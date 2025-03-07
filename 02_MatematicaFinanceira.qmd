@@ -1,0 +1,1361 @@
+# Matemática Financeira {#sec-02}
+
+O que chamamos de matemática financeira é um conjunto de ferramentas que nos permitem comparar quantidades monetárias que existem em diferentes instantes de tempo.
+
+$$ \text{Dinheiro Amanhã} = \text{Dinheiro hoje} + \text{Alguma coisa} $$
+
+Vamos começar com um exemplo bem simples no contexto de um empréstimo. Imagine que você tomou emprestado uma quantia *principal* de $\$2500$ pelo período de $1$ ano, e que ao final do ano deve o *montante* de $\$3500$: os $\$2500$ originais, mais uma tarifa de $\$1000$. Essa tarifa é o que chamamos de *juros*.
+
+$$ \begin{align} 
+\text{Montante} &= \text{Principal} + \text{Juros} \\
+\$3500 &= \$2500 + \$1000 
+\end{align}$$
+
+::: {.callout-note title="Juros"}
+Os juros (ou juro, o plural é opcional) são o preço do dinheiro no tempo. É o pagamento que o tomador de um empréstimo oferece ao credor do empréstimo pelo privilégio de usufruir dos recursos do principal, por um período de tempo pré-estabelecido.
+:::
+
+## Juros e taxa de juros {#sec-juros}
+
+Considere um outro empréstimo. Você toma um principal de $\$1000$, e devolve um montante de $\$1500$ ao final do ano. 
+
+$$ \begin{align*} 
+\text{Montante} &= \text{Principal} + \text{Juros} \\
+\$1500 &= \$1000 + \$500 
+\end{align*}$$
+
+No primeiro exemplo foram pagos $\$1500$ em juros pelo privilégio de usufruir de $\$2500$ por $1$ ano, enquanto no segundo exemplo pagamos $\$500$ como tarifa pela utilização de $\$1000$ pelo mesmo período. 
+
+Os juros, a quantia absoluta paga ao credor, do primeiro exemplo são maiores do que no segundo exemplo. Ao mesmo tempo, é claro para nós que, em termos de custo-benefício, o primeiro empréstimo é "mais barato" do que o segundo.
+
+Não é direto comparar juros entre operações com valores diferentes. Uma solução é representar os juros como proporção do principal. 
+
+No caso do primeiro empréstimo,
+
+$$ \begin{align*} 
+\$3500 &= \$2500 + \$1000, \\
+&= \$2500 + \$1000\cdot\left(\frac{\$2500}{\$2500}\right), \\
+&= \$2500 + \left(\frac{\$1000}{\$2500}\right)\cdot\$2500, \\
+&= \$2500 + 0.4\cdot\$2500, \\
+&= \$2500(1+0.4)= \$2500(1+40\%). 
+\end{align*}$$
+
+Então os juros pagos representam $40\%$ da quantia tomada emprestada. É a **taxa de juros** da operação.  
+
+Já no segundo empréstimo,
+
+$$\begin{align*}
+\$1500 &= \$1000 + \$500 \\
+&=\$1000 + \left(\frac{\$500}{\$1000}\right)\$1000 \\
+&=\$1000(1+0.5)=\$1000(1+50\%)
+\end{align*}$$
+
+Agora a taxa de juros é $50\%$ do principal. Vemos claramente que, de fato, que estamos pagando uma tarifa menor no primeiro empréstimo por cada $\$1$ tomado.
+
+Repare que ao calcularmos a taxa de juros, as unidades monetárias do numerador e denominador se anulam.
+
+$$\begin{align*} 
+\text{Valor futuro} &= \text{Valor presente} + \text{Juros} \\
+VF &= VP + J
+\end{align*}$$
+
+$$\begin{align*} 
+VF &= VP + J \left(\frac{VP}{VP}\right) \\
+&= VP + \left(\frac{J}{VP}\right)\cdot VP \\
+&= VP + rVP \\
+VF &= VP(1+r)
+\end{align*}$$
+
+::: {.callout-note title="Taxa de juros, taxa de retorno, e taxa de desconto"}
+
+Juros são o pagamento que o tomador faz ao credor pelo direito de usufruir do principal por um período de tempo pre-éstabelecido em um empréstimo. 
+
+Só faz sentido falar em taxa de juros no contexto de um contrato de dívida. Chamamos de ativos de renda fixa, contratos nos quais o emissor, em troca de uma quantia acordada, se compromete a 
+
+A matemática financeira é aplicável em situações ma
+
+
+
+:::
+
+
+## Capitalização e desconto {#sec-capitalizacaoedesconto}
+
+Chegamos na equação principal de valor presente-valor futuro em um período:
+
+$$\begin{align} \text{Valor futuro} &= \text{Valor presente}\cdot(1+\text{Taxa de juros}),\\ VF &= VP(1+r), \\
+S_1 &= S_0(1+r).\end{align} $${#eq-eqvp}
+
+* O valor futuro $(VF, S_1)$ é uma quantidade monetária, um fluxo de caixa, que se materializa em um período de tempo posterior $t=1$. 
+* O valor presente $(VP, S_0)$é um fluxo de caixa que acontece no período inicial $t=0$.
+* A taxa de juros $(r)$ funciona como o deslocamento intertemporal desses dois fluxos monetários assíncronos, necessário para que os valores possam ser comparados.
+
+A *capitalização* é o deslocamento temporal de uma quantidade presente a uma quantidade futura.
+
+Retornando ao nosso primeiro exemplo: se tomarmos um empréstimo de $\$2500$, com duração de um ano (um período) e taxa de juros de $40\%$ ao ano, qual deve ser o montante devolvido ao final do ano? 
+
+$$\begin{align*}
+  FV &= PV(1+r), \\
+  \$3500 &= \$2500(1+40\%).
+\end{align*}$$
+
+Estamos no ponto de vista do futuro, do período no qual o empréstimo deve ser quitado. Nesse sentido, a taxa de $r=40\%$ incide capitalizando, deslocando temporalmente para frente, o valor presente de $VP=\$2500$ para obtermos o valor futuro $VF=\$2500(1+40\%)=\$3500$. 
+
+O *desconto* é a operação inversa à capitalização. Se devolvemos ao credor um montante (principal mais juros) de $\$1500$, por um empréstimo de um período com taxa de juros de $r=50\%$ ao ano, qual foi o princial tomado originalmente?
+
+$$\begin{align*} 
+\text{Valor presente} &= \frac{\text{Valor futuro}}{\text{1 + Taxa de juros}},\\
+VP &= \frac{VF}{1+r}, \\
+VP &= \frac{\$1500}{1+0.5}=\$1000.
+\end{align*}$$
+
+Descontamos o montante de $\$1500$ pela taxa de juros de $50\%$ para obter o principal original de $\$1000$.
+
+Um título de desconto (zero cupom^[Cupons são pagamentos periódicos feitos pelo emissor ao detentor do título antes da data final de vencimento.]) é um dos instrumentos financeiros simples possíveis.
+
+O emissor do título fixa um valor de face (VF) que será pago pelo emissor ao detentor do título em uma data futura combinada. Hoje, um preço unitário (PU) é combinado entre as partes e é entregue pelo comprador ao emissor do título. 
+
+Repare que não foi necessário falar em uma taxa de juros do título. A taxa de juros da operação é determinada implicitamente pela razão entre valor de face e preço unitário, menos um.
+
+Suponha que o valor de face de um título de desconto seja fixado em $VF=\$1000$, o título vence daqui a um ano, e o preço unitário pago hoje pelo comprador seja $PU=\$800$. Qual é a taxa de juros embutida no título?
+
+Do ponto de vista do comprador do título, os fluxos de caixa são como os descritos na tabela abaixo. 
+
+| $t$ | $FC_t$ | $FC_t$   |
+|-----|--------|----------|
+| 0   | $-PU$  | $-\$800$ |
+| 1   | $VF$   | $\$1000$ |
+
+: Fluxos de caixa do comprador de um título de desconto {.striped .hover}
+
+
+
+$$\begin{align*}
+  VF &= PU(1+r)\\
+  r &= \frac{VF}{PU}-1
+\end{align*}$$
+
+Fixamos um valor de face
+
+```{r, echo=FALSE}
+#| label: fig-diagrama-fluxo-de-caixa-1
+#| fig-cap: "Diagrama de fluxo de caixa"
+
+tt = c(0,1)
+FV = 1000
+r = 0.25
+PV = FV*(1+r)^(-1)
+plot(tt, c(-PV, FV), t='h', xaxt='n', yaxt='n', ylab=expression(paste("Fluxo de Caixa:  ", CF[t])), xlab='Tempo: t', lty=2)
+abline(h=0)
+arrows(x0=tt[1], y0=0, x1=tt[1], y1=-PV)
+arrows(x0=tt[2], y0=0, x1=tt[2], y1=FV)
+axis(1, at=tt, labels=TRUE)
+axis(2, at=c(-PV,FV), labels=TRUE)
+```
+
+## Desconto e capitalização em múltiplos períodos {#sec-regimescapitalizacao}
+
+Nossos exemplos até agora trataram de situações nas quais a operação acontece em dois períodos. 
+
+
+
+### Regime composto
+
+
+::: {#exm-regime-composto-1}
+Imagine que você tomou emprestado $\$1000$, pelo período de $2$ anos, e que a taxa de juros é $10\%$ ao ano. Quanto você deve devolver para o credor ao final dos $2$ anos?
+:::
+
+
+O principal é $\$1000$ e a taxa de juros é $10\%$ ao ano, mas o montante deve ser quitado em dois anos.
+Uma forma natural de lidar com essa situação é desmembrar a operação toda em dois empréstimos de $1$ ano, e aplicar a equação @eq-eqvp duas vezes.
+Chame de $S_t$ o saldo devedor no período $t$. Então $S_0=\$1000$ é o princial original e a taxa de juros é $r=10\%$ ao ano. 
+
+$$\begin{align*} &S_1 = S_0(1+r),  &1100=1000(1+0.1).  \end{align*}$$
+
+Tomamos $S_0=\$1000$ no ano $t=0$, pagando uma taxa de $r=10\%$ ao ano, tal que nosso saldo devedor ao final do ano é $S_1=\$1100$. No início do ano $t=1$ o empréstimo é renovado, mas o "novo principal" inclui os juros devidos pelo período anterior.
+
+$$\begin{align*} S_2&=S_1(1+r)=S_0(1+r)(1+r)=S_0(1+r)^2,\\
+1210&=1100(1+0.1)=1000(1+0.1)^2. \end{align*}$$
+
+A figura abaixo descreve a evolução de um saldo devedor originalmente $S_0=\$100$ sendo capitalizado a uma taxa de juros de $10\%$ ao período sob o regime composto.
+
+![Composição do saldo devedor no regime de capitalização composta](images/JurosCompostosComposicaoSaldoDevedorPlot.png)
+
+::: {.callout-note appearance="minimal" title="Capitalização e desconto no regime composto com taxa de juros constante"}
+
+O valor futuro de um saldo original $S_0$, capitalizado a uma taxa de juros constante $r$ por $t$ períodos é dado por
+
+$$\begin{align} 
+  S_t = S_0(1+r)^t.
+\end{align}$${#eq-eqvf-taxaconstante}
+
+O valor presente de um saldo futuro $S_t$, $t$ períodos a frente, descontado a uma taxa de juros constante $r$ é dado por
+
+$$\begin{align} 
+  S_0 = \frac{S_t}{(1+r)^t}.
+\end{align}$${#eq-eqvp-taxaconstante}
+
+:::
+
+
+::: {.callout-warning title="Exercícios de fixação" collapse="true"}
+
+[@exr-sec-regimescapitalizacao-1]
+
+[@exr-sec-regimescapitalizacao-2]
+
+[@exr-sec-regimescapitalizacao-3]
+
+[@exr-sec-regimescapitalizacao-4]
+
+:::
+
+### Múltiplas taxas de juro durante a operação
+
+Nossos exemplos até agora consideraram que a taxa de juros $r$ se manteve constante durante toda a vida da operação. Isso torna nossos cálculos mais simples, mas não precisa ser verdade na prática. *A forma de lidar com mudanças na taxa de juros é a mesma: iterar a relação de valor presente-valor futuro de um período* [@eq-eqvp].
+
+::: {.callout-tip appearance="minimal"}
+::: {#exm-multiplas-taxas-1}
+Você empenhou seu capital em um investimento com duração de 3 anos, mas não lembra exatamente quanto foi que aplicou originalmente No vencimento você recebeu o montante de $S_3=\$1888.11$. Sabendo que a taxa de juros do primeiro ano foi $r_1=11\%$, do segundo ano foi $r_2=8\%$, e do terceiro ano foi $r_3=5\%$, calcule a quantia investida originalmente.
+:::
+Como é um problema de desconto, resolvemos "de trás para frente". 
+
+```{r, echo=FALSE}
+rm(list=ls())
+r_1 = 0.11; r_2 = 0.08; r_3 = 0.05
+S_3 = 1888.11
+S_2 = S_3/(1+r_3) 
+S_1 = S_2/(1+r_2) 
+S_0 = S_1/(1+r_1)
+```
+
+
+$$\begin{align*}
+  S_2 &= \frac{S_3}{1+r_3} = \frac{\$`r S_3`}{1+`r r_3`} = \$`r S_2`, \\
+  S_1 &= \frac{S_2}{1+r_2} = \frac{\$`r S_2`}{1+`r r_2`} = \$`r S_1`,\\
+  S_0 &= \frac{S_1}{1+r_1} = \frac{\$`r S_1`}{1+`r r_1`} = \$`r S_0`.
+\end{align*}$$
+
+A quantia investida foi $S_0=\$`r S_0`$.
+
+:::
+
+Conseguimos obter uma fórmula de capitalização e desconto quando a taxa de juros muda período a período. Como veremos agora, as fórmulas [@eq-eqvf-taxaconstante] e [@eq-eqvp-taxaconstante] são casos particulares da fórmula geral quando a taxa de juros pode variar.
+
+Do nosso exemplo anterior, repare que
+
+$$\begin{align*}
+  S_2 = \frac{S_3}{1+r_3}, \text{ e } S_1 = \frac{S_2}{1+r_2}.
+\end{align*}$$
+
+Portanto podemos escrever
+
+$$ \begin{align*}
+  S_1 &= \frac{\frac{S_3}{1+r_3}}{1+r_2} = \frac{S_3}{(1+r_2)(1+r_3)}, \\
+  S_0 &= \frac{S_1}{1+r_1} = \frac{S_3}{(1+r_1)(1+r_2)(1+r_3)}.
+\end{align*}$$
+
+Cheque que, de fato,
+
+$$\begin{align*}
+  \$`r S_0` = \frac{\$`r S_3`}{(1+`r r_1`)(1+`r r_2`)(1+`r r_3`)}
+\end{align*}$$
+
+::: {.callout-note appearance="minimal" title="Capitalização e desconto no regime composto com taxas de juro variáveis"}
+
+$$\begin{align} 
+  S_t &= S_0(1+r_1)(1+r_2)\cdots(1+r_{t-1})(1+r_t), \\
+  S_t &= S_0\prod^t_{j=1}(1+r_j).
+\end{align}$${#eq-eqvf-taxasvariaveis}
+
+$$\begin{align} 
+  S_0 &= \frac{S_t}{(1+r_1)(1+r_2)\cdots(1+r_{t-1})(1+r_t)}, \\
+  S_0 &= \frac{S_t}{\prod^t_{j=1}(1+r_j)}
+\end{align}$${#eq-eqvp-taxasvariaveis}
+:::
+
+::: {.callout-warning appearance="minimal"}
+::: {#exr-taxasvariaveis-1}
+ a.
+ a.
+ a.
+ a.
+ a.
+ a.
+:::
+:::
+
+### Regime simples
+
+A diferença fundamental do regime simples de capitalização e desconto quando comparado ao regime composto é que *no regime simples os juros do período anterior não são incorporados ao saldo devedor do período seguinte*.
+
+::: {.callout-note appearance="minimal" title="Capitalização e desconto no regime simples com taxa de juros constante"}
+O valor futuro de um saldo original $S_0$, capitalizado pelo regime simples a uma taxa de juros constante $r$ por $t$ períodos é dado por
+$$\begin{align} 
+  S_t = S_0(1+rt)
+\end{align}$$
+
+O valor presente de um saldo futuro $S_t$, $t$ períodos a frente, descontado pelo regime simples a uma taxa de juros constante $r$ é dado por
+$$\begin{align} 
+  S_0 = \frac{S_t}{1+rt}.
+\end{align}$$
+:::
+
+## Transformação de frequência e taxas equivalentes {#sec-transformacaotaxas}
+
+Vamos considerar uma pergunta um pouco diferente agora. 
+
+::: {.callout-tip appearance="minimal"}
+::: {#exm-taxas-equivalentes-1}
+Imagine que você tomou emprestado $\$150$ pelo período de $2$ anos. O montante (principal mais juros) repago ao final dos dois anos foi $\$200$. 
+
+  a. Qual é a taxa de juros total implícita no empréstimo? 
+  a. Qual é a taxa de juros anual implícita no empréstimo?
+:::
+
+```{r, echo=FALSE}
+rm(list=ls())
+S_0 = 150
+S_2 = 200
+r_bienal = (S_2/S_0-1) |> round(3)
+r_anual = ((1+r_bienal)^(1/2)-1) |> round(3)
+```
+
+Para calcular a taxa de juros total nós consideramos os $2$ anos do empréstimo como um único período e aplicamos [@eq-eqvp].
+
+$$\begin{align*}
+  r_{bienal} &= \frac{S_2}{S_0}-1=\frac{\$`r S_2`}{\$`r S_0`}-1=`r r_bienal` \text{ ao ``dois anos''}.
+\end{align*}$$
+
+Essa taxa tem uma frequência de incidência de a cada $2$ anos. 
+
+Quando perguntamos "qual a taxa anual do empréstimo", estamos perguntando: qual a única taxa de juros constante, que aplicada duas vezes sobre o valor presente $S_0=\$150$, nos leva ao mesmo valor futuro $S_2=\$200$.
+
+Ou seja,
+
+$$\begin{align*}
+  S_2 = S_0 (1+r_{anual})(1+r_{anual}) = S_0 (1+r_{bienal})
+\end{align*}$$
+
+No caso, conhecemos $r_{bienal}$ e queremos resolver para $r_{anual}$. Repare que o capital inicial $S_0$ aparece dos dois lados da equação, de modo que esse valor em si é irrelevante na transformação de frequência de incidência das taxas de juros.
+
+$$\begin{align*}
+  (1+r_{anual})^2 &= (1+r_{bienal}) \\
+  (1+r_{anual}) &= (1+r_{bienal})^{1/2}\\
+  r_{anual} &= (1+r_{bienal})^{1/2}-1 \\
+  &=(1+`r r_bienal`)^{1/2}-1=`r r_anual` \text{ ao ano}
+\end{align*}$$
+
+:::
+
+::: {.callout-tip appearance="minimal"}
+::: {#exm-taxas-equivalentes-1}
+  Você tem $\$1000$ empenhados em uma aplicação que te rende $1\%$ ao mês.  
+  
+```{r, echo=FALSE}
+rm(list=ls())
+S_0 = 1000
+r_mes = 0.01
+S_6 = (S_0*(1+r_mes)^6) |> round(2)
+r_sem = ((1+r_mes)^6-1) |> round(5)
+S_12 = (S_0*(1+r_mes)^12) |> round(2)
+r_ano = ((1+r_mes)^12-1) |> round(5)
+```  
+  
+  a. Qual o valor do seu capital depois de $6$ meses? Qual a taxa de juros semestral da aplicação?
+  
+$$\begin{align*}
+  S_6 = S_0(1+r_{mes})^6 = \$1000(1+0.01)^6 = \$`r S_6`
+\end{align*}$$
+$$\begin{align*}
+  (1+r_{sem})=(1+r_{mes})^6=(1.01)^6=`r 1+r_sem`
+\end{align*}$$
+$$\begin{align*}
+  r_{sem}=(1+r_{mes})^6-1=`r r_sem`=`r 100*r_sem`\% \text{ ao semestre}
+\end{align*}$$
+  
+  b. Qual o valor do seu capital depois de $1$ ano? Qual a taxa de juros anual da aplicação?
+$$\begin{align*}
+  S_{12} = S_0(1+r_{mes})^{12} = \$1000(1+0.01)^{12} = \$`r S_12`
+\end{align*}$$
+Existem várias formas de obtermos a taxa de juros anual aqui. Podemos calcular diretamente
+$$ \begin{align*} r_{ano} = \frac{S_{12}}{S_0}-1 = \frac{\$ `r S_12`}{\$ `r S_0`}-1 = `r r_ano` \text{ ao ano}. \end{align*}$$
+Outra opção é transformar a taxa mensal em anual:
+$$ \begin{align*} 
+  (1+r_{ano})&=(1+r_{mes})^{12},\\
+  r_{ano} &= (1+`r r_mes`)^{12}-1 = `r r_ano`\text{ ao ano}.
+\end{align*}$$
+Ou mesmo transformar a taxa semestral em taxa anual
+$$\begin{align*}
+  (1+r_{ano}) &= (1+r_{sem})^2 \\
+  r_{ano} &= (1+`r r_sem`)^2-1 = `r r_ano`\text{ ao ano}.
+\end{align*}$$
+
+:::
+:::
+
+::: {.callout-note title="Transformação de frequência de incidência de taxa de juros no regime composto"}
+Tome $r$ uma taxa de juros conhecida cuja frequência de incidência é de $h$ períodos. A taxa equivalente $r^\prime$ cuja frequência de incidência é $h^\prime$ períodos é tal que
+$$\begin{align}
+  (1+r^\prime)^{h^\prime} &= (1+r)^h, \\
+  (1+r^\prime) & = (1+r)^{\frac{h}{h^\prime}}, \\
+  r^\prime &=(1+r)^{\frac{h}{h^\prime}}-1.
+\end{align}$$
+:::
+
+::: {.callout-warning appearance="minimal"}
+
+:::
+
+### Taxa de juros média {.unnumbered}
+
+## Inflação e retorno real {#sec-inflacao}
+
+O *preço* de um bem (ou serviço) é a quantidade de dinheiro (do bem numerário) entregue em troca desse bem em uma negociação particular.   
+
+A *inflação* é a mudança (percentual) dos preços de um certo bem, em um dado intervalo de tempo. 
+
+Por exemplo, se um pacote de café custava $P_0=\$8$ há um ano, e hoje custa $P_1=\$11$, então a (taxa de) inflação $\pi$ do café, entre um ano atrás e hoje, foi de
+
+$$\begin{align} 
+  \pi &= \frac{P_1-P_0}{P_0},\\
+  &=\frac{\$11-\$8}{\$8} = 37.5\% \text{ ao ano}.
+\end{align}$$
+
+Repare aqui a inflação tem uma frequência de incidência assim como uma taxa de juros. Operações como transformações de frequência e cálculo de taxas médias funcionam de maneira análoga aos procedimentos para taxas de juros.
+
+Levar em conta a inflação se torna necessário quando nosso objetivo é calcular o retorno temporal de uma certa operação quando cotado em termos de bens ou serviços materiais, não meramente unidades monetárias. 
+
+::: {.callout-tip title='@exm-inflacao-1: Inflação e retorno real' collapse='true'}
+::: {#exm-inflacao-1}
+Considere a seguinte situação. Um agricultor tem separados $\$1500$ para a compra de sementes para a safra do próximo ano (daqui a 12 meses). Suponha que o preço das sementes seja $\$15$/kg.
+
+  a. Quantos kgs de sementes o agricultor conseguiria comprar hoje?
+
+Chame o capital que o agricultor dispõe hoje de $W_0$, e o preço do fertilizante hoje de $P_0$. Então ele conseguiria comprar
+$$\begin{align*}
+  S_0 = \frac{W_0}{P_0}=\frac{\$1500}{\$15/\text{kg}} = 100\text{kg}.
+\end{align*}$$
+Veja que as unidades monetárias do numerador e denominador se anulam.
+
+  b. Suponha que exista uma aplicação financeira que rende $10\%$ ao ano. Caso deixasse o dinheiro aplicado, quantos kgs de sementes o agricultor conseguiria comprar ao final dos 12 meses? 
+
+Como a riqueza foi aplicada, $W_1=W_0(1+r)$, e como o preço do fertilizante não mudou, $P_1=P_0$. Então
+$$\begin{align*}
+    K_1 &= \frac{W_1}{P_1}=\frac{W_0(1+r)}{P_0}, \\
+    &=\frac{\$1500(1+10\%)}{\$15/\text{kg}}=\frac{\$1650}{\$15/\text{kg}}=110\text{kg}.
+\end{align*}$$
+
+Repare que nessa situação o agricultor conseguiria comprar $10\%$ mais sementes. É a mesma rentabilidade da aplicação financeira.
+
+  c. Agora suponha que passados os $12$ meses, o preço das sementes tenha aumentado de $\$15/\text{kg}$ para $\$16/\text{kg}$. Qual é a taxa de inflação anual das sementes?
+  $$\begin{align}
+    \pi &= \frac{P_1-P_0}{P_0},
+    &= \frac{\$16/\text{kg}-\$15/\text{kg}}{\$16/\text{kg}}, \\
+    &= 6.66\% \text{ ao ano}.
+  \end{align}$$
+  
+  d. Se o agricultor manteve o capital na aplicação financeira que rende $10\%$ ao ano, quantos kgs de sementes conseguiria comprar após o aumento no preço?
+
+Agora $P_1=\$16/\text{kg}$, e $W_1=W_0(1+r)$. Então
+$$\begin{align*}
+  K_1&= \frac{W_1}{P_1}=\frac{W_0(1+r)}{P_1},\\
+  &=\frac{\$1,500(1+10\%)}{\$16/\text{kg}},\\
+  &=\frac{\$1650}{\$16/\text{kg}} = 103.125\text{kg}.
+\end{align*}$$
+
+  e. Qual é o retorno da aplicação financeira em termos de sementes? 
+
+Veja que o agricultor tem duas opções: ou comprar o fertilizante hoje com os $\$1500$ por $\$15/\text{kg}$, ou investir o dinheiro a $10\%$ e comprar pelo preço de $\$16/\text{kg}$. Estamos perguntando quantos kgs de sementes a mais ele pode comprar ao deixar o dinheiro investido. Então o retorno real $\mu$, da aplicação financeira, em termos de sementes é
+
+$$\begin{align}
+\mu &= \frac{S_1-S_0}{S_0} = \frac{S_1}{S_0}-1,\\
+&= \frac{103.125\text{kg}}{\$100\text{kg}}-1,\\
+&= 1.03125-1 = 3.125\% \text{ ao ano}.
+\end{align}$$
+
+Ao investir o dinheiro o agricultor pode comprar $1.03125$ vezes a quantidade original de sementes. Então a taxa de retorno em termos de fertilizante é $3.125\%$. Essa é a taxa *real* de retorno da operação, já que se refere à rentabilidade em termos de um bem ou serviço, não em termos de unidades monetárias.
+
+Agora veja o cálculo que fizemos para obter o retorno real.
+$$\begin{align}
+  1 + \mu &= \frac{K_1}{K_0} = \frac{W_1/P_1}{W_0/P_0}=\frac{W_0(1+r)/P_1}{W_0/P_0},\\
+  &=(1+r)\frac{P_0}{P_1},
+\end{align}$$
+como $P_1/P_0=1+\pi$, temos 
+$$\begin{align}
+  1+\mu = \frac{1+r}{1+\pi}.
+\end{align}$$
+
+Então verificamos que (um mais) a taxa real $\mu$ é (um mais) a taxa nominal $r$, descontado pela (por um mais) a taxa de inflação $\pi$. É matematicamente equivalente a capitalizarmos $\$1$ pela taxa de juros nominal $r$, depois descontarmos pela taxa de inflação $\pi$.
+
+:::
+:::
+
+::: {.callout-note title="Retorno real *ex-post*"}
+Se $r$ é o retorno nominal (em termos de unidades monetárias) de uma aplicação financeira, e $\pi$ é a taxa de inflação dos bens relevantes no período, então a taxa de retorno real (em termos de bens) $\mu$ da aplicação financeira é dada por
+$$\begin{align}
+  1+\mu = \frac{1+r}{1+\pi}.
+\end{align}$$
+:::
+É importante lembrar que ambas a taxa de retorno nominal $r$ e inflação $\pi$ tenham a mesma frequência de incidência (mensal, anual, etc.).
+
+#### Retorno real *ex-post* e *ex-ante* {.unnumbered}
+
+No @exm-inflacao-1 nós calculamos o retorno da aplicação financeira em termos da quantidade de sementes,  
+
+### Índices de preço 
+
+Apesar de não conseguirmos observar exatamente o preço das coisas, aproximações são claramente úteis. Afinal, falamos do preço da gasolina, do preço de um pão, do preço do tomate, etc.
+
+Em especial, médias ponderadas de diversos preços nos dão uma ideia de como os preços da economia estão mudando no agregado, capturando por exemplo custo de vida dos consumidores ou custo de produção das firmas.
+
+::: {.callout-tip title='@exm-indicedeprecos-1: Construção de um índice de preços' collapse='true'}
+::: {#exm-indicedeprecos-1}
+
+```{r, echo=FALSE}
+require(knitr) 
+require(kableExtra) 
+rm(list=ls())
+TT = 8
+
+simul_inflacao = function(TT=6, x0=10, pinf0=0.05){
+  x = rep(0,TT)
+  x[1] = x0
+  for (t in 2:length(x)){
+    pinf = pinf0+2*pinf0*runif(1,min=-1,max=1)
+    x[t]=x[t-1]*(1+pinf)
+  }
+  return(x)
+}
+
+Arroz = simul_inflacao(x0=6.65, pinf0=0.06) |> round(2)
+Feijao = simul_inflacao(x0=8.94, pinf0=0.04) |> round(2)
+Leite =  simul_inflacao(x0=7.05, pinf0=0.05) |> round(2)
+Carne =  simul_inflacao(x0=15.70, pinf0=0.10) |> round(2)
+Gas =  simul_inflacao(x0=30.34, pinf0=0.08) |> round(2)
+Pesos = c(0.3,0.2,0.1,0.25,0.15)
+Precos_mat = cbind(Arroz, Feijao, Leite, Carne, Gas)
+Indice = Precos_mat %*% Pesos
+IndiceP = 100*Indice/Indice[1]
+df = data.frame(1:length(Arroz), Arroz,Feijao,Leite,Carne,Gas)
+colnames(df) = c("Mês", "Arroz", "Feijão", "Leite", "Carne", "Gás")
+knitr::kable(df)
+```
+
+  A cesta de consumo mensal das famílias de certa comunidade é  bem descrita pelas seguintes proporções:
+  
+  1. Arroz: $`r 100*Pesos[1]`\%$.
+  1. Feijão: $20\%$.
+  1. Leite: $10\%$.
+  1. Carne: $25\%$.
+  1. Gás de cozinha: $15\%$.
+  
+  Nosso objetivo é construír um índice de preços que descreva o custo de vida nessa comunidade e nos permita calcular uma medida de inflação agregada.
+
+
+O índice é construído como uma média ponderada do preço dos bens individuais: 
+$$\begin{align}
+  I = 0.3 A + 0.2 F + 0.1 L + 0.25 C + 0.15 G.
+\end{align}$$
+No primeiro mês, o valor do índice é:
+$$\begin{align}
+  I_1 &= 0.3\cdot \$`r Arroz[1]` + 0.2 \cdot \$`r Feijao[1]` + 0.1 \cdot \$`r Leite[1]` + 0.25  \cdot \$`r Carne[1]` + 0.15  \cdot \$`r Gas[1]`,\\
+  &= \$12.9640.
+\end{align}$$
+:::
+:::
+
+::: {.callout-note title='IPCA: Índice de Preços ao Consumidor Amplo' collapse='true'}
+
+O Índice de Preços ao Consumidor Amplo, [IPCA](https://www.ibge.gov.br/estatisticas/economicas/precos-e-custos/9256-indice-nacional-de-precos-ao-consumidor-amplo.html), é uma média ponderada de preços calculada pelo IBGE desde dezembro de 1979, que tem por objetivo medir a inflação de um conjunto de produtos e serviços comercializados no varejo, referentes ao consumo pessoal das famílias. O IPCA é o principal índice de preços do Brasil, sendo utilizado com indexador em diversos contratos, e, em especial, tomado como a medida oficial de inflação para efeitos de política monetária.
+
+Atualmente, a população-objetivo do IPCA abrange as famílias com rendimentos de 1 a 40 salários mínimos, qualquer que seja a fonte, residentes nas áreas urbanas das regiões de abrangência do SNIPC^[Sistema Nacional de Índices de Preços ao Consumidor], as quais são: regiões metropolitanas de Belém, Fortaleza, Recife, Salvador, Belo Horizonte, Vitória, Rio de Janeiro, São Paulo, Curitiba, Porto Alegre, além do Distrito Federal e dos municípios de Goiânia, Campo Grande, Rio Branco, São Luís e Aracaju.
+
+Esse índice de preços tem como unidade de coleta estabelecimentos comerciais e de prestação de serviços, concessionária de serviços públicos e intenet e sua coleta estende-se, em geral, do dia 01 a 30 do mês de referência.
+
+```{r, echo=FALSE, results='hide', message=FALSE}
+rm(list=ls());
+library(sidrar);
+x = get_sidra(7060,
+              variable = 66);
+grupos = c("7170", "7445", "7486", "7558", "7625", "7660", "7712", "7766", "7786");
+ind = x$`Geral, grupo, subgrupo, item e subitem (Código)` %in% grupos;
+x = x[ind,];
+```
+
+Os gastos mensais das famílias são divididos em grandes grupos, que se dividem em categorias cada vez mais granulares. A tabela abaixo descreve os pesos relativos de cada grupo em `r x$Mês[1]`.
+
+| # | Grupo                     | Peso             |
+|---|---------------------------|------------------|
+| 1 | Alimentação e bebidas     | `r x$Valor[1]`\% |
+| 2 | Habitação                 | `r x$Valor[2]`\% |
+| 3 | Artigos de residência     | `r x$Valor[3]`\% |
+| 4 | Vestuário                 | `r x$Valor[4]`\% |
+| 5 | Transportes               | `r x$Valor[5]`\% |
+| 6 | Saúde e cuidados pessoais | `r x$Valor[6]`\% |
+| 7 | Despesas pessoais         | `r x$Valor[7]`\% |
+| 8 | Educação                  | `r x$Valor[8]`\% |
+| 9 | Comunicação               | `r x$Valor[9]`\% |
+:::
+
+::: {.callout-tip title='@exm-inflacao-2: Retorno real de um título de desconto' collapse='true'}
+::: {#exm-inflacao-2}
+
+O Tesouro Federal brasileiro negocia um título de de desconto zero cupom com valor de face $R\$1000$ chamado LTN (Letra do Tesouro Nacional). Imagine que hoje, em 01/01/2020, você comprou uma LTN com vencimento em 01/01/2024, pelo preço unitário de $R\$812.15$.
+
+  a. Qual é a rentabilidade nominal do título?
+
+Pagamos o preço unitário de $PU=R\$812.15$ para receber o valor de face $VF=R\$1000$ daqui a quatro anos, então a rentabilidade embutida no título é
+$$\begin{align}
+  r_{4anos} &= \frac{VF}{PU}-1,\\
+  &=\frac{R\$1000}{R\$812.15}-1,\\
+  &=23.13\%
+\end{align}$$
+em quatro anos.
+
+Que é equivalente a uma taxa de retorno anual de
+$$\begin{align}
+  r_{ano}=(1+0.2313)^{1/4}-1 = 5.34\%
+\end{align}$$
+ao ano.
+
+  * Suponha que passados os quatro anos, a variação anual do IPCA tenha sido como descrita na tabela abaixo.
+
+|                | 2020     | 2021     | 2022     | 2024     |
+|----------------|----------|----------|----------|----------|
+| $\Delta\%IPCA$ | 2.54\%   | 3.83\%   | 5.01\%   | 4.21\%   |
+
+  b. Qual é a inflação, como medida pelo IPCA, acumulada em quatro anos? Qual a taxa média de inflação nesse período? 
+
+A inflação acumulada é obtida compondo as taxas anuais.
+
+$$\begin{align}
+  1+\pi_{4anos} &= (1.0254)\cdot(1.0383)\cdot(1.0501)\cdot(1.0421),\\
+  &=1.1651.
+\end{align}$$
+Então a inflação acumulada em 4 anos foi de $16.51\%$.
+
+Que nos leva a uma taxa média de inflação de
+$$\begin{align}
+\tilde \pi_{ano} = (1.1608)^{1/4}-1 = 3.798\%
+\end{align}$$
+ao ano.
+
+  c. Qual foi seu retorno real ao carregar o título, passados quatro anos? E retorno real médio anual?
+  
+Da fórmula que deduzimos anteriormente,
+$$\begin{align}
+  1+\mu_{4anos} &= \frac{1+r_{4anos}}{1+\pi_{4anos}}, \\
+  &= \frac{1.2313}{1.1651}=1.05682,
+\end{align}$$
+que nos dá um retorno real acumulado de $\mu=5.682\%$ em quatro anos. O retorno real médio anual é então
+$$\begin{align}
+  \tilde \mu_{ano} &= (1+\mu_{4anos})^{1/4}-1, \\
+  &= (1.05682)^{1/4}-1=1.391\%
+\end{align}$$
+ao ano.
+
+Repare que se tivessemos descontado a inflação média do retorno anual médio, obteríamos o mesmo resultado.
+
+:::
+:::
+
+::: {.callout-warning title="Exercícios" collapse="true"}
+
+::: {#exr-inflacao-1}
+
+   Seu salário é $Y=\$800$ ao mês e você gasta essa renda exclusivamente em latas de refrigerantes, que custam atualmente $P_0=\$5$. Passado um mês, o seu salário ainda é o mesmo, mas o preço do refrigerante aumentou para $P_1=\$5.5$. 
+   
+   a. Qual é a taxa de inflação mensal realizada das latas de refrigerantes?
+   b. Qual foi sua "perda de poder de compra" no período? Ou seja, quantos refrigerantes (em termos percentuais) a menos você pôde comprar devido o aumento no preço? 
+   c. Considere que a inflação do refrigerante se manterá constante mês a mês. Quantos meses passarão até seu poder de compra ser reduzido pela metade?
+   
+:::
+
+
+
+
+:::
+
+## Sequências de fluxos de caixa {#sec-sequenciasfluxosdecaixa}
+
+Até agora tratamos de situações nas quais existem apenas dois fluxos de caixa. Nosso exemplos foram do tipo que você toma um empréstimo e recebe $\$200$ hoje, depois paga $\$375$ após 3 períodos; ou que investe em um título de desconto e paga $\$700$ de preço unitário hoje para receber o valor de face $\$1000$ no vencimento. 
+
+Nada impede de hajam fluxos de caixa intermediários durante a vida da operação. Veremos que a ferramenta de análise é rigorosamente a mesma: a relação valor presente-valor futuro [@eq-eqvp]. A diferença é que lidaremos com a *soma de várias relações de valor presente com horizontes distintos*.
+
+Tome uma sequência de fluxos de caixa igualmente espaçados no tempo $SFC=\{FC_0, FC_1, FC_2, \dots, FC_T\}$. Note que o primeiro fluxo acontece hoje em $t=0$ e o último no vencimento em $t=T$, de modo que existem $T+1$ fluxos de caixa. Considerando uma taxa de juros constante $r$ (cuja frequência de incidência é igual ao passo temporal na sequência de fluxos de caixa), o valor presente dessa sequência de fluxos de caixa é
+
+$$\begin{align}
+    PV(\{FC_t\}^T_{t=0},r) &= \sum^T_{t=0} \frac{CF_t}{(1+r)^t},\\
+    &=\frac{FC_0}{(1+r)^0} + \frac{FC_1}{(1+r)^1} + \cdots + \frac{FC_T}{(1+r)^T}.
+\end{align}$$
+
+::: {.callout-tip title='@exm-seq-fcs-1: Valor presente de uma sequência de fluxos de caixa' collapse='true'}
+::: {#exm-seq-fcs-1}
+A você é ofertado um contrato de dívida com maturidade de dois anos. Passado primeiro ano o emissor do título te pagará $\$500$, então ao final do segundo ano ele te pagará $\$1000$. Supondo que você possa tomar emprestado recursos a uma taxa de juros de $12\%$ ao ano. Qual é o maior preço que você estaria disposto a pagar hoje por esse contrato de dívida? 
+
+Do ponto de vista do comprador do título, os fluxos de caixa associados são
+
+| $t$ | $FC_t$ | $FC_t$   |
+|-----|--------|----------|
+| 0   | $-PU$  | $-PU$ |
+| 1   | $FC_1$   | $\$500$ |
+| 2   | $FC_2$   | $\$1000$ |
+
+Podemos pensar em duas operações diferentes, uma com duração de 1 ano e outra com duração de dois anos.
+
+Na primeira você recebe $FC_1=\$500$ daqui a $t=1$ períodos.
+$$\begin{align*} VP(\{FC_1\},r,t) &= \frac{FC_1}{1+r} \\
+VP(\{\$500\},0.12,1) &= \frac{\$500}{1+0.12} = \$446.43
+\end{align*}$$
+Na segunda você recebe $FC_2=\$1000$ daqui a $t=2$ períodos.
+$$\begin{align*} VP(\{FC_2\},r,t) &= \frac{FC_2}{(1+r)^2} \\
+VP(\{\$1000\},0.12,2) &= \frac{\$1000}{(1+0.12)^2} = \$797.19
+\end{align*}$$
+O valor presente da sequência de fluxos de caixa $\{\$500, \$1000\}$, descontado pela taxa constante de $r=0.12$ ao período, é a soma dos valores presentes dos fluxos de caixa individuais, descontados durante o horizonte apropriado.
+$$\begin{align*} VP(\{FC_1,FC_2\},r) &= VP(\{FC_1\},r,t) + VP(\{FC_2\},r,t) \\
+&= \frac{FC_1}{1+r} + \frac{FC_2}{(1+r)^2} \\
+VP(\{\$500,\$1000\},0.12)&= \frac{\$500}{1+0.12} + \frac{\$1000}{(1+0.12)^2} = \$1243.62
+\end{align*}$$
+Portanto estaríamos dispostos a pagar no máximo $\$1243.62$ pelo título de dívida. 
+:::
+:::
+
+::: {.callout-tip title='@exm-seq-fcs-2: Valor futuro de uma sequência de fluxos de caixa' collapse='true'}
+::: {#exm-seq-fcs-2}
+Todo mês você investe $\$100$ em uma aplicação que rende uma taxa de juros de $10\%$ ao ano. Qual seu capital acumulado passados 4 meses (logo após fazer a contribuição do quarto mês)?
+
+O primeiro passo aqui é transformar a taxa anual em taxa mensal equivalente.
+$$\begin{align*} 
+r_{mes} &= (1+r_{ano})^{1/12}-1, \\
+&=(1+0.1)^{(1/12)}-1=0.007974 \text{ ao mês}.
+\end{align*}$$
+
+Agora tratamos cada investimento mensal como uma operação distinta.
+
+Os primeiros $\$100$, investidos imediatamente em $t=0$, irão ser capitalizados durante 4 meses, tal que seu valor futuro é
+
+$$\begin{align*} 
+  VF(\{FC_0\}, r, 4) &= FC_0(1+r)^4,\\
+  VF(\{\$100\}, 0.007974, 4) &=\$100(1+0.007974)^4 = \$103.23.
+\end{align*}$$
+
+A contribuição feita no início do segundo mês, em $t=1$, terá 3 meses para render. 
+
+$$\begin{align*} 
+  VF(\{FC_1\}, r, 3) &= FC_1(1+r)^3,\\
+  VF(\{\$100\}, 0.007974, 3) &=\$100(1+0.007974)^3 = \$102.41.
+\end{align*}$$
+
+E assim por diante, de modo que o valor acumulado do nosso capital é a soma dos valores futuros de cada uma das contribuições individuais.
+
+$$\begin{align*}
+ VF(\{FC_t\}^T_{t=0},r) = \sum_{t=0}^T FC_t(1+r)^{T-t}
+\end{align*}$$
+
+$$\begin{align*}
+ VF&(\{\$100\}^4_{t=0},0.007974) = \$100(1.007974)^{4-0}+\$100(1.007974)^{4-1}+\\&\$100(1.007974)^{4-2}+\$100(1.007974)^{4-3}+\$100(1.007974)^{4-4}
+\end{align*}$$
+
+$$\begin{align*}
+ VF&(\{\$100\}^4_{t=0},0.007974) = \$103.23 + \$102.41 +\\& \$101.60 + \$100.79 + \$100 = \$508.038
+\end{align*}$$
+
+<iframe width="100%" height="250" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRjTxdjUogiIT9iTClOqwdPiEPwIO39-zijEaE-LKEdp4Hg518Vnq2b9PWyognB6AG8WPPU6JdBDdv1/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+[Link](https://docs.google.com/spreadsheets/d/1Fvkam4F3ssvCPbWord7vXeTMK24_x6hlk03NtpoySCY/edit?usp=sharing)
+:::
+:::
+
+::: {.callout-tip title='@exm-seq-fcs-3: Valor presente de uma sequência de fluxos de caixa com taxas de juros variáveis' collapse='true'}
+::: {#exm-seq-fcs-3}
+
+| $t$    | 0       | 1     | 2      | 3     | 4     |
+|--------|---------|-------|--------|-------|-------|
+| $r_t$  |         | 7\%   | 5\%    | 2\%   | 3\%   |
+| $CF_t$ | -\$1000 | \$500 | -\$300 | \$700 | \$400 |
+
+$$\begin{align*}
+  VP(\cdot) =& -\$1000 + \frac{\$500}{(1.07)} + \frac{-\$300}{(1.07)(1.05)} \\ &+ \frac{\$700}{(1.07)(1.05)(1.02)} + \frac{\$400}{(1.07)(1.05)(1.02)(1.03)}.
+\end{align*}$$
+
+$$\begin{align*}
+  PV(\cdot)&=-\$1000+\frac{\$500}{1.07} - \frac{\$300}{1.1235} + \frac{\$700}{1.14597} + \frac{\$400}{1.1803491},\\
+  &=-\$1000+\$467.23-\$267.02+\$610.84+\$338.88=\$149.98.
+\end{align*}$$
+
+:::
+:::
+
+### Sequências de fluxos de caixa homogêneos
+
+Um caso especial muito importante é quando ambos taxa de juros e o valor dos fluxos de caixa são constantes. 
+
+Suponha que todos os fluxos de caixa, a menos do período $t=0$, são idênticos, tal que nossa sequência de fluxos de caixa é $SFC=\{FC_0, FC, FC, \dots, FC\}$. Faz sentido tratarmos o primeiro fluxo de caixa como diferente porque na maioria das nossas aplicações representa um dispêndio inicial para realizar dado investimento.
+
+#### Valor presente de uma sequência de fluxos de caixa homogêneos
+
+O valor presente dessa sequência de fluxos de caixa, descontado por uma taxa constante de $r$ ao período, é dado por
+
+$$ VP(SFC, r) = \frac{FC_0}{(1+r)^0} + \frac{FC}{(1+r)^1}+\cdots+\frac{FC}{(1+r)^T}.$$ 
+
+Conseguimos colocar $FC$ em evidência e escrever
+$$VP(SFC,r)=FC_0 + FC\left[\frac{1}{(1+r)^1}+\cdots+\frac{1}{(1+r)^T}\right].$$
+Repare que a expressão entre colchetes é a soma de uma progressão geométrica com $T$ termos, razão $(1+r)^{-1}$ e primeiro termo também $(1+r)^{-1}$. 
+
+::: {.callout-note title="Fórmula da soma da progressão geométrica" collapse='true'}
+Tome a soma de uma progressão geométrica com $n$ parcelas, razão dada por $q$, e primeiro termo $a_0$,
+
+$$\begin{align*} S_n = a_0\left(1 + q^1 + q^2 + \cdots + q^{n-2} +  q^{n-1}\right). \end{align*}$$
+Escreva $qS_n$
+$$\begin{align*} qS_n = a_0(q^1 + q^2 + q^3 + \cdots + q^{n-1} + q^n). \end{align*}$$
+Agora faça $S_n - qS_n$. Veja que apenas o primeiro termo $1$ e o último termo $q^n$ sobram.
+$$\begin{align*} S_n - qS_n &= a_0\left(1 - q^{n}\right), \\
+S_n(1-q) &= a_0\left(1-q^{n}\right), \\
+S_n &=  a_0\left(\frac{1-q^n}{1-q}\right).\end{align*} $$
+Essa é a fórmula da soma de uma progressão geométrica com $n$ parcelas, razão dada por $q$, e primeiro $a_0$. 
+:::
+
+Então temos
+
+$$\begin{align}
+VP(SFC,r) &= FC_0 + \frac{1}{1+r}\left[\frac{1-\left(\frac{1}{1+r}\right)^T}{1-\left(\frac{1}{1+r}\right)}\right],\\
+&= FC_0 + FC\left(\frac{1-(1+r)^{-T}}{r}\right).
+\end{align}$${#eq-sfc-vp-1} 
+
+A expressão entre parênteses na [@eq-sfc-vp-1] às vezes é chamada de fator de valor presente, $FVP$, porque é o fator pelo qual que multiplicamos o pagamento homogêneo $FC$ para obter o valor presente da sua soma.
+
+$$\begin{align*}
+  FVP(r,T)=\left(\frac{1-(1+r)^{-T}}{r}\right).
+\end{align*}$${#eq-sfc-vp-2}
+
+#### Valor presente da perpetuidade
+
+Podemos calcular o valor presente de uma sequência de fluxos de caixa homogêneos sem data para acabar. 
+
+Tome a sequência de fluxos de caixa $SFC=\{FC_0, FC, FC, \dots\}$
+
+$$\begin{align*}
+VP_\infty (SFC,r) &= FC_0 + FC \left(\frac{1}{1+r} + \frac{1}{(1+r)^2}+\cdots \right), \\
+&= FC_0 + FC \lim_{T\rightarrow\infty}\left(\frac{1-(1+r)^{-T}}{r}\right),\\
+&= FC_0 + \frac{FC}{r}.
+\end{align*}$$
+
+#### Valor presente da perpetuidade com crescimento
+
+Uma aplicação bastante relevante para
+
+#### Valor futuro de uma sequência de fluxos de caixa homogêneos
+
+
+::: {.callout-warning appearance="minimal"}
+
+::: {#exr-sfc-1}
+
+:::
+
+::: {#exr-sfc-2}
+
+:::
+
+::: {#exr-sfc-3}
+
+:::
+
+::: {#exr-sfc-4}
+
+:::
+
+::: {#exr-sfc-5}
+
+:::
+
+:::
+
+
+
+
+## Valor presente líquido (VPL) {#sec-vpl}
+
+Em um mundo sem incertezas, um *projeto de investimento* é completamente descrito por dois objetos:
+
+* uma sequência de fluxos de caixa localizados no tempo 
+$$ SFC = \{FC_0, FC_1, \dots, FC_T\},$$
+
+* e uma sequência de taxas de juros que descontam/capitalizam esses fluxos de caixa a cada período
+$$ r = \{r_0, r_1, \dots, r_T\}.$$
+elas representam o *custo do capital* empenhado no projeto.
+
+::: {.callout-note title="Custo de capital"}
+
+Se coloque na posição de um empreendedor contemplando alguma oportunidade de investimento. Os recursos para realizar o investimento só podem vir de duas fontes: ou vêm da riqueza pessoal do empreendedor (do dono, ou donos da empresa), ou vêm de empréstimos tomados junto a terceiros. 
+
+* Se os recursos forem próprios (por ex. poupança do empreendedor, emissão de ações pela empresa, retenção de lucros para reinvestimento), então o custo de capital (a taxa de juros usada para descontar os fluxos de caixa), é dado pela rentabilidade do melhor projeto alternativo disponível (com mesmo perfil de risco).
+* Se os recursos forem de terceiros (por ex. contratação de um empréstimo com um banco, emissão de debêntures pela empresa), então o custo de capital do investimento é dado pela taxa de juros paga no financiamento.
+
+:::
+
+Chamamos de *Valor presente líquido*, VPL, do projeto o valor presente desses fluxos de caixa, descontado pela sequência de taxas de juros. O adjetivo "líquido" aparece para reforçar a ideia de que o fluxo de caixa inicial usualmente é negativo.
+
+Sob a suposição de ausência de incerteza, o VPL de um projeto representa o lucro (ou prejuízo) imediato obtido pelo investidor no momento que se inicia o projeto. 
+
+::: {.callout-tip appearance="minimal"}
+::: {#exm-vpl-1}
+
+Para entender a interpretação econômica do conceito de valor presente líquido, vamos retornar ao (exemplo??). 
+Para chegar no $PU$ máximo que pagaríamos pelo título nós descontamos os fluxos de caixa pela taxa de juros pela qual poderíamos tomar recursos emprestados. 
+
+Nós recebemos $\$500$ em $t=1$ e $\$1000$ em $t=2$. 
+
+Podemos tomar dinheiro emprestado ao custo de $12\%$ ao período. 
+
+A justificativa por trás da resposta é que em $t=0$ tomamos dois empréstimos com horizontes diferentes.
+
+* No primeiro empréstimo tomamos $\frac{\$500}{1+12\%}=\$446.43$ por $1$ período. Em $t=1$ devolveremos $\$446.43(1+12\%)=\$500$ aos nossos credores. O saldo devedor é exatamente coberto pelo pagamento que receberemos. 
+* No segundo, tomamos $\frac{\$1000}{(1+12\%)^2}=\$797.19$ por $2$ períodos. Em $t=2$ o pagamento de $\$1000$ é exatamente o necessário para quitar esse saldo devedor.
+
+
+Perceba que se tomarmos $\$1243.62$ emprestados da forma descrita acima em $t=0$, e usarmos os pagamentos do contrato de dívida para quitar nossas dívidas, estamos exatamente como se não tivessemos feito tal operação. 
+
+Então se pudermos comprar o contrato por $\$1043.62$, podemos tomar os $\$1243.62$ emprestados hoje, quitar o empréstimo com os rendimentos do título, e estaremos $\$200$ mais ricos hoje, não no final da vida do contrato.
+
+:::
+:::
+
+
+
+
+::: {.callout-note title="Critério do valor presente líquido"}
+
+  * Um projeto de investimento é considerado economicamente viável, e deve ser executado, se seu valor presente líquido for positivo, se $VPL>\$0$.
+  * Quando escolhendo entre dois projetos de investimento economicamente viáveis, mas mutuamente exclusivos, devemos escolher aquele com maior $VPL$. 
+  
+:::
+
+## Taxa interna de retorno (TIR) {#sec-tir}
+
+A taxa interna de retorno (TIR, ou IRR de *internal rate of return*) é a taxa de desconto, que quando aplicada aos fluxos de caixa de um projeto de investimento, torna o seu valor presente líquido zero. 
+
+::: {.callout-tip title="@exm-tir-1 TIR de uma sequência de fluxos de caixa" appearance="minimal" collapse="true"}
+::: {#exm-tir-1}
+Considere um projeto de investimento muito simples, com apenas dois fluxos de caixa. A Figura abaixo descreve os fluxos de caixa: na data inicial o investidor paga $\$100$, e no período seguinte recebe $\$120$. Qual é a Taxa interna de retorno do projeto?
+```{r, echo=FALSE}
+#| label: fig-diagrama-fluxo-de-caixa-tir-1
+#| fig-cap: "Diagrama de fluxo de caixa @exm-tir-1"
+rm(list=ls())
+tt = c(0,1)
+FV = 120
+r = 0.25
+PV = 100
+plot(tt, c(-PV, FV), t='h', xaxt='n', yaxt='n', ylab=expression(paste("Fluxo de Caixa:  ", FC[t])), xlab='Tempo: t', lty=2)
+abline(h=0)
+arrows(x0=tt[1], y0=0, x1=tt[1], y1=-PV)
+arrows(x0=tt[2], y0=0, x1=tt[2], y1=FV)
+axis(1, at=tt, labels=TRUE)
+axis(2, at=c(-PV,FV), labels=TRUE)
+```
+:::
+O VPL do projeto é
+$$\begin{align*}
+VPL = -\$100 + \frac{\$120}{1+r}.
+\end{align*}$$
+A TIR é a única taxa $r^*$ que faz com que $VPL=0$.
+$$\begin{align*}
+-\$100 &+ \frac{\$120}{1+r^*} = \$0\\
+r^* &= \frac{\$120}{\$100}-1 = 0.2 \text{ ao período.}
+\end{align*}$$
+Então se descontado a uma taxa de $r^*=20\%$ ao período, o VPL do projeto é zero. 
+:::
+
+Sabemos que o VPL de uma sequência de fluxos de caixa $SFC=\{FC_t\}^{T}_{t=0}$, descontado por uma taxa constante $r$ é
+
+$$\begin{align*}
+VPL = FC_0 + \sum^T_{t=1} \frac{FC_t}{(1+r)^t}
+\end{align*}$$
+A TIR é a única taxa de juros $r^*$ que torna esse VPL zero.
+$$\begin{align*}
+FC_0 + \sum^T_{t=1} \frac{FC_t}{(1+r^*)^t} = 0
+\end{align*}$$
+
+Chame $x = (1+r^*)^{-1}$. Então podemos escrever
+
+$$\begin{align*}
+  FC_0 + FC_1 x + FC_2 x^2 + \cdots + FC_T x^T = 0
+\end{align*}$$
+
+Aqui fica claro que para calcular a TIR devemos resolver uma equação polinomial em $r^*$, com grau $T$ dado pela quantidade de períodos na sequência de fluxos de caixa, menos um (lembre que de $0$ a $T$ temos $T+1$ elementos). Os fluxos de caixa $\{FC_t\}^T_{t=0}$ são os coeficientes dessa equação polinomial.
+
+::: {.callout-tip title="@exm-tir-2 Cálculo da TIR no usando *Google sheets*" appearance="minimal" collapse="true"}
+::: {#exm-tir-2}
+Calcule a TIR da seguinte sequência de fluxos de caixa
+$$ SFC = \{-1500, 200, 300, 400, 1000\}.$$
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRjTxdjUogiIT9iTClOqwdPiEPwIO39-zijEaE-LKEdp4Hg518Vnq2b9PWyognB6AG8WPPU6JdBDdv1/pubhtml?gid=2090645731&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+:::
+:::
+
+::: {.callout-tip title="@exm-tir-3 *Yield to maturity* de um título com cupons" appearance="minimal" collapse="true"}
+::: {#exm-tir-3}
+
+Uma aplicação importante da TIR é o cálculo da taxa de juros embutida em um título de desconto que paga cupons periódicos.
+
+As Notas do Tesouro Nacional série F (NTN-F, ou "Tesouro Prefixado com Juros Semestrais") são um tipo de título emitido pelo Tesouro brasileiro. O valor de face das NTN-F é $R\$1000$. Ou seja, na data de vencimento do título o detentor recebe $VF=R\$1000$. Ainda, durante a vida do contrato (incluindo a data de vencimento), o detentor do título recebe cupons de juros semestrais de $R\$48.81$^[A taxa de cupom das NTN-F é $10\%$ ao ano. No caso brasileiro calculamos a taxa de cupom semestral de forma composta, $c=(1+10\%)^{1/2}-1=4.881\%$ ao semestre. Então a cada semestre o detento do título recebe $cFV=4.881\%\times R\$1000=R\$48.81$.].
+
+![Preços e taxas Tesouro Direto](images/TIR_TesouroDireto_1.png)
+
+Não existe uma taxa de juros explícita no contrato dos títulos negociados pelo Tesouro. Oferta e demanda no mercado determinam o PU (Preço Unitário) do título, e a "Rentabilidade anual" na figura acima é determinada pela TIR da sequência de fluxos de caixa que o detentor do título receberia. 
+
+Imagine que hoje, 01/01/2025, uma NTN-F com vencimento em 01/01/2028, está sendo negociada com $PU=R\$800$. Qual é a taxa de juros embutida nesse título?
+
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRjTxdjUogiIT9iTClOqwdPiEPwIO39-zijEaE-LKEdp4Hg518Vnq2b9PWyognB6AG8WPPU6JdBDdv1/pubhtml?gid=784515563&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+
+A frequência de incidência da TIR calculada é igual ao passo temporal na sequência de fluxo de caixa. Então a rentabilidade é $9.392\%$ ao semestre, que é equivalente a $19.67\%$ ao ano.
+
+Chamamos essa taxa de *yield to maturity* porque é o retorno médio obtido pelo detentor do título, que leva esse título até o vencimento (não vende antecipadamente no mercado secundário). 
+
+:::
+:::
+
+::: {.callout-note title="Critério da taxa interna de retorno"}
+
+  Quando existe, taxa interna de retorno (TIR) é a maior taxa de custo de capital para o qual um projeto de investimento é viável. Chame a TIR de $r^*$.
+  
+  * Se o custo de capital $r$ é superior à TIR $r^*$, então o VPL do projeto é negativo e ele não deve ser efetuado.
+  * Se o custo de capital $r$ é inferior à TIR $r^*$, então o VPL do projeto é positivo e ele pode ser efetuado.
+  
+  A TIR não é apropriada pra a escolha entre dois projetos de investimento mutuamente exclusivos. 
+:::
+
+#### Limitações da TIR {.unnumbered}
+
+A TIR é uma medida bastante atraente porque apenas usando as informações dos fluxos de caixa, obtemos uma medida do quão rentável é um projeto de investimento particular. Comparando com o VPL, a TIR não requer uma taxa de desconto préviamente especificada para ser calculada.
+
+::: {.callout-note title="Unicidade da taxa interna de retorno"}
+A TIR é a solução para a seguinte equação polinomial:
+
+$$\begin{align*}
+FC_0 + \frac{FC_1}{1+r^*} + \frac{FC_2}{(1+r^*)^2} + \cdots + \frac{FC_T}{(1+r^*)^n} = 0. 
+\end{align*}$$
+
+Uma equação polinomial de grau $n$ tem sempre $n$ raízes. Em geral essas raízes podem ser números complexos e não precisam se repetir. 
+
+As duas condições abaixo garantem que existe apenas uma solução real $r^*$ (vão existir raízes complexas, que vamos ignorar), e que essa soluçaõ real é positiva.
+
+1. Existe apenas uma mudança no sinal dos fluxos de caixa.
+Essa condição garante que existe apenas uma solução real. Na grande maioria das nossas aplicações essa mudança ocorre do primeiro para o segundo fluxo de caixa. Isto é, $FC_0<0$ e $FC_t>0$, $t=1,\dots,n$; ou $FC_0>0$ e $FC_t<0$, $t=1,\dots,n$.
+
+2. Assumindo que a mundança de sinal acontece entre $t=0$ e $t=1$, o valor bruto (não descontado) dos fluxos de caixa acumulados entre $t=1$ e $t=n$ são maiores do que $FC_0$, em módulo. Ou seja,
+$$|FC_0|<\left|\sum^n_{t=1}FC_t\right|.$$
+Essa condição vai garantir que a TIR é uma taxa positiva. Perceba que se $FC_0 + \sum^n_{t=1}FC_t = 0$, então $r^*=0$.
+
+Essas condições são corolários de um resultado mais geral conhecido como [Regra dos sinais de Descartes](https://en.wikipedia.org/wiki/Descartes%27_rule_of_signs).
+:::
+
+::: {.callout-tip title="@exm-tir-3 Cálculo da TIR no ***R***" appearance="minimal" collapse="true"}
+::: {#exm-tir-3}
+
+```{r}
+SFC_1 = c(100, 10, 10, 20, 30, -45)
+polyroot(SFC_1)
+tir = function(SFC){
+  
+}
+```
+:::
+:::
+
+## Exercícios {#sec-exercicios02}
+
+### @sec-juros Juros e taxa de juros {.unnumbered}
+
+### @sec-capitalizacaoedesconto Capitalização e desconto {.unnumbered}
+
+### @sec-regimescapitalizacao Desconto e capitalização em múltiplos períodos {.unnumbered}
+
+::: {#exr-sec-regimescapitalizacao-1}
+Verifique as fórmulas de capitalização e desconto em múltiplos períodos (com taxa de juros constante) descritas nas [@eq-eqvf-taxaconstante] e [@eq-eqvp-taxaconstante], com base na fórmula para um período descrita na [@eq-eqvp].  
+:::
+
+
+::: {#exr-sec-regimescapitalizacao-2}
+Se $S_t$ é o valor do seu capital no período $t$ e $r$ é a taxa de juros, calcule o que se pede.
+
+  a. Se $S_0=\$100$, e $r=5\%$ ao período, qual o valor de $S_3$? <abbr title="$115.76">[R]</abbr>
+  a. Se $S_0=\$100$, e $r=1\%$ ao período, qual o valor de $S_{12}$? <abbr title="$112.68">[R]</abbr>
+  a. Se $S_0=\$250$ e $r=10\%$ ao período, qual o valor de $S_{10}$? <abbr title="$648.44">[R]</abbr>
+  a. Se $S_{12}=\$1000$, e $r=1\%$ ao período, qual o valor de $S_0$? <abbr title="$887.45">[R]</abbr>
+  a. Se $S_5=\$1500$, e $r=5\%$ ao período, qual o valor de $S_2$? <abbr title="$1295.76">[R]</abbr>
+:::
+
+::: {#exr-sec-regimescapitalizacao-3}
+Hoje vence um título de desconto zero-cupom com valor de face $VF=\$1000$ comprado há exatos $5$ anos. Se a taxa de juros embutida no título no momento da compra era $7.5\%$ ao ano, qual foi o preço unitário $PU$ pago? <abbr title="$696.56">[R]</abbr>
+:::
+
+::: {#exr-sec-regimescapitalizacao-4}
+```{r echo=FALSE}
+rm(list=ls())
+ans.a = (log(2)/log(1+.08)) |> round(3)
+ans.b = (log(3)/log(1+.08)) |> round(3)
+ans.c = (log(5)/log(1+.08)) |> round(3)
+ans.d = (log(10)/log(1+.08)) |> round(3)
+```
+
+Você acabou de empenhar seu capital inicial de $S_0=\$5000$ em um investimento que te rende uma taxa de $r=8\%$ ao período. 
+
+  a. Quantos períodos são necessários para que o saldo do investimento exceda $2$ vezes o capital inicial? <abbr title="`r ans.a`">[R]</abbr>
+  a. Quantos períodos são necessários para que o saldo do investimento exceda $3$ vezes o capital inicial? <abbr title="`r ans.b`">[R]</abbr>
+  a. Quantos períodos são necessários para que o saldo do investimento exceda $5$ vezes o capital inicial? <abbr title="`r ans.c`">[R]</abbr>
+  a. Quantos períodos são necessários para que o saldo do investimento exceda $10$ vezes o capital inicial? <abbr title="`r ans.d`">[R]</abbr>
+  a. Quantos períodos são necessários para que o saldo do investimento exceda $K$ vezes o capital inicial?
+  a. O valor do capital inicial tem alguma influência sobre as respostas dos itens anteriores? O que podemos concluir da diferença entre as respostas dos itens anteriores?
+:::
+
+::: {#exr-sec-regimescapitalizacao-5}
+Um mesmo saldo inicial de $S_0=\$1000$ é capitalizado ambos pelo regime composto e simples, com a mesma taxa de juros de $10\%$ ao ano. Quantos períodos são necessários para que o valor desse saldo capitalizado pelo regime composto exceda duas vezes o valor capitalizado pelo regime simples? 
+:::
+
+::: {#exr-sec-regimescapitalizacao-6}
+
+:::
+
+### @sec-transformacaotaxas Transformação de frequência e taxas equivalentes {.unnumbered}
+
+::: {#exr-sec-transformacaotaxas-1}
+Para responder às perguntas abaixo, considere as convenções
+
+  * 30 dias em 1 mês (dias corridos),
+  * 365 dias em 1 ano (dias corridos),
+  * 52 semanas em 1 ano,
+  * 252 dias úteis em 1 ano (taxa *over*),
+  * 22 dias úteis em 1 mês (taxa *over*).
+
+ a. Se $r=10\%$ ao semestre, qual a taxa equivalente com incidência a cada quatro meses? <abbr title="6.56%">[R]</abbr>
+ a. Se $r=15\%$ ao ano, qual a taxa equivalente com incidência a cada um ano e meio? <abbr title="23.32%">[R]</abbr>
+ a. Se $r=5\%$ ao semestre, qual a taxa equivalente com incidência semanal? <abbr title="0.1878%">[R]</abbr>
+ a. Se $r=25\%$ a cada dois anos e meio, qual a taxa equivalente com incidência mensal? <abbr title="0.7466%">[R]</abbr>
+ a. Se $r=0.1\%$ ao dia útil, qual a taxa *over* equivalente anual? <abbr title="28.64%">[R]</abbr>
+ a. Se $r=15\%$ ao ano *over*, qual a taxa equivalente diária? <abbr title="0.0555%">[R]</abbr>
+:::
+
+::: {#exr-sec-transformacaotaxas-2}
+Os retornos mensais de um portfólio de ativos financeiros está descrito na tabela abaixo.
+```{r echo=FALSE}
+n = 12
+r_vec = rnorm(n, mean=1) |> round(4)
+ans.a = (prod(1+r_vec/100)-1) |> round(4)
+ans.b = (prod(1+r_vec/100)^(1/12)-1) |> round(4)
+ans.c = (prod(1+r_vec[1:6]/100)-1) |> round(4) 
+ans.d = (prod(1+r_vec[7:12]/100)-1) |> round(4)
+ans.e = (prod(1+r_vec/100)^(1/2)-1) |> round(4)
+```
+| $t$ (meses) | $r_t$           |
+|-------------|-----------------|
+|           1 | `r r_vec[1]`\%  |
+|           2 | `r r_vec[2]`\%  |
+|           3 | `r r_vec[3]`\%  |
+|           4 | `r r_vec[4]`\%  |
+|           5 | `r r_vec[5]`\%  |
+|           6 | `r r_vec[6]`\%  |
+|           7 | `r r_vec[7]`\%  |
+|           8 | `r r_vec[8]`\%  |
+|           9 | `r r_vec[9]`\%  |
+|          10 | `r r_vec[10]`\% |
+|          11 | `r r_vec[11]`\% |
+|          12 | `r r_vec[12]`\% |
+
+Responda ao que se pede.
+
+  a. Qual o retorno anual acumulado? <abbr title="`r 100*ans.a`%">[R]</abbr>
+  a. Qual o retorno médio mensal? <abbr title="`r 100*ans.b`%">[R]</abbr>
+  a. Qual o retorno médio do primeiro semestre? <abbr title="`r 100*ans.c`%">[R]</abbr>
+  a. Qual o retorno médio do segundo semestre? <abbr title="`r 100*ans.d`%">[R]</abbr>
+  a. Qual o retorno médio semestral? <abbr title="`r 100*ans.e`%">[R]</abbr>
+:::
+
+::: {#exr-sec-transformacaotaxas-3}
+
+Um saldo de $S_0=\$1000$ capitalizado pelo regime simples a uma taxa de $r^s=1\%$ ao mês tem valor $S_{12}=\$1120$ após um ano. Qual é a taxa de juros mensal (no regime composto) que levaria ao mesmo valor $\$1120$ ao final do ano?  
+
+:::
+
+### @sec-inflacao Inflação e retorno real {.unnumbered}
+
+::: {#exr-sec-inflacao-1}
+```{r, echo=FALSE}
+rm(list=ls())
+VNA.0=runif(1,min = 2345, max=6543) |> round(digits=6) 
+dut.0 = c(252:728) |> sample(1)
+# Parte I
+Tx.contratada.0 = runif(1, min=10, max=15.5) %>% round(digits=2)
+#
+#A * Você adquiriu uma unidade de NTN-B, com vencimento em 17/08/2026. Qual preço unitário que você pagou no título hoje?
+a.ans = VNA.0/(1+Tx.contratada.0/100)^(dut.0/252)
+#B * Qual a cotação do título? (Só para esse item, a resposta deve estar expressa em porcentagem)
+b.ans = 100*(1/(1+Tx.contratada.0/100)^(dut.0/252))
+
+# Parte II
+dias.passados = c(100:150) %>% sample(1)
+pinf.media = runif(1, min=5, max=10) %>% round(digits=2)
+
+# * Qual foi a taxa de inflação anual (base 252) média acumulada no período?
+VNA.1 = VNA.0*(1+pinf.media/100)^(dias.passados/252)
+
+c.ans = (VNA.1/VNA.0)^(252/dias.passados)-1
+
+Tx.contratada.1 = Tx.contratada.0*1.25
+# * Qual é a taxa contratada implícita nesse título hoje (lembre-se que a taxa é expressa na frequência anual, com ano base de 252 dias úteis)?
+d.ans = Tx.contratada.1/100
+Cotacao.1 = 100/(1+Tx.contratada.1/100)^((dut.0-dias.passados)/252)
+
+# * Qual seria o preço de venda da NTN-B com vencimento em 15/08/2026 no mercado secundário passados os `r dias.passados` dias úteis?
+e.ans = VNA.1*Cotacao.1/100
+
+# * Imagine que você vendeu antecipadamente sua unidade da NTN-B Principal no mercado secundário pelo preço unitário calculado anteriormente. Qual foi seu retorno real médio realizado calculado em termos anuais?
+retorno.nominal.ano = (e.ans/a.ans)^(252/dias.passados)-1
+retorno.real.ano = (1+retorno.nominal.ano)/(1+c.ans)-1 
+f.ans = retorno.real.ano
+```
+
+A [NTN-B Principal](https://www.tesourodireto.com.br/lumis/portal/file/fileDownload.jsp?fileId=8A94D4988608850F018660E32BE60FE9) (ou Tesouro IPCA<sup>+</sup>) é um título pós-fixado negociado pelo Tesouro brasileiro que não possui pagamentos de cupom. Esse título oferece ao investidor retornos retornos dados pela variação realizada do IPCA, mais uma porção prefixada, que é determinada no momento da compra do título pela "taxa contratada" (sempre expressa em termos anuais, com 252 dias úteis). Você está considerando investir em títulos desse tipo.
+
+O valor de face das NTN-Bs é corrigido periodicamente pela variação do IPCA, e por isso costuma ser chamado "Valor Nominal Atualizado" (VNA). Checando a página da [ANBIMA](https://www.anbima.com.br/pt_br/informar/valor-nominal-atualizado.htm), você observa que atualmente o VNA das NTN-B é R\$`r VNA.0`.
+
+Hoje você pagaria por uma unidade do título:
+
+$$
+\begin{align}
+  \text{PU}(t) = \text{VNA}(t) \times \left(\frac{1}{1 + \text{taxa contratada}(t)}\right)^{\frac{\text{dut}}{252}},
+\end{align}
+$$
+
+onde $\text{dut}$ representa o número de dias úteis até o vencimento do título. No contexto desses títulos, é costume chamar o fator que multiplica o $\text{VNA}$ de "Cotação". Que expressa em porcentagem fica:
+
+
+$$
+\begin{align}
+  \text{Cotação}\% = 100 \times \left(\frac{1}{1 + \text{taxa contratada}(t)}\right)^{\frac{\text{dut}}{252}}.
+\end{align}
+$$
+
+Considere que a taxa contratada (na porção préfixada da remuneração) oferecida hoje é de `r Tx.contratada.0`\% ao ano. Faltam exatamente `r dut.0` dias úteis até o vencimento do título, em 15/08/2026. 
+
+  a. Você adquiriu uma unidade de NTN-B Principal, com vencimento em 15/08/2026. Qual preço unitário que você pagou no título hoje? <abbr title="R$`r a.ans`">[R]</abbr>
+  a. Qual a cotação do título? <abbr title="`r b.ans`%">[R]</abbr>
+
+Passados `r dias.passados` dias úteis da compra do título, o VNA agora é R\$`r VNA.1`, e a cotação atual é `r Cotacao.1`%. 
+
+  c. Qual foi a taxa de inflação anual (base 252) média acumulada no período? <abbr title="`r 100*c.ans`%">[R]</abbr>
+  c. Qual é a taxa contratada implícita nesse título hoje (lembre-se que a taxa é expressa na frequência anual, com ano base de 252 dias úteis)? <abbr title="`r 100*d.ans`%">[R]</abbr>
+  c. Qual seria o preço de venda da NTN-B Principal com vencimento em 15/08/2026 no mercado secundário hoje, depois de passados os `r dias.passados` dias úteis? <abbr title="R$`r e.ans`">[R]</abbr>
+  c. Imagine que você vendeu antecipadamente sua unidade da NTN-B Principal no mercado secundário pelo preço unitário calculado anteriormente. Qual foi seu retorno real médio realizado calculado em termos anuais? <abbr title="`r 100*f.ans`%">[R]</abbr>
+:::
+
+### @sec-sequenciasfluxosdecaixa Sequências de fluxos de caixa {.unnumbered}
+
+### @sec-vpl Valor presente líquido (VPL) {.unnumbered}
+
+::: {#exr-sec-vpl-1}
+```{r, echo=FALSE}
+rm(list=ls())
+r = 0.075
+```
+
+A tabela abaixo descreve os fluxos de caixa previstos para diferentes projetos de investimento. O custo de capital relevante é $r=7.5\%$ ao ano.
+
+```{r, echo=FALSE}
+
+```
+
+  a. Calcule o valor presente líquido (VPL) de cada um dos projetos de investimento. Determine quais são economicamente viáveis.
+  a. Se você tivesse que escolher apenas um dos projetos para executar, qual seria?
+
+:::
+
+### @sec-tir Taxa interna de retorno (TIR) {.unnumbered}
+
+::: {#exr-sec-tir-1}
+
+```{r, echo=FALSE}
+irr = function(CFs){
+  # Compute the internal rate of return of a regular cash flow. 
+  raizes = polyroot(CFs)
+  raizes.reais = Re(raizes[abs(Im(raizes))<=10e-5])
+  raiz.positiva.real = raizes.reais[raizes.reais>0]
+  taxa.interna.retorno = 1/raiz.positiva.real-1
+  return(taxa.interna.retorno)
+}
+
+c_ano = 0.1
+c_sem = ((1+c_ano)^(1/2)-1) %>% round(digits=5)
+FV=1000
+
+num_CFs_minus1 = 6 
+du_ate_prox_cupom = 252/2-1
+y_ano = .15 #seq(from=.1,to=0.15,by=0.01) %>% sample(1) 
+
+DUs = du_ate_prox_cupom+(1:num_CFs_minus1)*(252/2)
+DUs = c(du_ate_prox_cupom, DUs)
+PMT = c_sem*FV
+CFs = rep(PMT,num_CFs_minus1)
+CFs = c(CFs, FV+PMT)
+
+
+
+PVs = CFs/(1+y_ano)^(DUs/252)
+PU = sum(PVs) 
+D = (sum(DUs*(PVs/PU))/252) %>% round(digits=2)
+
+Aliquota.IR = c(.225, .175, .175, .175, .15, .15, .15)
+Base.IR = c(rep(PMT,num_CFs_minus1), FV+PMT-PU)
+Cupons.liq = rep(PMT,num_CFs_minus1+1)*(1-Aliquota.IR)
+
+df = data.frame(dut=DUs,CFs=CFs,IR=100*Aliquota.IR)
+CFs.liq = CFs - Aliquota.IR * Base.IR
+
+
+
+y.liq.sem = irr(c(-PU,CFs.liq))
+y.liq.ano = (1+y.liq.sem)^2-1
+
+
+y2_ano = (y_ano*(1.25)) %>% round(digits=4)
+
+dPP = ((-D/(1+y_ano))*(y2_ano-y_ano)) %>% round(digits=4)
+```
+
+
+As NTN-F (Notas do Tesouro Nacional série F) são títulos com rentabilidade prefixada emitidos pelo Tesouro brasileiro que pagam juros semestrais. O valor de face das NTN-Fs é R\$1.000,00, e a taxa de cupom é 10\% ao ano.
+
+Os cupons são pagos dia primeiro de janeiro (01/01) e primeiro de julho (01/07) de cada ano até o vencimento. O valor do cupom semestral é calculado pela convenção composta; isso quer dizer que a cada semestre, $((1+10\%)^{1/2}-1)=4{,}881\%$ do valor de face são pagos ao detentor do título.
+
+O imposto de renda sobre rendimentos auferidos de títulos do Tesouro (e a maioria dos ativos de renda fixa brasileiros) incide sobre pagamentos de cupom e ganhos de capital brutos no momento do vencimento ou venda antecipada do título.  A alíquota decresce conforme passa o tempo desde a aquisição do título.
+
+|Dias corridos | Alíquota IR(%)|
+|--------------|------------------|
+|Até 180 | 22,5%|
+|181 a 360 | 20,0%|
+|361 a 720 | 17,5%|
+|Acima de 720 | 15,0%|
+
+Você está avaliando adquirir uma unidade de NTN-F. Faltam `r du_ate_prox_cupom` dias úteis até o próximo pagamento de cupom, e a data de vencimento é daqui a `r max(DUs)` dias úteis. A estrutura de fluxos de caixa desse título está representada na tabela abaixo.
+
+```{r table, echo=FALSE}
+kable(df, align="ccc", format.args=list(decimal.mark=","), col.names=c("Dias Úteis até o Pagamento", "Valor Bruto do Pagamento (R$)", "Alíquota IR (%)"))
+```
+
+A rentabilidade anual (o *yield to maturity*) bruta implícita nesse título hoje é de `r 100*y_ano`\% ao ano.
+
+  a. Qual é o preço unitário desse título hoje?
+  a. Qual é a soma dos valores dos pagamentos de cupom líquidos de impostos?
+  a. Qual é a rentabilidade anual desse título líquida de impostos?
+
+:::
+
+## Aplicações e extensões {#sec-aplicacoes02}
+
+### Amortização de financiamentos: tabela SAC
+
+### Amortização de financiamentos: tabela Price
+
+### Juros contínuos
+
+### Desconto bancário

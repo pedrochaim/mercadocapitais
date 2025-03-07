@@ -1,0 +1,27 @@
+project:
+  type: book
+  output-dir: docs
+  
+book:
+  title: "Mercado de Capitais"
+  author: "Pedro Chaim"
+  date: "2025"
+  cover-image: images/capa.png
+  page-navigation: false
+  chapters:
+    - index.qmd
+    - 02_MatematicaFinanceira.qmd
+
+callout-appearance: minimal
+
+bibliography: references.bib
+
+format:
+  html: 
+    theme: cosmo
+    cover-image: capa.png
+    code-link: true
+    citations-hover: false
+    footnotes-hover: false
+    crossrefs-hover: false
+number-sections: true
