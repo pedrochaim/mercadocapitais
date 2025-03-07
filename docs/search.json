@@ -1,0 +1,22 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Mercado de Capitais",
+    "section": "",
+    "text": "Welcome\nThis is the website for “Hands-On Programming with R”. This book will teach you how to program in R, with hands-on examples. I wrote it for non-programmers to provide a friendly introduction to the R language. You’ll learn how to load data, assemble and disassemble data objects, navigate R’s environment system, write your own functions, and use all of R’s programming tools. Throughout the book, you’ll use your newfound skills to solve practical data science problems.\nIf you are already comfortable with R, and would like to focus instead how to analyze data using R’s Tidyverse packages, I recommend R for Data Science, a book that I co-authored with Hadley Wickham.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "Mercado de Capitais",
+    "section": "",
+    "text": "aaa",
+    "crumbs": [
+      "Welcome"
+    ]
+  }
+]
