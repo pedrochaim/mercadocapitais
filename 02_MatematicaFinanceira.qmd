@@ -70,13 +70,11 @@ VF &= VP(1+r)
 
 Nesta apresentação eu uso os termos "taxa de juros", "taxa de retorno", e "taxa de desconto", de forma intercambiável. Todos esses conceitos se referem ao $r$ em [@eq-juros], mas são ligeiramente distintos. 
 
-Juros são o pagamento que o tomador faz ao credor pelo direito de usufruir do principal por um período de tempo pre-éstabelecido em um empréstimo. 
+Juros são o pagamento que o tomador faz ao credor pelo direito de usufruir do principal por um período de tempo pré-estabelecido em um empréstimo. Só faz sentido falar em taxa de juros quando existe um contrato entre duas partes e a transferência de recursos do emissor ao detentor é bem definida no momento que é firmado o contrato. Chamamos esse tipo de contrato de dívida de ativos de renda fixa. A quantia paga ao detentor do ativo pode ser completamente definida no momento da emissão (ativos prefixados) ou pode depender da realização de um índice amplamente acompanhado (ativos pós-fixados).
 
-Não faz sentido falar de taxa de "juros" quando não há um compromisso explicito de transferência de recursos entre duas partes. 
+Em casos nos quais o ativo é uma cota de propriedade em uma empresa, como por exemplo no caso de ações de empresas de capital aberto, não existe um compromisso explícito de remuneração do capital empenhado. Como o detentor é parte dono da empresa, a remuneração do capital depende do resultado operacional dos investimentos e das estratégias de crescimento da empresa. Dizemos que são ativos de renda variável. Nesse caso não faz sentido falar em taxa de juros (ninguém te deve dinheiro), então falamos em taxa de retorno, que é um conceito mais genérico.
 
-Por exemplo, quando você investe em um negócio próprio e tem lucro   
-
-Quando falamos em taxa de "desconto" 
+Quando falamos em taxa de "desconto" estamos aludindo ao custo de oportunidade de realizar certo investimento. É relacionado ao retorno que obteríamos com o melhor projeto de investimento alternativo (com mesmo perfil de risco).
 
 :::
 
