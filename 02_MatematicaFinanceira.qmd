@@ -68,7 +68,7 @@ VF &= VP(1+r)
 
 ::: {.callout-note title="Taxa de juros, taxa de retorno, e taxa de desconto"}
 
-Nesta apresentação eu uso os termos "taxa de juros", "taxa de retorno", e "taxa de desconto", de forma intercambiável. Todos esses conceitos se referem ao $r$ em [@eq-juros], mas são ligeiramente distintos. 
+Nesta apresentação eu uso os termos "taxa de juros", "taxa de retorno", e "taxa de desconto" de forma intercambiável. Todos esses conceitos se referem ao $r$ em [@eq-juros], mas são ligeiramente distintos, sendo apropriados em contextos diferentes. 
 
 Juros são o pagamento que o tomador faz ao credor pelo direito de usufruir do principal por um período de tempo pré-estabelecido em um empréstimo. Só faz sentido falar em taxa de juros quando existe um contrato entre duas partes e a transferência de recursos do emissor ao detentor é bem definida no momento que é firmado o contrato. Chamamos esse tipo de contrato de dívida de ativos de renda fixa. A quantia paga ao detentor do ativo pode ser completamente definida no momento da emissão (ativos prefixados) ou pode depender da realização de um índice amplamente acompanhado (ativos pós-fixados).
 
@@ -77,7 +77,6 @@ Em casos nos quais o ativo é uma cota de propriedade em uma empresa, como por e
 Quando falamos em taxa de desconto estamos aludindo ao custo de oportunidade de realizar certo investimento. É relacionado ao retorno que obteríamos com o melhor projeto de investimento alternativo (com mesmo perfil de risco).
 
 :::
-
 
 ## Capitalização e desconto {#sec-capitalizacaoedesconto}
 
@@ -712,7 +711,7 @@ Repare que se tivessemos descontado a inflação média do retorno anual médio,
 :::
 :::
 
-::: {.callout-warning title="Exercícios" collapse="true"}
+::: {.callout-warning title="Exercícios de fixação" collapse="true"}
 
 
 
@@ -729,7 +728,7 @@ Nada impede de hajam fluxos de caixa intermediários durante a vida da operaçã
 Tome uma sequência de fluxos de caixa igualmente espaçados no tempo $SFC=\{FC_0, FC_1, FC_2, \dots, FC_T\}$. Note que o primeiro fluxo acontece hoje em $t=0$ e o último no vencimento em $t=T$, de modo que existem $T+1$ fluxos de caixa. Considerando uma taxa de juros constante $r$ (cuja frequência de incidência é igual ao passo temporal na sequência de fluxos de caixa), o valor presente dessa sequência de fluxos de caixa é
 
 $$\begin{align}
-    PV(\{FC_t\}^T_{t=0},r) &= \sum^T_{t=0} \frac{CF_t}{(1+r)^t},\\
+    PV(\{FC_t\}^T_{t=0},r) &= \sum^T_{t=0} \frac{FC_t}{(1+r)^t},\\
     &=\frac{FC_0}{(1+r)^0} + \frac{FC_1}{(1+r)^1} + \cdots + \frac{FC_T}{(1+r)^T}.
 \end{align}$$
 
@@ -756,7 +755,7 @@ $$\begin{align*} VP(\{FC_2\},r,t) &= \frac{FC_2}{(1+r)^2} \\
 VP(\{\$1000\},0.12,2) &= \frac{\$1000}{(1+0.12)^2} = \$797.19
 \end{align*}$$
 O valor presente da sequência de fluxos de caixa $\{\$500, \$1000\}$, descontado pela taxa constante de $r=0.12$ ao período, é a soma dos valores presentes dos fluxos de caixa individuais, descontados durante o horizonte apropriado.
-$$\begin{align*} VP(\{FC_1,FC_2\},r) &= VP(\{FC_1\},r,t) + VP(\{FC_2\},r,t) \\
+$$\begin{align*} VP(\{FC_1,FC_2\},r) &= VP(\{FC_1\},r,1) + VP(\{FC_2\},r,2) \\
 &= \frac{FC_1}{1+r} + \frac{FC_2}{(1+r)^2} \\
 VP(\{\$500,\$1000\},0.12)&= \frac{\$500}{1+0.12} + \frac{\$1000}{(1+0.12)^2} = \$1243.62
 \end{align*}$$

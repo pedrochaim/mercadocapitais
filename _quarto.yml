@@ -13,7 +13,6 @@ book:
   chapters:
     - index.qmd
     - 02_MatematicaFinanceira.qmd
-    - 03_MercadosFinanceiros.qmd
 
 callout-appearance: minimal
 
