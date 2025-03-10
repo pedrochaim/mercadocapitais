@@ -1,5 +1,5 @@
 ---
-title: "CNM7307 - Mercado de Capitais I"
+title: "Introdução"
 ---
 
 Notas de aula e exercícios para a disciplina CNM7307 - Mercado de Capitais I, ministrada no Departamento de Economia e Relações Internacionais da Universidade Federal de Santa Catarina.
