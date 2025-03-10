@@ -7,10 +7,13 @@ book:
   author: "Pedro Chaim"
   date: "2025"
   cover-image: images/capa.png
-  page-navigation: false
+  page-navigation: true
+  navbar: 
+    collapse: true
   chapters:
     - index.qmd
     - 02_MatematicaFinanceira.qmd
+    - 03_MercadosFinanceiros.qmd
 
 callout-appearance: minimal
 

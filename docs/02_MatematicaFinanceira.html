@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>1&nbsp; Matemática Financeira – Mercado de Capitais</title>
+
+
+<title>2&nbsp; Matemática Financeira – Mercado de Capitais</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -53,6 +56,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
+
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -60,6 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./03_MercadosFinanceiros.html" rel="next">
+<link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -68,12 +74,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -94,7 +101,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -120,112 +132,119 @@ window.Quarto = {
   typesetMath
 };
 </script>
+
 </head>
-<body class="nav-sidebar floating">
+
+<body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Mercado de Capitais</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02_MatematicaFinanceira.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Matemática Financeira</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02_MatematicaFinanceira.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Matemática Financeira</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
     </div>
-  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">Mercado de Capitais</a> 
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-<li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Welcome</span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcomm</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02_MatematicaFinanceira.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Matemática Financeira</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Matemática Financeira</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_MercadosFinanceiros.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mercados Financeiros</span></span></a>
   </div>
 </li>
     </ul>
-</div>
-</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#sec-juros" id="toc-sec-juros" class="nav-link active" data-scroll-target="#sec-juros"><span class="header-section-number">1.1</span> Juros e taxa de juros</a></li>
-  <li><a href="#sec-capitalizacaoedesconto" id="toc-sec-capitalizacaoedesconto" class="nav-link" data-scroll-target="#sec-capitalizacaoedesconto"><span class="header-section-number">1.2</span> Capitalização e desconto</a></li>
-  <li>
-<a href="#sec-regimescapitalizacao" id="toc-sec-regimescapitalizacao" class="nav-link" data-scroll-target="#sec-regimescapitalizacao"><span class="header-section-number">1.3</span> Desconto e capitalização em múltiplos períodos</a>
+  <li><a href="#sec-juros" id="toc-sec-juros" class="nav-link active" data-scroll-target="#sec-juros"><span class="header-section-number">2.1</span> Juros e taxa de juros</a></li>
+  <li><a href="#sec-capitalizacaoedesconto" id="toc-sec-capitalizacaoedesconto" class="nav-link" data-scroll-target="#sec-capitalizacaoedesconto"><span class="header-section-number">2.2</span> Capitalização e desconto</a></li>
+  <li><a href="#sec-regimescapitalizacao" id="toc-sec-regimescapitalizacao" class="nav-link" data-scroll-target="#sec-regimescapitalizacao"><span class="header-section-number">2.3</span> Desconto e capitalização em múltiplos períodos</a>
   <ul class="collapse">
-<li><a href="#regime-composto" id="toc-regime-composto" class="nav-link" data-scroll-target="#regime-composto"><span class="header-section-number">1.3.1</span> Regime composto</a></li>
-  <li><a href="#m%C3%BAltiplas-taxas-de-juro-durante-a-opera%C3%A7%C3%A3o" id="toc-múltiplas-taxas-de-juro-durante-a-operação" class="nav-link" data-scroll-target="#m%C3%BAltiplas-taxas-de-juro-durante-a-opera%C3%A7%C3%A3o"><span class="header-section-number">1.3.2</span> Múltiplas taxas de juro durante a operação</a></li>
-  <li><a href="#regime-simples" id="toc-regime-simples" class="nav-link" data-scroll-target="#regime-simples"><span class="header-section-number">1.3.3</span> Regime simples</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#sec-transformacaotaxas" id="toc-sec-transformacaotaxas" class="nav-link" data-scroll-target="#sec-transformacaotaxas"><span class="header-section-number">1.4</span> Transformação de frequência e taxas equivalentes</a>
+  <li><a href="#regime-composto" id="toc-regime-composto" class="nav-link" data-scroll-target="#regime-composto"><span class="header-section-number">2.3.1</span> Regime composto</a></li>
+  <li><a href="#múltiplas-taxas-de-juro-durante-a-operação" id="toc-múltiplas-taxas-de-juro-durante-a-operação" class="nav-link" data-scroll-target="#múltiplas-taxas-de-juro-durante-a-operação"><span class="header-section-number">2.3.2</span> Múltiplas taxas de juro durante a operação</a></li>
+  <li><a href="#regime-simples" id="toc-regime-simples" class="nav-link" data-scroll-target="#regime-simples"><span class="header-section-number">2.3.3</span> Regime simples</a></li>
+  </ul></li>
+  <li><a href="#sec-transformacaotaxas" id="toc-sec-transformacaotaxas" class="nav-link" data-scroll-target="#sec-transformacaotaxas"><span class="header-section-number">2.4</span> Transformação de frequência e taxas equivalentes</a>
   <ul class="collapse">
-<li><a href="#taxa-de-juros-m%C3%A9dia" id="toc-taxa-de-juros-média" class="nav-link" data-scroll-target="#taxa-de-juros-m%C3%A9dia">Taxa de juros média</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#sec-inflacao" id="toc-sec-inflacao" class="nav-link" data-scroll-target="#sec-inflacao"><span class="header-section-number">1.5</span> Inflação e retorno real</a>
+  <li><a href="#taxas-médias" id="toc-taxas-médias" class="nav-link" data-scroll-target="#taxas-médias"><span class="header-section-number">2.4.1</span> Taxas médias</a></li>
+  </ul></li>
+  <li><a href="#sec-inflacao" id="toc-sec-inflacao" class="nav-link" data-scroll-target="#sec-inflacao"><span class="header-section-number">2.5</span> Inflação e retorno real</a>
   <ul class="collapse">
-<li><a href="#%C3%ADndices-de-pre%C3%A7o" id="toc-índices-de-preço" class="nav-link" data-scroll-target="#%C3%ADndices-de-pre%C3%A7o"><span class="header-section-number">1.5.1</span> Índices de preço</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#sec-sequenciasfluxosdecaixa" id="toc-sec-sequenciasfluxosdecaixa" class="nav-link" data-scroll-target="#sec-sequenciasfluxosdecaixa"><span class="header-section-number">1.6</span> Sequências de fluxos de caixa</a>
+  <li><a href="#índices-de-preço" id="toc-índices-de-preço" class="nav-link" data-scroll-target="#índices-de-preço"><span class="header-section-number">2.5.1</span> Índices de preço</a></li>
+  </ul></li>
+  <li><a href="#sec-sequenciasfluxosdecaixa" id="toc-sec-sequenciasfluxosdecaixa" class="nav-link" data-scroll-target="#sec-sequenciasfluxosdecaixa"><span class="header-section-number">2.6</span> Sequências de fluxos de caixa</a>
   <ul class="collapse">
-<li><a href="#sequ%C3%AAncias-de-fluxos-de-caixa-homog%C3%AAneos" id="toc-sequências-de-fluxos-de-caixa-homogêneos" class="nav-link" data-scroll-target="#sequ%C3%AAncias-de-fluxos-de-caixa-homog%C3%AAneos"><span class="header-section-number">1.6.1</span> Sequências de fluxos de caixa homogêneos</a></li>
-  </ul>
-</li>
-  <li><a href="#sec-vpl" id="toc-sec-vpl" class="nav-link" data-scroll-target="#sec-vpl"><span class="header-section-number">1.7</span> Valor presente líquido (VPL)</a></li>
-  <li><a href="#sec-tir" id="toc-sec-tir" class="nav-link" data-scroll-target="#sec-tir"><span class="header-section-number">1.8</span> Taxa interna de retorno (TIR)</a></li>
-  <li>
-<a href="#sec-exercicios02" id="toc-sec-exercicios02" class="nav-link" data-scroll-target="#sec-exercicios02"><span class="header-section-number">1.9</span> Exercícios</a>
+  <li><a href="#sequências-de-fluxos-de-caixa-homogêneos" id="toc-sequências-de-fluxos-de-caixa-homogêneos" class="nav-link" data-scroll-target="#sequências-de-fluxos-de-caixa-homogêneos"><span class="header-section-number">2.6.1</span> Sequências de fluxos de caixa homogêneos</a></li>
+  </ul></li>
+  <li><a href="#sec-vpl" id="toc-sec-vpl" class="nav-link" data-scroll-target="#sec-vpl"><span class="header-section-number">2.7</span> Valor presente líquido (VPL)</a></li>
+  <li><a href="#sec-tir" id="toc-sec-tir" class="nav-link" data-scroll-target="#sec-tir"><span class="header-section-number">2.8</span> Taxa interna de retorno (TIR)</a></li>
+  <li><a href="#sec-exercicios02" id="toc-sec-exercicios02" class="nav-link" data-scroll-target="#sec-exercicios02"><span class="header-section-number">2.9</span> Exercícios</a>
   <ul class="collapse">
-<li><a href="#sec-juros-juros-e-taxa-de-juros" id="toc-sec-juros-juros-e-taxa-de-juros" class="nav-link" data-scroll-target="#sec-juros-juros-e-taxa-de-juros"><span>Section 1.1</span> Juros e taxa de juros</a></li>
-  <li><a href="#sec-capitalizacaoedesconto-capitaliza%C3%A7%C3%A3o-e-desconto" id="toc-sec-capitalizacaoedesconto-capitalização-e-desconto" class="nav-link" data-scroll-target="#sec-capitalizacaoedesconto-capitaliza%C3%A7%C3%A3o-e-desconto"><span>Section 1.2</span> Capitalização e desconto</a></li>
-  <li><a href="#sec-regimescapitalizacao-desconto-e-capitaliza%C3%A7%C3%A3o-em-m%C3%BAltiplos-per%C3%ADodos" id="toc-sec-regimescapitalizacao-desconto-e-capitalização-em-múltiplos-períodos" class="nav-link" data-scroll-target="#sec-regimescapitalizacao-desconto-e-capitaliza%C3%A7%C3%A3o-em-m%C3%BAltiplos-per%C3%ADodos"><span>Section 1.3</span> Desconto e capitalização em múltiplos períodos</a></li>
-  <li><a href="#sec-transformacaotaxas-transforma%C3%A7%C3%A3o-de-frequ%C3%AAncia-e-taxas-equivalentes" id="toc-sec-transformacaotaxas-transformação-de-frequência-e-taxas-equivalentes" class="nav-link" data-scroll-target="#sec-transformacaotaxas-transforma%C3%A7%C3%A3o-de-frequ%C3%AAncia-e-taxas-equivalentes"><span>Section 1.4</span> Transformação de frequência e taxas equivalentes</a></li>
-  <li><a href="#sec-inflacao-infla%C3%A7%C3%A3o-e-retorno-real" id="toc-sec-inflacao-inflação-e-retorno-real" class="nav-link" data-scroll-target="#sec-inflacao-infla%C3%A7%C3%A3o-e-retorno-real"><span>Section 1.5</span> Inflação e retorno real</a></li>
-  <li><a href="#sec-sequenciasfluxosdecaixa-sequ%C3%AAncias-de-fluxos-de-caixa" id="toc-sec-sequenciasfluxosdecaixa-sequências-de-fluxos-de-caixa" class="nav-link" data-scroll-target="#sec-sequenciasfluxosdecaixa-sequ%C3%AAncias-de-fluxos-de-caixa"><span>Section 1.6</span> Sequências de fluxos de caixa</a></li>
-  <li><a href="#sec-vpl-valor-presente-l%C3%ADquido-vpl" id="toc-sec-vpl-valor-presente-líquido-vpl" class="nav-link" data-scroll-target="#sec-vpl-valor-presente-l%C3%ADquido-vpl"><span>Section 1.7</span> Valor presente líquido (VPL)</a></li>
-  <li><a href="#sec-tir-taxa-interna-de-retorno-tir" id="toc-sec-tir-taxa-interna-de-retorno-tir" class="nav-link" data-scroll-target="#sec-tir-taxa-interna-de-retorno-tir"><span>Section 1.8</span> Taxa interna de retorno (TIR)</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#sec-aplicacoes02" id="toc-sec-aplicacoes02" class="nav-link" data-scroll-target="#sec-aplicacoes02"><span class="header-section-number">1.10</span> Aplicações e extensões</a>
+  <li><a href="#sec-juros-juros-e-taxa-de-juros" id="toc-sec-juros-juros-e-taxa-de-juros" class="nav-link" data-scroll-target="#sec-juros-juros-e-taxa-de-juros"><span>Section 2.1</span> Juros e taxa de juros</a></li>
+  <li><a href="#sec-capitalizacaoedesconto-capitalização-e-desconto" id="toc-sec-capitalizacaoedesconto-capitalização-e-desconto" class="nav-link" data-scroll-target="#sec-capitalizacaoedesconto-capitalização-e-desconto"><span>Section 2.2</span> Capitalização e desconto</a></li>
+  <li><a href="#sec-regimescapitalizacao-desconto-e-capitalização-em-múltiplos-períodos" id="toc-sec-regimescapitalizacao-desconto-e-capitalização-em-múltiplos-períodos" class="nav-link" data-scroll-target="#sec-regimescapitalizacao-desconto-e-capitalização-em-múltiplos-períodos"><span>Section 2.3</span> Desconto e capitalização em múltiplos períodos</a></li>
+  <li><a href="#sec-transformacaotaxas-transformação-de-frequência-e-taxas-equivalentes" id="toc-sec-transformacaotaxas-transformação-de-frequência-e-taxas-equivalentes" class="nav-link" data-scroll-target="#sec-transformacaotaxas-transformação-de-frequência-e-taxas-equivalentes"><span>Section 2.4</span> Transformação de frequência e taxas equivalentes</a></li>
+  <li><a href="#sec-inflacao-inflação-e-retorno-real" id="toc-sec-inflacao-inflação-e-retorno-real" class="nav-link" data-scroll-target="#sec-inflacao-inflação-e-retorno-real"><span>Section 2.5</span> Inflação e retorno real</a></li>
+  <li><a href="#sec-sequenciasfluxosdecaixa-sequências-de-fluxos-de-caixa" id="toc-sec-sequenciasfluxosdecaixa-sequências-de-fluxos-de-caixa" class="nav-link" data-scroll-target="#sec-sequenciasfluxosdecaixa-sequências-de-fluxos-de-caixa"><span>Section 2.6</span> Sequências de fluxos de caixa</a></li>
+  <li><a href="#sec-vpl-valor-presente-líquido-vpl" id="toc-sec-vpl-valor-presente-líquido-vpl" class="nav-link" data-scroll-target="#sec-vpl-valor-presente-líquido-vpl"><span>Section 2.7</span> Valor presente líquido (VPL)</a></li>
+  <li><a href="#sec-tir-taxa-interna-de-retorno-tir" id="toc-sec-tir-taxa-interna-de-retorno-tir" class="nav-link" data-scroll-target="#sec-tir-taxa-interna-de-retorno-tir"><span>Section 2.8</span> Taxa interna de retorno (TIR)</a></li>
+  </ul></li>
+  <li><a href="#sec-aplicacoes02" id="toc-sec-aplicacoes02" class="nav-link" data-scroll-target="#sec-aplicacoes02"><span class="header-section-number">2.10</span> Aplicações e extensões</a>
   <ul class="collapse">
-<li><a href="#amortiza%C3%A7%C3%A3o-de-financiamentos-tabela-sac" id="toc-amortização-de-financiamentos-tabela-sac" class="nav-link" data-scroll-target="#amortiza%C3%A7%C3%A3o-de-financiamentos-tabela-sac"><span class="header-section-number">1.10.1</span> Amortização de financiamentos: tabela SAC</a></li>
-  <li><a href="#amortiza%C3%A7%C3%A3o-de-financiamentos-tabela-price" id="toc-amortização-de-financiamentos-tabela-price" class="nav-link" data-scroll-target="#amortiza%C3%A7%C3%A3o-de-financiamentos-tabela-price"><span class="header-section-number">1.10.2</span> Amortização de financiamentos: tabela Price</a></li>
-  <li><a href="#juros-cont%C3%ADnuos" id="toc-juros-contínuos" class="nav-link" data-scroll-target="#juros-cont%C3%ADnuos"><span class="header-section-number">1.10.3</span> Juros contínuos</a></li>
-  <li><a href="#desconto-banc%C3%A1rio" id="toc-desconto-bancário" class="nav-link" data-scroll-target="#desconto-banc%C3%A1rio"><span class="header-section-number">1.10.4</span> Desconto bancário</a></li>
+  <li><a href="#amortização-de-financiamentos-tabela-sac" id="toc-amortização-de-financiamentos-tabela-sac" class="nav-link" data-scroll-target="#amortização-de-financiamentos-tabela-sac"><span class="header-section-number">2.10.1</span> Amortização de financiamentos: tabela SAC</a></li>
+  <li><a href="#amortização-de-financiamentos-tabela-price" id="toc-amortização-de-financiamentos-tabela-price" class="nav-link" data-scroll-target="#amortização-de-financiamentos-tabela-price"><span class="header-section-number">2.10.2</span> Amortização de financiamentos: tabela Price</a></li>
+  <li><a href="#juros-contínuos" id="toc-juros-contínuos" class="nav-link" data-scroll-target="#juros-contínuos"><span class="header-section-number">2.10.3</span> Juros contínuos</a></li>
+  <li><a href="#desconto-bancário" id="toc-desconto-bancário" class="nav-link" data-scroll-target="#desconto-bancário"><span class="header-section-number">2.10.4</span> Desconto bancário</a></li>
+  </ul></li>
   </ul>
-</li>
-  </ul></nav>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title"><span id="sec-02" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Matemática Financeira</span></span></h1>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="cap-02" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Matemática Financeira</span></span></h1>
 </div>
 
 
@@ -239,7 +258,10 @@ window.Quarto = {
   
 
 
-</header><p>O que chamamos de matemática financeira é um conjunto de ferramentas que nos permitem comparar quantidades monetárias que existem em diferentes instantes de tempo.</p>
+</header>
+
+
+<p>O que chamamos de matemática financeira é um conjunto de ferramentas que nos permitem comparar quantidades monetárias que existem em diferentes instantes de tempo.</p>
 <p><span class="math display">\[ \text{Dinheiro Amanhã} = \text{Dinheiro hoje} + \text{Alguma coisa} \]</span></p>
 <p>Vamos começar com um exemplo bem simples no contexto de um empréstimo. Imagine que você tomou emprestado uma quantia <em>principal</em> de <span class="math inline">\(\$2500\)</span> pelo período de <span class="math inline">\(1\)</span> ano, e que ao final do ano deve o <em>montante</em> de <span class="math inline">\(\$3500\)</span>: os <span class="math inline">\(\$2500\)</span> originais, mais uma tarifa de <span class="math inline">\(\$1000\)</span>. Essa tarifa é o que chamamos de <em>juros</em>.</p>
 <p><span class="math display">\[ \begin{align}
@@ -259,8 +281,8 @@ Juros
 <p>Os juros (ou juro, o plural é opcional) são o preço do dinheiro no tempo. É o pagamento que o tomador de um empréstimo oferece ao credor do empréstimo pelo privilégio de usufruir dos recursos do principal, por um período de tempo pré-estabelecido.</p>
 </div>
 </div>
-<section id="sec-juros" class="level2" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="sec-juros">
-<span class="header-section-number">1.1</span> Juros e taxa de juros</h2>
+<section id="sec-juros" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="sec-juros"><span class="header-section-number">2.1</span> Juros e taxa de juros</h2>
 <p>Considere um outro empréstimo. Você toma um principal de <span class="math inline">\(\$1000\)</span>, e devolve um montante de <span class="math inline">\(\$1500\)</span> ao final do ano.</p>
 <p><span class="math display">\[ \begin{align*}
 \text{Montante} &amp;= \text{Principal} + \text{Juros} \\
@@ -290,12 +312,12 @@ Juros
 \text{Valor futuro} &amp;= \text{Valor presente} + \text{Juros} \\
 VF &amp;= VP + J
 \end{align*}\]</span></p>
-<p><span class="math display">\[\begin{align*}
+<p><span id="eq-juros"><span class="math display">\[\begin{align*}
 VF &amp;= VP + J \left(\frac{VP}{VP}\right) \\
 &amp;= VP + \left(\frac{J}{VP}\right)\cdot VP \\
 &amp;= VP + rVP \\
 VF &amp;= VP(1+r)
-\end{align*}\]</span></p>
+\end{align*} \tag{2.1}\]</span></span></p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Taxa de juros, taxa de retorno, e taxa de desconto">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -306,16 +328,19 @@ Taxa de juros, taxa de retorno, e taxa de desconto
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>Nesta apresentação eu uso os termos “taxa de juros”, “taxa de retorno”, e “taxa de desconto”, de forma intercambiável. Todos esses conceitos se referem ao <span class="math inline">\(r\)</span> em <a href="#eq-juros" class="quarto-xref">Equation&nbsp;<span>2.1</span></a>, mas são ligeiramente distintos.</p>
 <p>Juros são o pagamento que o tomador faz ao credor pelo direito de usufruir do principal por um período de tempo pre-éstabelecido em um empréstimo.</p>
-<p>Só faz sentido falar em taxa de juros no contexto de um contrato de dívida. Chamamos de ativos de renda fixa, contratos nos quais o emissor, em troca de uma quantia acordada, se compromete a</p>
-<p>A matemática financeira é aplicável em situações ma</p>
+<p>Não faz sentido falar de taxa de “juros” quando não há um compromisso explicito de transferência de recursos entre duas partes.</p>
+<p>Por exemplo, quando você investe em um negócio próprio e tem lucro</p>
+<p>Quando falamos em taxa de “desconto”</p>
 </div>
 </div>
-</section><section id="sec-capitalizacaoedesconto" class="level2" data-number="1.2"><h2 data-number="1.2" class="anchored" data-anchor-id="sec-capitalizacaoedesconto">
-<span class="header-section-number">1.2</span> Capitalização e desconto</h2>
+</section>
+<section id="sec-capitalizacaoedesconto" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="sec-capitalizacaoedesconto"><span class="header-section-number">2.2</span> Capitalização e desconto</h2>
 <p>Chegamos na equação principal de valor presente-valor futuro em um período:</p>
 <p><span id="eq-eqvp"><span class="math display">\[\begin{align} \text{Valor futuro} &amp;= \text{Valor presente}\cdot(1+\text{Taxa de juros}),\\ VF &amp;= VP(1+r), \\
-S_1 &amp;= S_0(1+r).\end{align}  \tag{1.1}\]</span></span></p>
+S_1 &amp;= S_0(1+r).\end{align}  \tag{2.2}\]</span></span></p>
 <ul>
 <li>O valor futuro <span class="math inline">\((VF, S_1)\)</span> é uma quantidade monetária, um fluxo de caixa, que se materializa em um período de tempo posterior <span class="math inline">\(t=1\)</span>.</li>
 <li>O valor presente <span class="math inline">\((VP, S_0)\)</span>é um fluxo de caixa que acontece no período inicial <span class="math inline">\(t=0\)</span>.</li>
@@ -342,11 +367,13 @@ VP &amp;= \frac{\$1500}{1+0.5}=\$1000.
 <p>Do ponto de vista do comprador do título, os fluxos de caixa são como os descritos na tabela abaixo.</p>
 <table class="table-striped table-hover caption-top table">
 <caption>Fluxos de caixa do comprador de um título de desconto</caption>
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th><span class="math inline">\(t\)</span></th>
 <th><span class="math inline">\(FC_t\)</span></th>
 <th><span class="math inline">\(FC_t\)</span></th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td>0</td>
@@ -368,32 +395,43 @@ VP &amp;= \frac{\$1500}{1+0.5}=\$1000.
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-diagrama-fluxo-de-caixa-1" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-diagrama-fluxo-de-caixa-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-diagrama-fluxo-de-caixa-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="02_MatematicaFinanceira_files/figure-html/fig-diagrama-fluxo-de-caixa-1-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diagrama-fluxo-de-caixa-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.1: Diagrama de fluxo de caixa
-</figcaption></figure>
+Figure&nbsp;2.1: Diagrama de fluxo de caixa
+</figcaption>
+</figure>
 </div>
 </div>
 </div>
-</section><section id="sec-regimescapitalizacao" class="level2" data-number="1.3"><h2 data-number="1.3" class="anchored" data-anchor-id="sec-regimescapitalizacao">
-<span class="header-section-number">1.3</span> Desconto e capitalização em múltiplos períodos</h2>
-<p>Nossos exemplos até agora trataram de situações nas quais a operação acontece em dois períodos.</p>
-<section id="regime-composto" class="level3" data-number="1.3.1"><h3 data-number="1.3.1" class="anchored" data-anchor-id="regime-composto">
-<span class="header-section-number">1.3.1</span> Regime composto</h3>
-<div id="exm-regime-composto-1" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1.1</strong></span> Imagine que você tomou emprestado <span class="math inline">\(\$1000\)</span>, pelo período de <span class="math inline">\(2\)</span> anos, e que a taxa de juros é <span class="math inline">\(10\%\)</span> ao ano. Quanto você deve devolver para o credor ao final dos <span class="math inline">\(2\)</span> anos?</p>
-</div>
-<p>O principal é <span class="math inline">\(\$1000\)</span> e a taxa de juros é <span class="math inline">\(10\%\)</span> ao ano, mas o montante deve ser quitado em dois anos. Uma forma natural de lidar com essa situação é desmembrar a operação toda em dois empréstimos de <span class="math inline">\(1\)</span> ano, e aplicar a equação <a href="#eq-eqvp" class="quarto-xref">Equation&nbsp;<span>1.1</span></a> duas vezes. Chame de <span class="math inline">\(S_t\)</span> o saldo devedor no período <span class="math inline">\(t\)</span>. Então <span class="math inline">\(S_0=\$1000\)</span> é o princial original e a taxa de juros é <span class="math inline">\(r=10\%\)</span> ao ano.</p>
-<p><span class="math display">\[\begin{align*} &amp;S_1 = S_0(1+r),  &amp;1100=1000(1+0.1).  \end{align*}\]</span></p>
-<p>Tomamos <span class="math inline">\(S_0=\$1000\)</span> no ano <span class="math inline">\(t=0\)</span>, pagando uma taxa de <span class="math inline">\(r=10\%\)</span> ao ano, tal que nosso saldo devedor ao final do ano é <span class="math inline">\(S_1=\$1100\)</span>. No início do ano <span class="math inline">\(t=1\)</span> o empréstimo é renovado, mas o “novo principal” inclui os juros devidos pelo período anterior.</p>
-<p><span class="math display">\[\begin{align*} S_2&amp;=S_1(1+r)=S_0(1+r)(1+r)=S_0(1+r)^2,\\
-1210&amp;=1100(1+0.1)=1000(1+0.1)^2. \end{align*}\]</span></p>
+</section>
+<section id="sec-regimescapitalizacao" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="sec-regimescapitalizacao"><span class="header-section-number">2.3</span> Desconto e capitalização em múltiplos períodos</h2>
+<p>Nossos exemplos até agora trataram de situações nas quais a operação acontece em dois períodos. Em <span class="math inline">\(t=0\)</span> pagamos uma quantia <span class="math inline">\(S_0\)</span> e em <span class="math inline">\(t=1\)</span> recebemos outra quantia <span class="math inline">\(S_1\)</span> (ou vice e versa). A taxa de juros é determinada pela diferença entre esses valores, seguindo a <a href="#eq-eqvp" class="quarto-xref">Equation&nbsp;<span>2.2</span></a>. A <em>frequência de incidência</em> da taxa de juros é definida pelo passo temporal entre <span class="math inline">\(t=0\)</span> e <span class="math inline">\(t=1\)</span>.</p>
+<section id="regime-composto" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="regime-composto"><span class="header-section-number">2.3.1</span> Regime composto</h3>
+<p>Imagine que você tomou emprestado <span class="math inline">\(\$1000\)</span>, pelo período de <span class="math inline">\(2\)</span> anos, e que a taxa de juros é <span class="math inline">\(10\%\)</span> ao ano. Quanto você deve devolver para o credor ao final dos <span class="math inline">\(2\)</span> anos?</p>
+<p>O principal é <span class="math inline">\(\$1000\)</span> e a taxa de juros é <span class="math inline">\(10\%\)</span> ao ano, mas o montante deve ser quitado em dois anos.</p>
+<p>Uma forma natural de lidar com essa situação é desmembrar a operação toda em dois empréstimos de <span class="math inline">\(1\)</span> ano, e aplicar a equação <a href="#eq-eqvp" class="quarto-xref">Equation&nbsp;<span>2.2</span></a> duas vezes.</p>
+<p>Chame de <span class="math inline">\(S_t\)</span> o saldo devedor no período <span class="math inline">\(t\)</span>. Então <span class="math inline">\(S_0=\$1000\)</span> é o princial original e a taxa de juros é <span class="math inline">\(r=10\%\)</span> ao ano.</p>
+<p><span class="math display">\[\begin{align*} S_1 &amp;= S_0(1+r),\\  
+  S_1&amp;=\$1000(1+0.1)=\$1100.  
+\end{align*}\]</span></p>
+<p>Tomamos <span class="math inline">\(S_0=\$1000\)</span> em <span class="math inline">\(t=0\)</span>, pagando uma taxa de <span class="math inline">\(r=10\%\)</span> ao ano, tal que nosso saldo devedor ao final do ano é <span class="math inline">\(S_1=\$1100\)</span>. No início do ano <span class="math inline">\(t=1\)</span> o empréstimo é renovado, mas o “novo principal” inclui os juros devidos pelo período anterior.</p>
+<p><span class="math display">\[\begin{align*}
+  S_2&amp;=S_1(1+r)=S_0(1+r)(1+r)\\
+  S_2&amp;=S_0(1+r)^2,\\
+  S_2&amp;=\$1100(1+0.1)=\$1000(1+0.1)^2,\\
+  S_2&amp;=\$1210.
+\end{align*}\]</span></p>
 <p>A figura abaixo descreve a evolução de um saldo devedor originalmente <span class="math inline">\(S_0=\$100\)</span> sendo capitalizado a uma taxa de juros de <span class="math inline">\(10\%\)</span> ao período sob o regime composto.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/JurosCompostosComposicaoSaldoDevedorPlot.png" class="img-fluid figure-img"></p>
-<figcaption>Composição do saldo devedor no regime de capitalização composta</figcaption></figure>
+<figure class="figure">
+<p><img src="images/JurosCompostosComposicaoSaldoDevedorPlot.png" class="img-fluid figure-img"></p>
+<figcaption>Composição do saldo devedor no regime de capitalização composta</figcaption>
+</figure>
 </div>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Capitalização e desconto no regime composto com taxa de juros constante">
 <div class="callout-header d-flex align-content-center">
@@ -408,11 +446,11 @@ Capitalização e desconto no regime composto com taxa de juros constante
 <p>O valor futuro de um saldo original <span class="math inline">\(S_0\)</span>, capitalizado a uma taxa de juros constante <span class="math inline">\(r\)</span> por <span class="math inline">\(t\)</span> períodos é dado por</p>
 <p><span id="eq-eqvf-taxaconstante"><span class="math display">\[\begin{align}
   S_t = S_0(1+r)^t.
-\end{align} \tag{1.2}\]</span></span></p>
+\end{align} \tag{2.3}\]</span></span></p>
 <p>O valor presente de um saldo futuro <span class="math inline">\(S_t\)</span>, <span class="math inline">\(t\)</span> períodos a frente, descontado a uma taxa de juros constante <span class="math inline">\(r\)</span> é dado por</p>
 <p><span id="eq-eqvp-taxaconstante"><span class="math display">\[\begin{align}
   S_0 = \frac{S_t}{(1+r)^t}.
-\end{align} \tag{1.3}\]</span></span></p>
+\end{align} \tag{2.4}\]</span></span></p>
 </div>
 </div>
 <div class="callout callout-style-simple callout-warning no-icon callout-titled" title="Exercícios de fixação">
@@ -427,16 +465,17 @@ Exercícios de fixação
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><a href="#exr-sec-regimescapitalizacao-1" class="quarto-xref">Exercise&nbsp;<span>1.8</span></a></p>
-<p><a href="#exr-sec-regimescapitalizacao-2" class="quarto-xref">Exercise&nbsp;<span>1.9</span></a></p>
-<p><a href="#exr-sec-regimescapitalizacao-3" class="quarto-xref">Exercise&nbsp;<span>1.10</span></a></p>
-<p><a href="#exr-sec-regimescapitalizacao-4" class="quarto-xref">Exercise&nbsp;<span>1.11</span></a></p>
+<p><a href="#exr-sec-regimescapitalizacao-1" class="quarto-xref">Exercise&nbsp;<span>2.6</span></a></p>
+<p><a href="#exr-sec-regimescapitalizacao-2" class="quarto-xref">Exercise&nbsp;<span>2.7</span></a></p>
+<p><a href="#exr-sec-regimescapitalizacao-3" class="quarto-xref">Exercise&nbsp;<span>2.8</span></a></p>
+<p><a href="#exr-sec-regimescapitalizacao-4" class="quarto-xref">Exercise&nbsp;<span>2.9</span></a></p>
 </div>
 </div>
 </div>
-</section><section id="múltiplas-taxas-de-juro-durante-a-operação" class="level3" data-number="1.3.2"><h3 data-number="1.3.2" class="anchored" data-anchor-id="múltiplas-taxas-de-juro-durante-a-operação">
-<span class="header-section-number">1.3.2</span> Múltiplas taxas de juro durante a operação</h3>
-<p>Nossos exemplos até agora consideraram que a taxa de juros <span class="math inline">\(r\)</span> se manteve constante durante toda a vida da operação. Isso torna nossos cálculos mais simples, mas não precisa ser verdade na prática. <em>A forma de lidar com mudanças na taxa de juros é a mesma: iterar a relação de valor presente-valor futuro de um período</em> <a href="#eq-eqvp" class="quarto-xref">Equation&nbsp;<span>1.1</span></a>.</p>
+</section>
+<section id="múltiplas-taxas-de-juro-durante-a-operação" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="múltiplas-taxas-de-juro-durante-a-operação"><span class="header-section-number">2.3.2</span> Múltiplas taxas de juro durante a operação</h3>
+<p>Nossos exemplos até agora consideraram que a taxa de juros <span class="math inline">\(r\)</span> se manteve constante durante toda a vida da operação. Isso torna nossos cálculos mais simples, mas não precisa ser verdade na prática. <em>A forma de lidar com mudanças na taxa de juros é a mesma: iterar a relação de valor presente-valor futuro de um período</em> <a href="#eq-eqvp" class="quarto-xref">Equation&nbsp;<span>2.2</span></a>.</p>
 <div class="callout callout-style-simple callout-tip no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -444,7 +483,7 @@ Exercícios de fixação
 </div>
 <div class="callout-body-container">
 <div id="exm-multiplas-taxas-1" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1.2</strong></span> Você empenhou seu capital em um investimento com duração de 3 anos, mas não lembra exatamente quanto foi que aplicou originalmente No vencimento você recebeu o montante de <span class="math inline">\(S_3=\$1888.11\)</span>. Sabendo que a taxa de juros do primeiro ano foi <span class="math inline">\(r_1=11\%\)</span>, do segundo ano foi <span class="math inline">\(r_2=8\%\)</span>, e do terceiro ano foi <span class="math inline">\(r_3=5\%\)</span>, calcule a quantia investida originalmente.</p>
+<p><span class="theorem-title"><strong>Example 2.1</strong></span> Você empenhou seu capital em um investimento com duração de 3 anos, mas não lembra exatamente quanto foi que aplicou originalmente No vencimento você recebeu o montante de <span class="math inline">\(S_3=\$1888.11\)</span>. Sabendo que a taxa de juros do primeiro ano foi <span class="math inline">\(r_1=11\%\)</span>, do segundo ano foi <span class="math inline">\(r_2=8\%\)</span>, e do terceiro ano foi <span class="math inline">\(r_3=5\%\)</span>, calcule a quantia investida originalmente.</p>
 </div>
 <p>Como é um problema de desconto, resolvemos “de trás para frente”.</p>
 <p><span class="math display">\[\begin{align*}
@@ -456,7 +495,7 @@ Exercícios de fixação
 </div>
 </div>
 </div>
-<p>Conseguimos obter uma fórmula de capitalização e desconto quando a taxa de juros muda período a período. Como veremos agora, as fórmulas <a href="#eq-eqvf-taxaconstante" class="quarto-xref">Equation&nbsp;<span>1.2</span></a> e <a href="#eq-eqvp-taxaconstante" class="quarto-xref">Equation&nbsp;<span>1.3</span></a> são casos particulares da fórmula geral quando a taxa de juros pode variar.</p>
+<p>Conseguimos obter uma fórmula de capitalização e desconto quando a taxa de juros muda período a período. Como veremos agora, as fórmulas <a href="#eq-eqvf-taxaconstante" class="quarto-xref">Equation&nbsp;<span>2.3</span></a> e <a href="#eq-eqvp-taxaconstante" class="quarto-xref">Equation&nbsp;<span>2.4</span></a> são casos particulares da fórmula geral quando a taxa de juros pode variar.</p>
 <p>Do nosso exemplo anterior, repare que</p>
 <p><span class="math display">\[\begin{align*}
   S_2 = \frac{S_3}{1+r_3}, \text{ e } S_1 = \frac{S_2}{1+r_2}.
@@ -483,35 +522,32 @@ Capitalização e desconto no regime composto com taxas de juro variáveis
 <p><span id="eq-eqvf-taxasvariaveis"><span class="math display">\[\begin{align}
   S_t &amp;= S_0(1+r_1)(1+r_2)\cdots(1+r_{t-1})(1+r_t), \\
   S_t &amp;= S_0\prod^t_{j=1}(1+r_j).
-\end{align} \tag{1.4}\]</span></span></p>
+\end{align} \tag{2.5}\]</span></span></p>
 <p><span id="eq-eqvp-taxasvariaveis"><span class="math display">\[\begin{align}
   S_0 &amp;= \frac{S_t}{(1+r_1)(1+r_2)\cdots(1+r_{t-1})(1+r_t)}, \\
   S_0 &amp;= \frac{S_t}{\prod^t_{j=1}(1+r_j)}
-\end{align} \tag{1.5}\]</span></span></p>
+\end{align} \tag{2.6}\]</span></span></p>
 </div>
 </div>
-<div class="callout callout-style-simple callout-warning no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-simple callout-warning no-icon callout-titled" title="Exercícios de fixação">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
-<div id="exr-taxasvariaveis-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1.1</strong></span> &nbsp;</p>
-<ol type="a">
-<li>
-</li><li>
-</li><li>
-</li><li>
-</li><li>
-</li><li>
-</li></ol>
+<div class="callout-title-container flex-fill">
+Exercícios de fixação
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+
 </div>
 </div>
 </div>
-</div>
-</section><section id="regime-simples" class="level3" data-number="1.3.3"><h3 data-number="1.3.3" class="anchored" data-anchor-id="regime-simples">
-<span class="header-section-number">1.3.3</span> Regime simples</h3>
+</section>
+<section id="regime-simples" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="regime-simples"><span class="header-section-number">2.3.3</span> Regime simples</h3>
 <p>A diferença fundamental do regime simples de capitalização e desconto quando comparado ao regime composto é que <em>no regime simples os juros do período anterior não são incorporados ao saldo devedor do período seguinte</em>.</p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Capitalização e desconto no regime simples com taxa de juros constante">
 <div class="callout-header d-flex align-content-center">
@@ -531,8 +567,11 @@ Capitalização e desconto no regime simples com taxa de juros constante
 \end{align}\]</span></p>
 </div>
 </div>
-</section></section><section id="sec-transformacaotaxas" class="level2" data-number="1.4"><h2 data-number="1.4" class="anchored" data-anchor-id="sec-transformacaotaxas">
-<span class="header-section-number">1.4</span> Transformação de frequência e taxas equivalentes</h2>
+<p>A menos que explicitamente mencionado, consideraremos todas as operações de desconto e capitalização no regime composto.</p>
+</section>
+</section>
+<section id="sec-transformacaotaxas" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="sec-transformacaotaxas"><span class="header-section-number">2.4</span> Transformação de frequência e taxas equivalentes</h2>
 <p>Vamos considerar uma pergunta um pouco diferente agora.</p>
 <div class="callout callout-style-simple callout-tip no-icon">
 <div class="callout-body d-flex">
@@ -541,13 +580,13 @@ Capitalização e desconto no regime simples com taxa de juros constante
 </div>
 <div class="callout-body-container">
 <div id="exm-taxas-equivalentes-1" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1.3</strong></span> Imagine que você tomou emprestado <span class="math inline">\(\$150\)</span> pelo período de <span class="math inline">\(2\)</span> anos. O montante (principal mais juros) repago ao final dos dois anos foi <span class="math inline">\(\$200\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 2.2</strong></span> Imagine que você tomou emprestado <span class="math inline">\(\$150\)</span> pelo período de <span class="math inline">\(2\)</span> anos. O montante (principal mais juros) repago ao final dos dois anos foi <span class="math inline">\(\$200\)</span>.</p>
 <ol type="a">
 <li>Qual é a taxa de juros total implícita no empréstimo?</li>
 <li>Qual é a taxa de juros anual implícita no empréstimo?</li>
 </ol>
 </div>
-<p>Para calcular a taxa de juros total nós consideramos os <span class="math inline">\(2\)</span> anos do empréstimo como um único período e aplicamos <a href="#eq-eqvp" class="quarto-xref">Equation&nbsp;<span>1.1</span></a>.</p>
+<p>Para calcular a taxa de juros total nós consideramos os <span class="math inline">\(2\)</span> anos do empréstimo como um único período e aplicamos <a href="#eq-eqvp" class="quarto-xref">Equation&nbsp;<span>2.2</span></a>.</p>
 <p><span class="math display">\[\begin{align*}
   r_{bienal} &amp;= \frac{S_2}{S_0}-1=\frac{\$200}{\$150}-1=0.333 \text{ ao ``dois anos''}.
 \end{align*}\]</span></p>
@@ -574,7 +613,7 @@ Capitalização e desconto no regime simples com taxa de juros constante
 </div>
 <div class="callout-body-container">
 <div id="exm-taxas-equivalentes-1" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1.4</strong></span> Você tem <span class="math inline">\(\$1000\)</span> empenhados em uma aplicação que te rende <span class="math inline">\(1\%\)</span> ao mês.</p>
+<p><span class="theorem-title"><strong>Example 2.3</strong></span> Você tem <span class="math inline">\(\$1000\)</span> empenhados em uma aplicação que te rende <span class="math inline">\(1\%\)</span> ao mês.</p>
 <ol type="a">
 <li>Qual o valor do seu capital depois de <span class="math inline">\(6\)</span> meses? Qual a taxa de juros semestral da aplicação?</li>
 </ol>
@@ -594,8 +633,7 @@ Capitalização e desconto no regime simples com taxa de juros constante
 \end{align*}\]</span> Ou mesmo transformar a taxa semestral em taxa anual <span class="math display">\[\begin{align*}
   (1+r_{ano}) &amp;= (1+r_{sem})^2 \\
   r_{ano} &amp;= (1+0.06152)^2-1 = 0.12683\text{ ao ano}.
-\end{align*}\]</span>
-</li>
+\end{align*}\]</span></li>
 </ol>
 </div>
 </div>
@@ -618,22 +656,96 @@ Transformação de frequência de incidência de taxa de juros no regime compost
 \end{align}\]</span></p>
 </div>
 </div>
-<div class="callout callout-style-simple callout-warning no-icon">
-<div class="callout-body d-flex">
+<div class="callout callout-style-simple callout-warning no-icon callout-titled" title="Exercícios de fixação">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+Exercícios de fixação
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 
 </div>
 </div>
 </div>
-<section id="taxa-de-juros-média" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="taxa-de-juros-média">Taxa de juros média</h3>
-</section></section><section id="sec-inflacao" class="level2" data-number="1.5"><h2 data-number="1.5" class="anchored" data-anchor-id="sec-inflacao">
-<span class="header-section-number">1.5</span> Inflação e retorno real</h2>
+<section id="taxas-médias" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="taxas-médias"><span class="header-section-number">2.4.1</span> Taxas médias</h3>
+<p>A tabela abaixo descreve as taxas de juro realizadas de um certo ativo financeiro em quatro anos.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>t</th>
+<th>r</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>10.0%</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>8.0%</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>7.5%</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>13.0%</td>
+</tr>
+</tbody>
+</table>
+<p>Qual é a taxa de juros média nesses quatro anos?</p>
+<p>Uma solução aparente seria calcular a média aritmética das taxas de juro</p>
+<p><span class="math display">\[\begin{align}
+\frac{10\%+8\%+7.5\%+13\%}{4}=9.625\%
+\end{align}\]</span></p>
+<p>Repare que <span class="math display">\[\begin{align}
+10\%+8\%+7.5\%+13\% = 4\cdot9.625\% = 38.5\%
+\end{align}\]</span></p>
+<p>Então a média aritmética de um conjunto de dados com <span class="math inline">\(n\)</span> elementos é o único número que, repetido <span class="math inline">\(n\)</span> vezes, nos leva ao mesmo valor que obteríamos somando todos os elementos desse conjunto.</p>
+<p>Se eu investi <span class="math inline">\(\$100\)</span> em <span class="math inline">\(t=0\)</span> nesse ativo financeiro, o valor do meu capital em <span class="math inline">\(t=4\)</span> é <span class="math display">\[\begin{align}
+\$100(1+10\%)(1+8\%)(1+7.5\%)(1+13\%)=\$138.5.
+\end{align}\]</span></p>
+<p>Quando dizemos taxa de juros <em>média</em> aqui, nos referimos à única taxa de juros constante, que quando aplicada quatro vezes sobre <span class="math inline">\(\$100\)</span> nos levaria ao mesmo valor futuro <span class="math inline">\(\$138.5\)</span>.</p>
+<p>Se tentarmos aplicar a média das taxas, <span class="math inline">\(9.6\%\)</span>, quatro vezes, obtemos <span class="math display">\[\begin{align}
+\$100(1+9.6\%)^4=\$144.42,
+\end{align}\]</span> que é diferente do valor futuro <span class="math inline">\(\$138.5\)</span>, obtido ao compor as taxas individuais.</p>
+<p>O que queremos é <span class="math display">\[\begin{align}
+\$100(1+\tilde r)^4&amp;=\$100(1+10\%)(1+8\%)(1+7.5\%)(1+13\%),\\
+(1+\tilde r)^4 &amp;= 1.385, \\
+1+\tilde r &amp;= (1.385)^{1/4}, \\
+\tilde r &amp;= (1.385)^{1/4}-1 = 8.483%.
+\end{align}\]</span></p>
+<p>O que efetivamente fizemos foi calcular a taxa de juros total acumulada nos quatro anos, depois anualizamos tal taxa.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Taxa média de juros">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Taxa média de juros
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Seja <span class="math inline">\(r_1, r_2, \dots, r_n\)</span> uma sequência de taxas de juro com <span class="math inline">\(n\)</span> elementos. A taxa média <span class="math inline">\(\tilde r\)</span> é a única taxa constante, que composta <span class="math inline">\(n\)</span> vezes, leva ao mesmo valor futuro que seria obtido componto <span class="math inline">\(r_1, r_2, \dots, r_n\)</span>. <span class="math display">\[\begin{align}
+  \tilde r = \left[\prod_{t=1}^n(1+r_t)\right]^{1/n}-1
+\end{align}\]</span></p>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-inflacao" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="sec-inflacao"><span class="header-section-number">2.5</span> Inflação e retorno real</h2>
 <p>O <em>preço</em> de um bem (ou serviço) é a quantidade de dinheiro (do bem numerário) entregue em troca desse bem em uma negociação particular.</p>
 <p>A <em>inflação</em> é a mudança (percentual) dos preços de um certo bem, em um dado intervalo de tempo.</p>
-<p>Por exemplo, se um pacote de café custava <span class="math inline">\(P_0=\$8\)</span> há um ano, e hoje custa <span class="math inline">\(P_1=\$11\)</span>, então a (taxa de) inflação <span class="math inline">\(\pi\)</span> do café, entre um ano atrás e hoje, foi de</p>
+<p>Por exemplo, se um pacote de café no Supermercado Azul custava <span class="math inline">\(P_0=\$8\)</span> há um ano, e hoje custa <span class="math inline">\(P_1=\$11\)</span>, então a (taxa de) inflação <span class="math inline">\(\pi\)</span> do café, entre um ano atrás e hoje, foi de</p>
 <p><span class="math display">\[\begin{align}
   \pi &amp;= \frac{P_1-P_0}{P_0},\\
   &amp;=\frac{\$11-\$8}{\$8} = 37.5\% \text{ ao ano}.
@@ -641,19 +753,19 @@ Transformação de frequência de incidência de taxa de juros no regime compost
 <p>Repare aqui a inflação tem uma frequência de incidência assim como uma taxa de juros. Operações como transformações de frequência e cálculo de taxas médias funcionam de maneira análoga aos procedimentos para taxas de juros.</p>
 <p>Levar em conta a inflação se torna necessário quando nosso objetivo é calcular o retorno temporal de uma certa operação quando cotado em termos de bens ou serviços materiais, não meramente unidades monetárias.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled" title="@exm-inflacao-1: Inflação e retorno real">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<a href="#exm-inflacao-1" class="quarto-xref">Example&nbsp;<span>1.5</span></a>: Inflação e retorno real
+<a href="#exm-inflacao-1" class="quarto-xref">Example&nbsp;<span>2.4</span></a>: Inflação e retorno real
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="exm-inflacao-1" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1.5</strong></span> Considere a seguinte situação. Um agricultor tem separados <span class="math inline">\(\$1500\)</span> para a compra de sementes para a safra do próximo ano (daqui a 12 meses). Suponha que o preço das sementes seja <span class="math inline">\(\$15\)</span>/kg.</p>
+<p><span class="theorem-title"><strong>Example 2.4</strong></span> Considere a seguinte situação. Um agricultor tem separados <span class="math inline">\(\$1500\)</span> para a compra de sementes para a safra do próximo ano (daqui a 12 meses). Suponha que o preço das sementes seja <span class="math inline">\(\$15\)</span>/kg.</p>
 <ol type="a">
 <li>Quantos kgs de sementes o agricultor conseguiria comprar hoje?</li>
 </ol>
@@ -717,28 +829,29 @@ Retorno real <em>ex-post</em>
 \end{align}\]</span></p>
 </div>
 </div>
-<p>É importante lembrar que ambas a taxa de retorno nominal <span class="math inline">\(r\)</span> e inflação <span class="math inline">\(\pi\)</span> tenham a mesma frequência de incidência (mensal, anual, etc.).</p>
-<section id="retorno-real-ex-post-e-ex-ante" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="retorno-real-ex-post-e-ex-ante">Retorno real <em>ex-post</em> e <em>ex-ante</em>
-</h4>
-<p>No <a href="#exm-inflacao-1" class="quarto-xref">Example&nbsp;<span>1.5</span></a> nós calculamos o retorno da aplicação financeira em termos da quantidade de sementes,</p>
-</section><section id="índices-de-preço" class="level3" data-number="1.5.1"><h3 data-number="1.5.1" class="anchored" data-anchor-id="índices-de-preço">
-<span class="header-section-number">1.5.1</span> Índices de preço</h3>
+<p>É importante ressaltar que ambas a taxa de retorno nominal <span class="math inline">\(r\)</span> e inflação <span class="math inline">\(\pi\)</span> precisam estar expressas na mesma frequência de incidência (mensal, anual, etc.).</p>
+<section id="retorno-real-ex-post-e-ex-ante" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="retorno-real-ex-post-e-ex-ante">Retorno real <em>ex-post</em> e <em>ex-ante</em></h4>
+<p>No <a href="#exm-inflacao-1" class="quarto-xref">Example&nbsp;<span>2.4</span></a> nós calculamos o retorno da aplicação financeira em termos da quantidade de sementes,</p>
+</section>
+<section id="índices-de-preço" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="índices-de-preço"><span class="header-section-number">2.5.1</span> Índices de preço</h3>
 <p>Apesar de não conseguirmos observar exatamente o preço das coisas, aproximações são claramente úteis. Afinal, falamos do preço da gasolina, do preço de um pão, do preço do tomate, etc.</p>
 <p>Em especial, médias ponderadas de diversos preços nos dão uma ideia de como os preços da economia estão mudando no agregado, capturando por exemplo custo de vida dos consumidores ou custo de produção das firmas.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled" title="@exm-indicedeprecos-1: Construção de um índice de preços">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<a href="#exm-indicedeprecos-1" class="quarto-xref">Example&nbsp;<span>1.6</span></a>: Construção de um índice de preços
+<a href="#exm-indicedeprecos-1" class="quarto-xref">Example&nbsp;<span>2.5</span></a>: Construção de um índice de preços
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="exm-indicedeprecos-1" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1.6</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 2.5</strong></span> &nbsp;</p>
 <div class="cell">
 <div class="cell-output cell-output-stderr">
 <pre><code>Carregando pacotes exigidos: knitr</code></pre>
@@ -751,14 +864,16 @@ Retorno real <em>ex-post</em>
 </div>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th style="text-align: right;">Mês</th>
 <th style="text-align: right;">Arroz</th>
 <th style="text-align: right;">Feijão</th>
 <th style="text-align: right;">Leite</th>
 <th style="text-align: right;">Carne</th>
 <th style="text-align: right;">Gás</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;">1</td>
@@ -770,43 +885,43 @@ Retorno real <em>ex-post</em>
 </tr>
 <tr class="even">
 <td style="text-align: right;">2</td>
-<td style="text-align: right;">7.21</td>
-<td style="text-align: right;">9.41</td>
-<td style="text-align: right;">7.09</td>
-<td style="text-align: right;">14.97</td>
-<td style="text-align: right;">34.37</td>
+<td style="text-align: right;">7.59</td>
+<td style="text-align: right;">9.03</td>
+<td style="text-align: right;">7.83</td>
+<td style="text-align: right;">14.83</td>
+<td style="text-align: right;">36.55</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">3</td>
-<td style="text-align: right;">7.25</td>
-<td style="text-align: right;">10.52</td>
-<td style="text-align: right;">8.15</td>
-<td style="text-align: right;">16.08</td>
-<td style="text-align: right;">39.88</td>
+<td style="text-align: right;">7.55</td>
+<td style="text-align: right;">8.87</td>
+<td style="text-align: right;">8.49</td>
+<td style="text-align: right;">18.34</td>
+<td style="text-align: right;">39.96</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">4</td>
-<td style="text-align: right;">7.94</td>
-<td style="text-align: right;">11.75</td>
-<td style="text-align: right;">8.56</td>
-<td style="text-align: right;">18.63</td>
-<td style="text-align: right;">38.16</td>
+<td style="text-align: right;">8.21</td>
+<td style="text-align: right;">9.67</td>
+<td style="text-align: right;">8.82</td>
+<td style="text-align: right;">19.48</td>
+<td style="text-align: right;">39.16</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">5</td>
-<td style="text-align: right;">7.64</td>
-<td style="text-align: right;">13.07</td>
-<td style="text-align: right;">8.16</td>
-<td style="text-align: right;">24.11</td>
-<td style="text-align: right;">37.98</td>
+<td style="text-align: right;">9.53</td>
+<td style="text-align: right;">9.88</td>
+<td style="text-align: right;">10.12</td>
+<td style="text-align: right;">21.96</td>
+<td style="text-align: right;">38.27</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">6</td>
-<td style="text-align: right;">8.75</td>
-<td style="text-align: right;">14.49</td>
-<td style="text-align: right;">8.12</td>
-<td style="text-align: right;">24.87</td>
-<td style="text-align: right;">38.98</td>
+<td style="text-align: right;">9.80</td>
+<td style="text-align: right;">10.39</td>
+<td style="text-align: right;">11.09</td>
+<td style="text-align: right;">25.48</td>
+<td style="text-align: right;">45.02</td>
 </tr>
 </tbody>
 </table>
@@ -832,7 +947,7 @@ Retorno real <em>ex-post</em>
 </div>
 </div>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="IPCA: Índice de Preços ao Consumidor Amplo">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -841,18 +956,20 @@ IPCA: Índice de Preços ao Consumidor Amplo
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>O Índice de Preços ao Consumidor Amplo, <a href="https://www.ibge.gov.br/estatisticas/economicas/precos-e-custos/9256-indice-nacional-de-precos-ao-consumidor-amplo.html">IPCA</a>, é uma média ponderada de preços calculada pelo IBGE desde dezembro de 1979, que tem por objetivo medir a inflação de um conjunto de produtos e serviços comercializados no varejo, referentes ao consumo pessoal das famílias. O IPCA é o principal índice de preços do Brasil, sendo utilizado com indexador em diversos contratos, e, em especial, tomado como a medida oficial de inflação para efeitos de política monetária.</p>
 <p>Atualmente, a população-objetivo do IPCA abrange as famílias com rendimentos de 1 a 40 salários mínimos, qualquer que seja a fonte, residentes nas áreas urbanas das regiões de abrangência do SNIPC<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, as quais são: regiões metropolitanas de Belém, Fortaleza, Recife, Salvador, Belo Horizonte, Vitória, Rio de Janeiro, São Paulo, Curitiba, Porto Alegre, além do Distrito Federal e dos municípios de Goiânia, Campo Grande, Rio Branco, São Luís e Aracaju.</p>
 <p>Esse índice de preços tem como unidade de coleta estabelecimentos comerciais e de prestação de serviços, concessionária de serviços públicos e intenet e sua coleta estende-se, em geral, do dia 01 a 30 do mês de referência.</p>
 <p>Os gastos mensais das famílias são divididos em grandes grupos, que se dividem em categorias cada vez mais granulares. A tabela abaixo descreve os pesos relativos de cada grupo em janeiro 2025.</p>
 <table class="caption-top table">
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th>#</th>
 <th>Grupo</th>
 <th>Peso</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td>1</td>
@@ -905,19 +1022,19 @@ IPCA: Índice de Preços ao Consumidor Amplo
 </div>
 </div>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled" title="@exm-inflacao-2: Retorno real de um título de desconto">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<a href="#exm-inflacao-2" class="quarto-xref">Example&nbsp;<span>1.7</span></a>: Retorno real de um título de desconto
+<a href="#exm-inflacao-2" class="quarto-xref">Example&nbsp;<span>2.6</span></a>: Retorno real de um título de desconto
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="exm-inflacao-2" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1.7</strong></span> O Tesouro Federal brasileiro negocia um título de de desconto zero cupom com valor de face <span class="math inline">\(R\$1000\)</span> chamado LTN (Letra do Tesouro Nacional). Imagine que hoje, em 01/01/2020, você comprou uma LTN com vencimento em 01/01/2024, pelo preço unitário de <span class="math inline">\(R\$812.15\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 2.6</strong></span> O Tesouro Federal brasileiro negocia um título de de desconto zero cupom com valor de face <span class="math inline">\(R\$1000\)</span> chamado LTN (Letra do Tesouro Nacional). Imagine que hoje, em 01/01/2020, você comprou uma LTN com vencimento em 01/01/2024, pelo preço unitário de <span class="math inline">\(R\$812.15\)</span>.</p>
 <ol type="a">
 <li>Qual é a rentabilidade nominal do título?</li>
 </ol>
@@ -933,20 +1050,24 @@ IPCA: Índice de Preços ao Consumidor Amplo
 <li>Suponha que passados os quatro anos, a variação anual do IPCA tenha sido como descrita na tabela abaixo.</li>
 </ul>
 <table class="caption-top table">
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th></th>
 <th>2020</th>
 <th>2021</th>
 <th>2022</th>
 <th>2024</th>
-</tr></thead>
-<tbody><tr class="odd">
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
 <td><span class="math inline">\(\Delta\%IPCA\)</span></td>
 <td>2.54%</td>
 <td>3.83%</td>
 <td>5.01%</td>
 <td>4.21%</td>
-</tr></tbody>
+</tr>
+</tbody>
 </table>
 <ol start="2" type="a">
 <li>Qual é a inflação, como medida pelo IPCA, acumulada em quatro anos? Qual a taxa média de inflação nesse período?</li>
@@ -975,7 +1096,7 @@ IPCA: Índice de Preços ao Consumidor Amplo
 </div>
 </div>
 <div class="callout callout-style-simple callout-warning no-icon callout-titled" title="Exercícios">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -984,49 +1105,46 @@ Exercícios
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="exr-inflacao-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1.2</strong></span> Seu salário é <span class="math inline">\(Y=\$800\)</span> ao mês e você gasta essa renda exclusivamente em latas de refrigerantes, que custam atualmente <span class="math inline">\(P_0=\$5\)</span>. Passado um mês, o seu salário ainda é o mesmo, mas o preço do refrigerante aumentou para <span class="math inline">\(P_1=\$5.5\)</span>.</p>
-<ol type="a">
-<li>Qual é a taxa de inflação mensal realizada das latas de refrigerantes?</li>
-<li>Qual foi sua “perda de poder de compra” no período? Ou seja, quantos refrigerantes (em termos percentuais) a menos você pôde comprar devido o aumento no preço?</li>
-<li>Considere que a inflação do refrigerante se manterá constante mês a mês. Quantos meses passarão até seu poder de compra ser reduzido pela metade?</li>
-</ol>
+
 </div>
 </div>
 </div>
-</div>
-</section></section><section id="sec-sequenciasfluxosdecaixa" class="level2" data-number="1.6"><h2 data-number="1.6" class="anchored" data-anchor-id="sec-sequenciasfluxosdecaixa">
-<span class="header-section-number">1.6</span> Sequências de fluxos de caixa</h2>
+</section>
+</section>
+<section id="sec-sequenciasfluxosdecaixa" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="sec-sequenciasfluxosdecaixa"><span class="header-section-number">2.6</span> Sequências de fluxos de caixa</h2>
 <p>Até agora tratamos de situações nas quais existem apenas dois fluxos de caixa. Nosso exemplos foram do tipo que você toma um empréstimo e recebe <span class="math inline">\(\$200\)</span> hoje, depois paga <span class="math inline">\(\$375\)</span> após 3 períodos; ou que investe em um título de desconto e paga <span class="math inline">\(\$700\)</span> de preço unitário hoje para receber o valor de face <span class="math inline">\(\$1000\)</span> no vencimento.</p>
-<p>Nada impede de hajam fluxos de caixa intermediários durante a vida da operação. Veremos que a ferramenta de análise é rigorosamente a mesma: a relação valor presente-valor futuro <a href="#eq-eqvp" class="quarto-xref">Equation&nbsp;<span>1.1</span></a>. A diferença é que lidaremos com a <em>soma de várias relações de valor presente com horizontes distintos</em>.</p>
+<p>Nada impede de hajam fluxos de caixa intermediários durante a vida da operação. Veremos que a ferramenta de análise é rigorosamente a mesma: a relação valor presente-valor futuro <a href="#eq-eqvp" class="quarto-xref">Equation&nbsp;<span>2.2</span></a>. A diferença é que lidaremos com a <em>soma de várias relações de valor presente com horizontes distintos</em>.</p>
 <p>Tome uma sequência de fluxos de caixa igualmente espaçados no tempo <span class="math inline">\(SFC=\{FC_0, FC_1, FC_2, \dots, FC_T\}\)</span>. Note que o primeiro fluxo acontece hoje em <span class="math inline">\(t=0\)</span> e o último no vencimento em <span class="math inline">\(t=T\)</span>, de modo que existem <span class="math inline">\(T+1\)</span> fluxos de caixa. Considerando uma taxa de juros constante <span class="math inline">\(r\)</span> (cuja frequência de incidência é igual ao passo temporal na sequência de fluxos de caixa), o valor presente dessa sequência de fluxos de caixa é</p>
 <p><span class="math display">\[\begin{align}
     PV(\{FC_t\}^T_{t=0},r) &amp;= \sum^T_{t=0} \frac{CF_t}{(1+r)^t},\\
     &amp;=\frac{FC_0}{(1+r)^0} + \frac{FC_1}{(1+r)^1} + \cdots + \frac{FC_T}{(1+r)^T}.
 \end{align}\]</span></p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled" title="@exm-seq-fcs-1: Valor presente de uma sequência de fluxos de caixa">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<a href="#exm-seq-fcs-1" class="quarto-xref">Example&nbsp;<span>1.8</span></a>: Valor presente de uma sequência de fluxos de caixa
+<a href="#exm-seq-fcs-1" class="quarto-xref">Example&nbsp;<span>2.7</span></a>: Valor presente de uma sequência de fluxos de caixa
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="exm-seq-fcs-1" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1.8</strong></span> A você é ofertado um contrato de dívida com maturidade de dois anos. Passado primeiro ano o emissor do título te pagará <span class="math inline">\(\$500\)</span>, então ao final do segundo ano ele te pagará <span class="math inline">\(\$1000\)</span>. Supondo que você possa tomar emprestado recursos a uma taxa de juros de <span class="math inline">\(12\%\)</span> ao ano. Qual é o maior preço que você estaria disposto a pagar hoje por esse contrato de dívida?</p>
+<p><span class="theorem-title"><strong>Example 2.7</strong></span> A você é ofertado um contrato de dívida com maturidade de dois anos. Passado primeiro ano o emissor do título te pagará <span class="math inline">\(\$500\)</span>, então ao final do segundo ano ele te pagará <span class="math inline">\(\$1000\)</span>. Supondo que você possa tomar emprestado recursos a uma taxa de juros de <span class="math inline">\(12\%\)</span> ao ano. Qual é o maior preço que você estaria disposto a pagar hoje por esse contrato de dívida?</p>
 <p>Do ponto de vista do comprador do título, os fluxos de caixa associados são</p>
 <table class="caption-top table">
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th><span class="math inline">\(t\)</span></th>
 <th><span class="math inline">\(FC_t\)</span></th>
 <th><span class="math inline">\(FC_t\)</span></th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td>0</td>
@@ -1059,19 +1177,19 @@ VP(\{\$500,\$1000\},0.12)&amp;= \frac{\$500}{1+0.12} + \frac{\$1000}{(1+0.12)^2}
 </div>
 </div>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled" title="@exm-seq-fcs-2: Valor futuro de uma sequência de fluxos de caixa">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<a href="#exm-seq-fcs-2" class="quarto-xref">Example&nbsp;<span>1.9</span></a>: Valor futuro de uma sequência de fluxos de caixa
+<a href="#exm-seq-fcs-2" class="quarto-xref">Example&nbsp;<span>2.8</span></a>: Valor futuro de uma sequência de fluxos de caixa
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="exm-seq-fcs-2" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1.9</strong></span> Todo mês você investe <span class="math inline">\(\$100\)</span> em uma aplicação que rende uma taxa de juros de <span class="math inline">\(10\%\)</span> ao ano. Qual seu capital acumulado passados 4 meses (logo após fazer a contribuição do quarto mês)?</p>
+<p><span class="theorem-title"><strong>Example 2.8</strong></span> Todo mês você investe <span class="math inline">\(\$100\)</span> em uma aplicação que rende uma taxa de juros de <span class="math inline">\(10\%\)</span> ao ano. Qual seu capital acumulado passados 4 meses (logo após fazer a contribuição do quarto mês)?</p>
 <p>O primeiro passo aqui é transformar a taxa anual em taxa mensal equivalente. <span class="math display">\[\begin{align*}
 r_{mes} &amp;= (1+r_{ano})^{1/12}-1, \\
 &amp;=(1+0.1)^{(1/12)}-1=0.007974 \text{ ao mês}.
@@ -1105,28 +1223,30 @@ VF&amp;(\{\$100\}^4_{t=0},0.007974) = \$103.23 + \$102.41 +\\&amp; \$101.60 + \$
 </div>
 </div>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled" title="@exm-seq-fcs-3: Valor presente de uma sequência de fluxos de caixa com taxas de juros variáveis">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<a href="#exm-seq-fcs-3" class="quarto-xref">Example&nbsp;<span>1.10</span></a>: Valor presente de uma sequência de fluxos de caixa com taxas de juros variáveis
+<a href="#exm-seq-fcs-3" class="quarto-xref">Example&nbsp;<span>2.9</span></a>: Valor presente de uma sequência de fluxos de caixa com taxas de juros variáveis
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="exm-seq-fcs-3" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1.10</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 2.9</strong></span> &nbsp;</p>
 <table class="caption-top table">
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th><span class="math inline">\(t\)</span></th>
 <th>0</th>
 <th>1</th>
 <th>2</th>
 <th>3</th>
 <th>4</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td><span class="math inline">\(r_t\)</span></td>
@@ -1157,17 +1277,17 @@ VF&amp;(\{\$100\}^4_{t=0},0.007974) = \$103.23 + \$102.41 +\\&amp; \$101.60 + \$
 </div>
 </div>
 </div>
-<section id="sequências-de-fluxos-de-caixa-homogêneos" class="level3" data-number="1.6.1"><h3 data-number="1.6.1" class="anchored" data-anchor-id="sequências-de-fluxos-de-caixa-homogêneos">
-<span class="header-section-number">1.6.1</span> Sequências de fluxos de caixa homogêneos</h3>
+<section id="sequências-de-fluxos-de-caixa-homogêneos" class="level3" data-number="2.6.1">
+<h3 data-number="2.6.1" class="anchored" data-anchor-id="sequências-de-fluxos-de-caixa-homogêneos"><span class="header-section-number">2.6.1</span> Sequências de fluxos de caixa homogêneos</h3>
 <p>Um caso especial muito importante é quando ambos taxa de juros e o valor dos fluxos de caixa são constantes.</p>
 <p>Suponha que todos os fluxos de caixa, a menos do período <span class="math inline">\(t=0\)</span>, são idênticos, tal que nossa sequência de fluxos de caixa é <span class="math inline">\(SFC=\{FC_0, FC, FC, \dots, FC\}\)</span>. Faz sentido tratarmos o primeiro fluxo de caixa como diferente porque na maioria das nossas aplicações representa um dispêndio inicial para realizar dado investimento.</p>
-<section id="valor-presente-de-uma-sequência-de-fluxos-de-caixa-homogêneos" class="level4" data-number="1.6.1.1"><h4 data-number="1.6.1.1" class="anchored" data-anchor-id="valor-presente-de-uma-sequência-de-fluxos-de-caixa-homogêneos">
-<span class="header-section-number">1.6.1.1</span> Valor presente de uma sequência de fluxos de caixa homogêneos</h4>
+<section id="valor-presente-de-uma-sequência-de-fluxos-de-caixa-homogêneos" class="level4" data-number="2.6.1.1">
+<h4 data-number="2.6.1.1" class="anchored" data-anchor-id="valor-presente-de-uma-sequência-de-fluxos-de-caixa-homogêneos"><span class="header-section-number">2.6.1.1</span> Valor presente de uma sequência de fluxos de caixa homogêneos</h4>
 <p>O valor presente dessa sequência de fluxos de caixa, descontado por uma taxa constante de <span class="math inline">\(r\)</span> ao período, é dado por</p>
 <p><span class="math display">\[ VP(SFC, r) = \frac{FC_0}{(1+r)^0} + \frac{FC}{(1+r)^1}+\cdots+\frac{FC}{(1+r)^T}.\]</span></p>
 <p>Conseguimos colocar <span class="math inline">\(FC\)</span> em evidência e escrever <span class="math display">\[VP(SFC,r)=FC_0 + FC\left[\frac{1}{(1+r)^1}+\cdots+\frac{1}{(1+r)^T}\right].\]</span> Repare que a expressão entre colchetes é a soma de uma progressão geométrica com <span class="math inline">\(T\)</span> termos, razão <span class="math inline">\((1+r)^{-1}\)</span> e primeiro termo também <span class="math inline">\((1+r)^{-1}\)</span>.</p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Fórmula da soma da progressão geométrica">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1176,7 +1296,7 @@ Fórmula da soma da progressão geométrica
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Tome a soma de uma progressão geométrica com <span class="math inline">\(n\)</span> parcelas, razão dada por <span class="math inline">\(q\)</span>, e primeiro termo <span class="math inline">\(a_0\)</span>,</p>
 <p><span class="math display">\[\begin{align*} S_n = a_0\left(1 + q^1 + q^2 + \cdots + q^{n-2} +  q^{n-1}\right). \end{align*}\]</span> Escreva <span class="math inline">\(qS_n\)</span> <span class="math display">\[\begin{align*} qS_n = a_0(q^1 + q^2 + q^3 + \cdots + q^{n-1} + q^n). \end{align*}\]</span> Agora faça <span class="math inline">\(S_n - qS_n\)</span>. Veja que apenas o primeiro termo <span class="math inline">\(1\)</span> e o último termo <span class="math inline">\(q^n\)</span> sobram. <span class="math display">\[\begin{align*} S_n - qS_n &amp;= a_0\left(1 - q^{n}\right), \\
@@ -1189,13 +1309,14 @@ S_n &amp;=  a_0\left(\frac{1-q^n}{1-q}\right).\end{align*} \]</span> Essa é a f
 <p><span id="eq-sfc-vp-1"><span class="math display">\[\begin{align}
 VP(SFC,r) &amp;= FC_0 + \frac{1}{1+r}\left[\frac{1-\left(\frac{1}{1+r}\right)^T}{1-\left(\frac{1}{1+r}\right)}\right],\\
 &amp;= FC_0 + FC\left(\frac{1-(1+r)^{-T}}{r}\right).
-\end{align} \tag{1.6}\]</span></span></p>
-<p>A expressão entre parênteses na <a href="#eq-sfc-vp-1" class="quarto-xref">Equation&nbsp;<span>1.6</span></a> às vezes é chamada de fator de valor presente, <span class="math inline">\(FVP\)</span>, porque é o fator pelo qual que multiplicamos o pagamento homogêneo <span class="math inline">\(FC\)</span> para obter o valor presente da sua soma.</p>
+\end{align} \tag{2.7}\]</span></span></p>
+<p>A expressão entre parênteses na <a href="#eq-sfc-vp-1" class="quarto-xref">Equation&nbsp;<span>2.7</span></a> às vezes é chamada de fator de valor presente, <span class="math inline">\(FVP\)</span>, porque é o fator pelo qual que multiplicamos o pagamento homogêneo <span class="math inline">\(FC\)</span> para obter o valor presente da sua soma.</p>
 <p><span id="eq-sfc-vp-2"><span class="math display">\[\begin{align*}
   FVP(r,T)=\left(\frac{1-(1+r)^{-T}}{r}\right).
-\end{align*} \tag{1.7}\]</span></span></p>
-</section><section id="valor-presente-da-perpetuidade" class="level4" data-number="1.6.1.2"><h4 data-number="1.6.1.2" class="anchored" data-anchor-id="valor-presente-da-perpetuidade">
-<span class="header-section-number">1.6.1.2</span> Valor presente da perpetuidade</h4>
+\end{align*} \tag{2.8}\]</span></span></p>
+</section>
+<section id="valor-presente-da-perpetuidade" class="level4" data-number="2.6.1.2">
+<h4 data-number="2.6.1.2" class="anchored" data-anchor-id="valor-presente-da-perpetuidade"><span class="header-section-number">2.6.1.2</span> Valor presente da perpetuidade</h4>
 <p>Podemos calcular o valor presente de uma sequência de fluxos de caixa homogêneos sem data para acabar.</p>
 <p>Tome a sequência de fluxos de caixa <span class="math inline">\(SFC=\{FC_0, FC, FC, \dots\}\)</span></p>
 <p><span class="math display">\[\begin{align*}
@@ -1203,11 +1324,13 @@ VP_\infty (SFC,r) &amp;= FC_0 + FC \left(\frac{1}{1+r} + \frac{1}{(1+r)^2}+\cdot
 &amp;= FC_0 + FC \lim_{T\rightarrow\infty}\left(\frac{1-(1+r)^{-T}}{r}\right),\\
 &amp;= FC_0 + \frac{FC}{r}.
 \end{align*}\]</span></p>
-</section><section id="valor-presente-da-perpetuidade-com-crescimento" class="level4" data-number="1.6.1.3"><h4 data-number="1.6.1.3" class="anchored" data-anchor-id="valor-presente-da-perpetuidade-com-crescimento">
-<span class="header-section-number">1.6.1.3</span> Valor presente da perpetuidade com crescimento</h4>
+</section>
+<section id="valor-presente-da-perpetuidade-com-crescimento" class="level4" data-number="2.6.1.3">
+<h4 data-number="2.6.1.3" class="anchored" data-anchor-id="valor-presente-da-perpetuidade-com-crescimento"><span class="header-section-number">2.6.1.3</span> Valor presente da perpetuidade com crescimento</h4>
 <p>Uma aplicação bastante relevante para</p>
-</section><section id="valor-futuro-de-uma-sequência-de-fluxos-de-caixa-homogêneos" class="level4" data-number="1.6.1.4"><h4 data-number="1.6.1.4" class="anchored" data-anchor-id="valor-futuro-de-uma-sequência-de-fluxos-de-caixa-homogêneos">
-<span class="header-section-number">1.6.1.4</span> Valor futuro de uma sequência de fluxos de caixa homogêneos</h4>
+</section>
+<section id="valor-futuro-de-uma-sequência-de-fluxos-de-caixa-homogêneos" class="level4" data-number="2.6.1.4">
+<h4 data-number="2.6.1.4" class="anchored" data-anchor-id="valor-futuro-de-uma-sequência-de-fluxos-de-caixa-homogêneos"><span class="header-section-number">2.6.1.4</span> Valor futuro de uma sequência de fluxos de caixa homogêneos</h4>
 <div class="callout callout-style-simple callout-warning no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1215,25 +1338,28 @@ VP_\infty (SFC,r) &amp;= FC_0 + FC \left(\frac{1}{1+r} + \frac{1}{(1+r)^2}+\cdot
 </div>
 <div class="callout-body-container">
 <div id="exr-sfc-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1.3</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Exercise 2.1</strong></span> &nbsp;</p>
 </div>
 <div id="exr-sfc-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1.4</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Exercise 2.2</strong></span> &nbsp;</p>
 </div>
 <div id="exr-sfc-3" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1.5</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Exercise 2.3</strong></span> &nbsp;</p>
 </div>
 <div id="exr-sfc-4" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1.6</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Exercise 2.4</strong></span> &nbsp;</p>
 </div>
 <div id="exr-sfc-5" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1.7</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Exercise 2.5</strong></span> &nbsp;</p>
 </div>
 </div>
 </div>
 </div>
-</section></section></section><section id="sec-vpl" class="level2" data-number="1.7"><h2 data-number="1.7" class="anchored" data-anchor-id="sec-vpl">
-<span class="header-section-number">1.7</span> Valor presente líquido (VPL)</h2>
+</section>
+</section>
+</section>
+<section id="sec-vpl" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="sec-vpl"><span class="header-section-number">2.7</span> Valor presente líquido (VPL)</h2>
 <p>Em um mundo sem incertezas, um <em>projeto de investimento</em> é completamente descrito por dois objetos:</p>
 <ul>
 <li><p>uma sequência de fluxos de caixa localizados no tempo <span class="math display">\[ SFC = \{FC_0, FC_1, \dots, FC_T\},\]</span></p></li>
@@ -1265,7 +1391,7 @@ Custo de capital
 </div>
 <div class="callout-body-container">
 <div id="exm-vpl-1" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1.11</strong></span> Para entender a interpretação econômica do conceito de valor presente líquido, vamos retornar ao (exemplo??). Para chegar no <span class="math inline">\(PU\)</span> máximo que pagaríamos pelo título nós descontamos os fluxos de caixa pela taxa de juros pela qual poderíamos tomar recursos emprestados.</p>
+<p><span class="theorem-title"><strong>Example 2.10</strong></span> Para entender a interpretação econômica do conceito de valor presente líquido, vamos retornar ao (exemplo??). Para chegar no <span class="math inline">\(PU\)</span> máximo que pagaríamos pelo título nós descontamos os fluxos de caixa pela taxa de juros pela qual poderíamos tomar recursos emprestados.</p>
 <p>Nós recebemos <span class="math inline">\(\$500\)</span> em <span class="math inline">\(t=1\)</span> e <span class="math inline">\(\$1000\)</span> em <span class="math inline">\(t=2\)</span>.</p>
 <p>Podemos tomar dinheiro emprestado ao custo de <span class="math inline">\(12\%\)</span> ao período.</p>
 <p>A justificativa por trás da resposta é que em <span class="math inline">\(t=0\)</span> tomamos dois empréstimos com horizontes diferentes.</p>
@@ -1295,32 +1421,35 @@ Critério do valor presente líquido
 </ul>
 </div>
 </div>
-</section><section id="sec-tir" class="level2" data-number="1.8"><h2 data-number="1.8" class="anchored" data-anchor-id="sec-tir">
-<span class="header-section-number">1.8</span> Taxa interna de retorno (TIR)</h2>
+</section>
+<section id="sec-tir" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="sec-tir"><span class="header-section-number">2.8</span> Taxa interna de retorno (TIR)</h2>
 <p>A taxa interna de retorno (TIR, ou IRR de <em>internal rate of return</em>) é a taxa de desconto, que quando aplicada aos fluxos de caixa de um projeto de investimento, torna o seu valor presente líquido zero.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled" title="@exm-tir-1 TIR de uma sequência de fluxos de caixa">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<a href="#exm-tir-1" class="quarto-xref">Example&nbsp;<span>1.12</span></a> TIR de uma sequência de fluxos de caixa
+<a href="#exm-tir-1" class="quarto-xref">Example&nbsp;<span>2.11</span></a> TIR de uma sequência de fluxos de caixa
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="exm-tir-1" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1.12</strong></span> Considere um projeto de investimento muito simples, com apenas dois fluxos de caixa. A Figura abaixo descreve os fluxos de caixa: na data inicial o investidor paga <span class="math inline">\(\$100\)</span>, e no período seguinte recebe <span class="math inline">\(\$120\)</span>. Qual é a Taxa interna de retorno do projeto?</p>
+<p><span class="theorem-title"><strong>Example 2.11</strong></span> Considere um projeto de investimento muito simples, com apenas dois fluxos de caixa. A Figura abaixo descreve os fluxos de caixa: na data inicial o investidor paga <span class="math inline">\(\$100\)</span>, e no período seguinte recebe <span class="math inline">\(\$120\)</span>. Qual é a Taxa interna de retorno do projeto?</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-diagrama-fluxo-de-caixa-tir-1" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-diagrama-fluxo-de-caixa-tir-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-diagrama-fluxo-de-caixa-tir-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="02_MatematicaFinanceira_files/figure-html/fig-diagrama-fluxo-de-caixa-tir-1-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diagrama-fluxo-de-caixa-tir-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.2: Diagrama de fluxo de caixa <a href="#exm-tir-1" class="quarto-xref">Example&nbsp;<span>1.12</span></a>
-</figcaption></figure>
+Figure&nbsp;2.2: Diagrama de fluxo de caixa <a href="#exm-tir-1" class="quarto-xref">Example&nbsp;<span>2.11</span></a>
+</figcaption>
+</figure>
 </div>
 </div>
 </div>
@@ -1346,41 +1475,43 @@ FC_0 + \sum^T_{t=1} \frac{FC_t}{(1+r^*)^t} = 0
 \end{align*}\]</span></p>
 <p>Aqui fica claro que para calcular a TIR devemos resolver uma equação polinomial em <span class="math inline">\(r^*\)</span>, com grau <span class="math inline">\(T\)</span> dado pela quantidade de períodos na sequência de fluxos de caixa, menos um (lembre que de <span class="math inline">\(0\)</span> a <span class="math inline">\(T\)</span> temos <span class="math inline">\(T+1\)</span> elementos). Os fluxos de caixa <span class="math inline">\(\{FC_t\}^T_{t=0}\)</span> são os coeficientes dessa equação polinomial.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled" title="@exm-tir-2 Cálculo da TIR no usando *Google sheets*">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<a href="#exm-tir-2" class="quarto-xref">Example&nbsp;<span>1.13</span></a> Cálculo da TIR no usando <em>Google sheets</em>
+<a href="#exm-tir-2" class="quarto-xref">Example&nbsp;<span>2.12</span></a> Cálculo da TIR no usando <em>Google sheets</em>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="exm-tir-2" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1.13</strong></span> Calcule a TIR da seguinte sequência de fluxos de caixa <span class="math display">\[ SFC = \{-1500, 200, 300, 400, 1000\}.\]</span> <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRjTxdjUogiIT9iTClOqwdPiEPwIO39-zijEaE-LKEdp4Hg518Vnq2b9PWyognB6AG8WPPU6JdBDdv1/pubhtml?gid=2090645731&amp;single=true&amp;widget=true&amp;headers=false"></iframe></p>
+<p><span class="theorem-title"><strong>Example 2.12</strong></span> Calcule a TIR da seguinte sequência de fluxos de caixa <span class="math display">\[ SFC = \{-1500, 200, 300, 400, 1000\}.\]</span> <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRjTxdjUogiIT9iTClOqwdPiEPwIO39-zijEaE-LKEdp4Hg518Vnq2b9PWyognB6AG8WPPU6JdBDdv1/pubhtml?gid=2090645731&amp;single=true&amp;widget=true&amp;headers=false"></iframe></p>
 </div>
 </div>
 </div>
 </div>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled" title="@exm-tir-3 *Yield to maturity* de um título com cupons">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<a href="#exm-tir-3" class="quarto-xref">Example&nbsp;<span>1.15</span></a> <em>Yield to maturity</em> de um título com cupons
+<a href="#exm-tir-3" class="quarto-xref">Example&nbsp;<span>2.14</span></a> <em>Yield to maturity</em> de um título com cupons
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="exm-tir-3" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1.14</strong></span> Uma aplicação importante da TIR é o cálculo da taxa de juros embutida em um título de desconto que paga cupons periódicos.</p>
+<p><span class="theorem-title"><strong>Example 2.13</strong></span> Uma aplicação importante da TIR é o cálculo da taxa de juros embutida em um título de desconto que paga cupons periódicos.</p>
 <p>As Notas do Tesouro Nacional série F (NTN-F, ou “Tesouro Prefixado com Juros Semestrais”) são um tipo de título emitido pelo Tesouro brasileiro. O valor de face das NTN-F é <span class="math inline">\(R\$1000\)</span>. Ou seja, na data de vencimento do título o detentor recebe <span class="math inline">\(VF=R\$1000\)</span>. Ainda, durante a vida do contrato (incluindo a data de vencimento), o detentor do título recebe cupons de juros semestrais de <span class="math inline">\(R\$48.81\)</span><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/TIR_TesouroDireto_1.png" class="img-fluid figure-img"></p>
-<figcaption>Preços e taxas Tesouro Direto</figcaption></figure>
+<figure class="figure">
+<p><img src="images/TIR_TesouroDireto_1.png" class="img-fluid figure-img"></p>
+<figcaption>Preços e taxas Tesouro Direto</figcaption>
+</figure>
 </div>
 <p>Não existe uma taxa de juros explícita no contrato dos títulos negociados pelo Tesouro. Oferta e demanda no mercado determinam o PU (Preço Unitário) do título, e a “Rentabilidade anual” na figura acima é determinada pela TIR da sequência de fluxos de caixa que o detentor do título receberia.</p>
 <p>Imagine que hoje, 01/01/2025, uma NTN-F com vencimento em 01/01/2028, está sendo negociada com <span class="math inline">\(PU=R\$800\)</span>. Qual é a taxa de juros embutida nesse título?</p>
@@ -1388,6 +1519,7 @@ FC_0 + \sum^T_{t=1} \frac{FC_t}{(1+r^*)^t} = 0
 </iframe>
 <p>A frequência de incidência da TIR calculada é igual ao passo temporal na sequência de fluxo de caixa. Então a rentabilidade é <span class="math inline">\(9.392\%\)</span> ao semestre, que é equivalente a <span class="math inline">\(19.67\%\)</span> ao ano.</p>
 <p>Chamamos essa taxa de <em>yield to maturity</em> porque é o retorno médio obtido pelo detentor do título, que leva esse título até o vencimento (não vende antecipadamente no mercado secundário).</p>
+<p>O Tesouro disponibiliza uma <a href="https://www.tesourodireto.com.br/titulos/calculadora.htm">calculadora</a> que facilita esses cálculos, que no dia a dia são complicados por questões de dias úteis no caledário civil e incidência de impostos sobre recebimentos de cupons e valor de face.</p>
 </div>
 </div>
 </div>
@@ -1410,7 +1542,8 @@ Critério da taxa interna de retorno
 <p>A TIR não é apropriada pra a escolha entre dois projetos de investimento mutuamente exclusivos.</p>
 </div>
 </div>
-<section id="limitações-da-tir" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="limitações-da-tir">Limitações da TIR</h4>
+<section id="limitações-da-tir" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="limitações-da-tir">Limitações da TIR</h4>
 <p>A TIR é uma medida bastante atraente porque apenas usando as informações dos fluxos de caixa, obtemos uma medida do quão rentável é um projeto de investimento particular. Comparando com o VPL, a TIR não requer uma taxa de desconto préviamente especificada para ser calculada.</p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Unicidade da taxa interna de retorno">
 <div class="callout-header d-flex align-content-center">
@@ -1423,101 +1556,110 @@ Unicidade da taxa interna de retorno
 </div>
 <div class="callout-body-container callout-body">
 <p>A TIR é a solução para a seguinte equação polinomial:</p>
-<p><span class="math display">\[\begin{align*}
+<p><span id="eq-tir"><span class="math display">\[\begin{align*}
 FC_0 + \frac{FC_1}{1+r^*} + \frac{FC_2}{(1+r^*)^2} + \cdots + \frac{FC_T}{(1+r^*)^n} = 0.
-\end{align*}\]</span></p>
+\end{align*} \tag{2.9}\]</span></span></p>
 <p>Uma equação polinomial de grau <span class="math inline">\(n\)</span> tem sempre <span class="math inline">\(n\)</span> raízes. Em geral essas raízes podem ser números complexos e não precisam se repetir.</p>
-<p>As duas condições abaixo garantem que existe apenas uma solução real <span class="math inline">\(r^*\)</span> (vão existir raízes complexas, que vamos ignorar), e que essa soluçaõ real é positiva.</p>
+<p>As duas condições abaixo garantem que existe apenas uma solução real <span class="math inline">\(r^*\)</span> (vão existir raízes complexas, que vamos ignorar), e que essa solução real é positiva.</p>
 <ol type="1">
-<li><p>Existe apenas uma mudança no sinal dos fluxos de caixa. Essa condição garante que existe apenas uma solução real. Na grande maioria das nossas aplicações essa mudança ocorre do primeiro para o segundo fluxo de caixa. Isto é, <span class="math inline">\(FC_0&lt;0\)</span> e <span class="math inline">\(FC_t&gt;0\)</span>, <span class="math inline">\(t=1,\dots,n\)</span>; ou <span class="math inline">\(FC_0&gt;0\)</span> e <span class="math inline">\(FC_t&lt;0\)</span>, <span class="math inline">\(t=1,\dots,n\)</span>.</p></li>
-<li><p>Assumindo que a mundança de sinal acontece entre <span class="math inline">\(t=0\)</span> e <span class="math inline">\(t=1\)</span>, o valor bruto (não descontado) dos fluxos de caixa acumulados entre <span class="math inline">\(t=1\)</span> e <span class="math inline">\(t=n\)</span> são maiores do que <span class="math inline">\(FC_0\)</span>, em módulo. Ou seja, <span class="math display">\[|FC_0|&lt;\left|\sum^n_{t=1}FC_t\right|.\]</span> Essa condição vai garantir que a TIR é uma taxa positiva. Perceba que se <span class="math inline">\(FC_0 + \sum^n_{t=1}FC_t = 0\)</span>, então <span class="math inline">\(r^*=0\)</span>.</p></li>
+<li>Existe apenas uma mudança no sinal dos fluxos de caixa.</li>
 </ol>
+<p>Essa condição garante que existe apenas uma solução real. Na grande maioria das nossas aplicações essa mudança ocorre do primeiro para o segundo fluxo de caixa. Isto é, <span class="math inline">\(FC_0&lt;0\)</span> e <span class="math inline">\(FC_t&gt;0\)</span>, <span class="math inline">\(t=1,\dots,n\)</span>; ou <span class="math inline">\(FC_0&gt;0\)</span> e <span class="math inline">\(FC_t&lt;0\)</span>, <span class="math inline">\(t=1,\dots,n\)</span>.</p>
+<ol start="2" type="1">
+<li>Assumindo que a mundança de sinal acontece entre <span class="math inline">\(t=0\)</span> e <span class="math inline">\(t=1\)</span>, o valor bruto (não descontado) dos fluxos de caixa acumulados entre <span class="math inline">\(t=1\)</span> e <span class="math inline">\(t=n\)</span> são maiores do que <span class="math inline">\(FC_0\)</span>, em módulo. Ou seja,</li>
+</ol>
+<p><span class="math display">\[|FC_0|&lt;\left|\sum^n_{t=1}FC_t\right|.\]</span></p>
+<p>Essa condição vai garantir que a TIR é uma taxa positiva. Perceba que se <span class="math inline">\(FC_0 + \sum^n_{t=1}FC_t = 0\)</span>, então <span class="math inline">\(r^*=0\)</span>.</p>
 <p>Essas condições são corolários de um resultado mais geral conhecido como <a href="https://en.wikipedia.org/wiki/Descartes%27_rule_of_signs">Regra dos sinais de Descartes</a>.</p>
 </div>
 </div>
-<div class="callout callout-style-simple callout-tip no-icon callout-titled" title="@exm-tir-3 Cálculo da TIR no ***R***">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout callout-style-simple callout-tip no-icon callout-titled" title="@exm-tir-3 Cálculo da TIR no usando a linguagem ***R***">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<a href="#exm-tir-3" class="quarto-xref">Example&nbsp;<span>1.15</span></a> Cálculo da TIR no <strong><em>R</em></strong>
+<a href="#exm-tir-3" class="quarto-xref">Example&nbsp;<span>2.14</span></a> Cálculo da TIR no usando a linguagem <strong><em>R</em></strong>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="exm-tir-3" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1.15</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 2.14</strong></span> Para calcular a TIR nós precisamos resolver a equação <a href="#eq-tir" class="quarto-xref">Equation&nbsp;<span>2.9</span></a> numericamente. Vamos usar a</p>
 <div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">SFC_1</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">100</span>, <span class="fl">10</span>, <span class="fl">10</span>, <span class="fl">20</span>, <span class="fl">30</span>, <span class="op">-</span><span class="fl">45</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/polyroot.html">polyroot</a></span><span class="op">(</span><span class="va">SFC_1</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-4"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-4-1" class="code-annotation-target"><a href="#annotated-cell-4-1" aria-hidden="true" tabindex="-1"></a>SFC <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="sc">-</span><span class="dv">45</span>)</span>
+<span id="annotated-cell-4-2"><a href="#annotated-cell-4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">polyroot</span>(SFC)</span>
+<span id="annotated-cell-4-3"><a href="#annotated-cell-4-3" aria-hidden="true" tabindex="-1"></a>tir <span class="ot">=</span> <span class="cf">function</span>(SFC){</span>
+<span id="annotated-cell-4-4"><a href="#annotated-cell-4-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="annotated-cell-4-5"><a href="#annotated-cell-4-5" aria-hidden="true" tabindex="-1"></a>}</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-4" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-4" data-code-lines="1" data-code-annotation="1">Construímos um vetor cujas entradas são os (…)</span>
+</dd>
+</dl>
+</div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]  0.4432337+1.0171096i -0.8728359+0.6490464i -0.8728359-0.6490464i
 [4]  0.4432337-1.0171096i  1.5258710+0.0000000i</code></pre>
 </div>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tir</span> <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">SFC</span><span class="op">)</span><span class="op">{</span></span>
-<span>  </span>
-<span><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-</section></section><section id="sec-exercicios02" class="level2" data-number="1.9"><h2 data-number="1.9" class="anchored" data-anchor-id="sec-exercicios02">
-<span class="header-section-number">1.9</span> Exercícios</h2>
-<section id="sec-juros-juros-e-taxa-de-juros" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="sec-juros-juros-e-taxa-de-juros">
-<a href="#sec-juros" class="quarto-xref"><span>Section 1.1</span></a> Juros e taxa de juros</h3>
-</section><section id="sec-capitalizacaoedesconto-capitalização-e-desconto" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="sec-capitalizacaoedesconto-capitalização-e-desconto">
-<a href="#sec-capitalizacaoedesconto" class="quarto-xref"><span>Section 1.2</span></a> Capitalização e desconto</h3>
-</section><section id="sec-regimescapitalizacao-desconto-e-capitalização-em-múltiplos-períodos" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="sec-regimescapitalizacao-desconto-e-capitalização-em-múltiplos-períodos">
-<a href="#sec-regimescapitalizacao" class="quarto-xref"><span>Section 1.3</span></a> Desconto e capitalização em múltiplos períodos</h3>
+</section>
+</section>
+<section id="sec-exercicios02" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="sec-exercicios02"><span class="header-section-number">2.9</span> Exercícios</h2>
+<section id="sec-juros-juros-e-taxa-de-juros" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="sec-juros-juros-e-taxa-de-juros"><a href="#sec-juros" class="quarto-xref"><span>Section 2.1</span></a> Juros e taxa de juros</h3>
+</section>
+<section id="sec-capitalizacaoedesconto-capitalização-e-desconto" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="sec-capitalizacaoedesconto-capitalização-e-desconto"><a href="#sec-capitalizacaoedesconto" class="quarto-xref"><span>Section 2.2</span></a> Capitalização e desconto</h3>
+</section>
+<section id="sec-regimescapitalizacao-desconto-e-capitalização-em-múltiplos-períodos" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="sec-regimescapitalizacao-desconto-e-capitalização-em-múltiplos-períodos"><a href="#sec-regimescapitalizacao" class="quarto-xref"><span>Section 2.3</span></a> Desconto e capitalização em múltiplos períodos</h3>
 <div id="exr-sec-regimescapitalizacao-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1.8</strong></span> Verifique as fórmulas de capitalização e desconto em múltiplos períodos (com taxa de juros constante) descritas nas <a href="#eq-eqvf-taxaconstante" class="quarto-xref">Equation&nbsp;<span>1.2</span></a> e <a href="#eq-eqvp-taxaconstante" class="quarto-xref">Equation&nbsp;<span>1.3</span></a>, com base na fórmula para um período descrita na <a href="#eq-eqvp" class="quarto-xref">Equation&nbsp;<span>1.1</span></a>.</p>
+<p><span class="theorem-title"><strong>Exercise 2.6</strong></span> Verifique as fórmulas de capitalização e desconto em múltiplos períodos (com taxa de juros constante) descritas nas <a href="#eq-eqvf-taxaconstante" class="quarto-xref">Equation&nbsp;<span>2.3</span></a> e <a href="#eq-eqvp-taxaconstante" class="quarto-xref">Equation&nbsp;<span>2.4</span></a>, com base na fórmula para um período descrita na <a href="#eq-eqvp" class="quarto-xref">Equation&nbsp;<span>2.2</span></a>.</p>
 </div>
 <div id="exr-sec-regimescapitalizacao-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1.9</strong></span> Se <span class="math inline">\(S_t\)</span> é o valor do seu capital no período <span class="math inline">\(t\)</span> e <span class="math inline">\(r\)</span> é a taxa de juros, calcule o que se pede.</p>
+<p><span class="theorem-title"><strong>Exercise 2.7</strong></span> Se <span class="math inline">\(S_t\)</span> é o valor do seu capital no período <span class="math inline">\(t\)</span> e <span class="math inline">\(r\)</span> é a taxa de juros, calcule o que se pede.</p>
 <ol type="a">
-<li>Se <span class="math inline">\(S_0=\$100\)</span>, e <span class="math inline">\(r=5\%\)</span> ao período, qual o valor de <span class="math inline">\(S_3\)</span>? <abbr title="$115.76">[R]</abbr>
-</li>
-<li>Se <span class="math inline">\(S_0=\$100\)</span>, e <span class="math inline">\(r=1\%\)</span> ao período, qual o valor de <span class="math inline">\(S_{12}\)</span>? <abbr title="$112.68">[R]</abbr>
-</li>
-<li>Se <span class="math inline">\(S_0=\$250\)</span> e <span class="math inline">\(r=10\%\)</span> ao período, qual o valor de <span class="math inline">\(S_{10}\)</span>? <abbr title="$648.44">[R]</abbr>
-</li>
-<li>Se <span class="math inline">\(S_{12}=\$1000\)</span>, e <span class="math inline">\(r=1\%\)</span> ao período, qual o valor de <span class="math inline">\(S_0\)</span>? <abbr title="$887.45">[R]</abbr>
-</li>
-<li>Se <span class="math inline">\(S_5=\$1500\)</span>, e <span class="math inline">\(r=5\%\)</span> ao período, qual o valor de <span class="math inline">\(S_2\)</span>? <abbr title="$1295.76">[R]</abbr>
-</li>
+<li>Se <span class="math inline">\(S_0=\$100\)</span>, e <span class="math inline">\(r=5\%\)</span> ao período, qual o valor de <span class="math inline">\(S_3\)</span>? <abbr title="$115.76">[R]</abbr></li>
+<li>Se <span class="math inline">\(S_0=\$100\)</span>, e <span class="math inline">\(r=1\%\)</span> ao período, qual o valor de <span class="math inline">\(S_{12}\)</span>? <abbr title="$112.68">[R]</abbr></li>
+<li>Se <span class="math inline">\(S_0=\$250\)</span> e <span class="math inline">\(r=10\%\)</span> ao período, qual o valor de <span class="math inline">\(S_{10}\)</span>? <abbr title="$648.44">[R]</abbr></li>
+<li>Se <span class="math inline">\(S_{12}=\$1000\)</span>, e <span class="math inline">\(r=1\%\)</span> ao período, qual o valor de <span class="math inline">\(S_0\)</span>? <abbr title="$887.45">[R]</abbr></li>
+<li>Se <span class="math inline">\(S_5=\$1500\)</span>, e <span class="math inline">\(r=5\%\)</span> ao período, qual o valor de <span class="math inline">\(S_2\)</span>? <abbr title="$1295.76">[R]</abbr></li>
 </ol>
 </div>
 <div id="exr-sec-regimescapitalizacao-3" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1.10</strong></span> Hoje vence um título de desconto zero-cupom com valor de face <span class="math inline">\(VF=\$1000\)</span> comprado há exatos <span class="math inline">\(5\)</span> anos. Se a taxa de juros embutida no título no momento da compra era <span class="math inline">\(7.5\%\)</span> ao ano, qual foi o preço unitário <span class="math inline">\(PU\)</span> pago? <abbr title="$696.56">[R]</abbr></p>
+<p><span class="theorem-title"><strong>Exercise 2.8</strong></span> Hoje vence um título de desconto zero-cupom com valor de face <span class="math inline">\(VF=\$1000\)</span> comprado há exatos <span class="math inline">\(5\)</span> anos. Se a taxa de juros embutida no título no momento da compra era <span class="math inline">\(7.5\%\)</span> ao ano, qual foi o preço unitário <span class="math inline">\(PU\)</span> pago? <abbr title="$696.56">[R]</abbr></p>
 </div>
 <div id="exr-sec-regimescapitalizacao-4" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1.11</strong></span> Você acabou de empenhar seu capital inicial de <span class="math inline">\(S_0=\$5000\)</span> em um investimento que te rende uma taxa de <span class="math inline">\(r=8\%\)</span> ao período.</p>
+<p><span class="theorem-title"><strong>Exercise 2.9</strong></span> Você acabou de empenhar seu capital inicial de <span class="math inline">\(S_0=\$5000\)</span> em um investimento que te rende uma taxa de <span class="math inline">\(r=8\%\)</span> ao período.</p>
 <ol type="a">
-<li>Quantos períodos são necessários para que o saldo do investimento exceda <span class="math inline">\(2\)</span> vezes o capital inicial? <abbr title="9.006">[R]</abbr>
-</li>
-<li>Quantos períodos são necessários para que o saldo do investimento exceda <span class="math inline">\(3\)</span> vezes o capital inicial? <abbr title="14.275">[R]</abbr>
-</li>
-<li>Quantos períodos são necessários para que o saldo do investimento exceda <span class="math inline">\(5\)</span> vezes o capital inicial? <abbr title="20.912">[R]</abbr>
-</li>
-<li>Quantos períodos são necessários para que o saldo do investimento exceda <span class="math inline">\(10\)</span> vezes o capital inicial? <abbr title="29.919">[R]</abbr>
-</li>
+<li>Quantos períodos são necessários para que o saldo do investimento exceda <span class="math inline">\(2\)</span> vezes o capital inicial? <abbr title="9.006">[R]</abbr></li>
+<li>Quantos períodos são necessários para que o saldo do investimento exceda <span class="math inline">\(3\)</span> vezes o capital inicial? <abbr title="14.275">[R]</abbr></li>
+<li>Quantos períodos são necessários para que o saldo do investimento exceda <span class="math inline">\(5\)</span> vezes o capital inicial? <abbr title="20.912">[R]</abbr></li>
+<li>Quantos períodos são necessários para que o saldo do investimento exceda <span class="math inline">\(10\)</span> vezes o capital inicial? <abbr title="29.919">[R]</abbr></li>
 <li>Quantos períodos são necessários para que o saldo do investimento exceda <span class="math inline">\(K\)</span> vezes o capital inicial?</li>
 <li>O valor do capital inicial tem alguma influência sobre as respostas dos itens anteriores? O que podemos concluir da diferença entre as respostas dos itens anteriores?</li>
 </ol>
 </div>
 <div id="exr-sec-regimescapitalizacao-5" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1.12</strong></span> Um mesmo saldo inicial de <span class="math inline">\(S_0=\$1000\)</span> é capitalizado ambos pelo regime composto e simples, com a mesma taxa de juros de <span class="math inline">\(10\%\)</span> ao ano. Quantos períodos são necessários para que o valor desse saldo capitalizado pelo regime composto exceda duas vezes o valor capitalizado pelo regime simples?</p>
+<p><span class="theorem-title"><strong>Exercise 2.10</strong></span> Um mesmo saldo inicial de <span class="math inline">\(S_0=\$1000\)</span> é capitalizado ambos pelo regime composto e simples, com a mesma taxa de juros de <span class="math inline">\(10\%\)</span> ao ano. Quantos períodos são necessários para que o valor desse saldo capitalizado pelo regime composto exceda duas vezes o valor capitalizado pelo regime simples?</p>
 </div>
 <div id="exr-sec-regimescapitalizacao-6" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1.13</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Exercise 2.11</strong></span> &nbsp;</p>
 </div>
-</section><section id="sec-transformacaotaxas-transformação-de-frequência-e-taxas-equivalentes" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="sec-transformacaotaxas-transformação-de-frequência-e-taxas-equivalentes">
-<a href="#sec-transformacaotaxas" class="quarto-xref"><span>Section 1.4</span></a> Transformação de frequência e taxas equivalentes</h3>
+</section>
+<section id="sec-transformacaotaxas-transformação-de-frequência-e-taxas-equivalentes" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="sec-transformacaotaxas-transformação-de-frequência-e-taxas-equivalentes"><a href="#sec-transformacaotaxas" class="quarto-xref"><span>Section 2.4</span></a> Transformação de frequência e taxas equivalentes</h3>
 <div id="exr-sec-transformacaotaxas-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1.14</strong></span> Para responder às perguntas abaixo, considere as convenções</p>
+<p><span class="theorem-title"><strong>Exercise 2.12</strong></span> Para responder às perguntas abaixo, considere as convenções</p>
 <ul>
 <li>30 dias em 1 mês (dias corridos),</li>
 <li>365 dias em 1 ano (dias corridos),</li>
@@ -1526,101 +1668,100 @@ FC_0 + \frac{FC_1}{1+r^*} + \frac{FC_2}{(1+r^*)^2} + \cdots + \frac{FC_T}{(1+r^*
 <li>22 dias úteis em 1 mês (taxa <em>over</em>).</li>
 </ul>
 <ol type="a">
-<li>Se <span class="math inline">\(r=10\%\)</span> ao semestre, qual a taxa equivalente com incidência a cada quatro meses? <abbr title="6.56%">[R]</abbr>
-</li>
-<li>Se <span class="math inline">\(r=15\%\)</span> ao ano, qual a taxa equivalente com incidência a cada um ano e meio? <abbr title="23.32%">[R]</abbr>
-</li>
-<li>Se <span class="math inline">\(r=5\%\)</span> ao semestre, qual a taxa equivalente com incidência semanal? <abbr title="0.1878%">[R]</abbr>
-</li>
-<li>Se <span class="math inline">\(r=25\%\)</span> a cada dois anos e meio, qual a taxa equivalente com incidência mensal? <abbr title="0.7466%">[R]</abbr>
-</li>
-<li>Se <span class="math inline">\(r=0.1\%\)</span> ao dia útil, qual a taxa <em>over</em> equivalente anual? <abbr title="28.64%">[R]</abbr>
-</li>
-<li>Se <span class="math inline">\(r=15\%\)</span> ao ano <em>over</em>, qual a taxa equivalente diária? <abbr title="0.0555%">[R]</abbr>
-</li>
+<li>Se <span class="math inline">\(r=10\%\)</span> ao semestre, qual a taxa equivalente com incidência a cada quatro meses? <abbr title="6.56%">[R]</abbr></li>
+<li>Se <span class="math inline">\(r=15\%\)</span> ao ano, qual a taxa equivalente com incidência a cada um ano e meio? <abbr title="23.32%">[R]</abbr></li>
+<li>Se <span class="math inline">\(r=5\%\)</span> ao semestre, qual a taxa equivalente com incidência semanal? <abbr title="0.1878%">[R]</abbr></li>
+<li>Se <span class="math inline">\(r=25\%\)</span> a cada dois anos e meio, qual a taxa equivalente com incidência mensal? <abbr title="0.7466%">[R]</abbr></li>
+<li>Se <span class="math inline">\(r=0.1\%\)</span> ao dia útil, qual a taxa <em>over</em> equivalente anual? <abbr title="28.64%">[R]</abbr></li>
+<li>Se <span class="math inline">\(r=15\%\)</span> ao ano <em>over</em>, qual a taxa equivalente diária? <abbr title="0.0555%">[R]</abbr></li>
 </ol>
 </div>
 <div id="exr-sec-transformacaotaxas-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1.15</strong></span> Os retornos mensais de um portfólio de ativos financeiros está descrito na tabela abaixo.</p>
+<p><span class="theorem-title"><strong>Exercise 2.13</strong></span> Os retornos mensais de um portfólio de ativos financeiros está descrito na tabela abaixo.</p>
 <table class="caption-top table">
-<thead><tr class="header">
-<th>
-<span class="math inline">\(t\)</span> (meses)</th>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(t\)</span> (meses)</th>
 <th><span class="math inline">\(r_t\)</span></th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td>1</td>
-<td>1.1324%</td>
+<td>1.4998%</td>
 </tr>
 <tr class="even">
 <td>2</td>
-<td>1.9915%</td>
+<td>1.1634%</td>
 </tr>
 <tr class="odd">
 <td>3</td>
-<td>1.1633%</td>
+<td>1.4972%</td>
 </tr>
 <tr class="even">
 <td>4</td>
-<td>3.0552%</td>
+<td>-1.4549%</td>
 </tr>
 <tr class="odd">
 <td>5</td>
-<td>1.4997%</td>
+<td>1.7376%</td>
 </tr>
 <tr class="even">
 <td>6</td>
-<td>1.5089%</td>
+<td>0.0503%</td>
 </tr>
 <tr class="odd">
 <td>7</td>
-<td>-0.4477%</td>
+<td>3.1969%</td>
 </tr>
 <tr class="even">
 <td>8</td>
-<td>1.8988%</td>
+<td>2.0319%</td>
 </tr>
 <tr class="odd">
 <td>9</td>
-<td>0.1892%</td>
+<td>2.3798%</td>
 </tr>
 <tr class="even">
 <td>10</td>
-<td>0.1892%</td>
+<td>1.5236%</td>
 </tr>
 <tr class="odd">
 <td>11</td>
-<td>-0.7276%</td>
+<td>1.1804%</td>
 </tr>
 <tr class="even">
 <td>12</td>
-<td>2.1905%</td>
+<td>-0.9585%</td>
 </tr>
 </tbody>
 </table>
 <p>Responda ao que se pede.</p>
 <ol type="a">
-<li>Qual o retorno anual acumulado? <abbr title="14.45%">[R]</abbr>
-</li>
-<li>Qual o retorno médio mensal? <abbr title="1.13%">[R]</abbr>
-</li>
-<li>Qual o retorno médio do primeiro semestre? <abbr title="10.79%">[R]</abbr>
-</li>
-<li>Qual o retorno médio do segundo semestre? <abbr title="3.3%">[R]</abbr>
-</li>
-<li>Qual o retorno médio semestral? <abbr title="6.98%">[R]</abbr>
-</li>
+<li>Qual o retorno anual acumulado? <abbr title="14.65%">[R]</abbr></li>
+<li>Qual o retorno médio mensal? <abbr title="1.15%">[R]</abbr></li>
+<li>Qual o retorno médio do primeiro semestre? <abbr title="4.54%">[R]</abbr></li>
+<li>Qual o retorno médio do segundo semestre? <abbr title="9.67%">[R]</abbr></li>
+<li>Qual o retorno médio semestral? <abbr title="7.07%">[R]</abbr></li>
 </ol>
 </div>
 <div id="exr-sec-transformacaotaxas-3" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1.16</strong></span> Um saldo de <span class="math inline">\(S_0=\$1000\)</span> capitalizado pelo regime simples a uma taxa de <span class="math inline">\(r^s=1\%\)</span> ao mês tem valor <span class="math inline">\(S_{12}=\$1120\)</span> após um ano. Qual é a taxa de juros mensal (no regime composto) que levaria ao mesmo valor <span class="math inline">\(\$1120\)</span> ao final do ano?</p>
+<p><span class="theorem-title"><strong>Exercise 2.14</strong></span> Um saldo de <span class="math inline">\(S_0=\$1000\)</span> capitalizado pelo regime simples a uma taxa de <span class="math inline">\(r^s=1\%\)</span> ao mês tem valor <span class="math inline">\(S_{12}=\$1120\)</span> após um ano. Qual é a taxa de juros mensal (no regime composto) que levaria ao mesmo valor <span class="math inline">\(\$1120\)</span> ao final do ano?</p>
 </div>
-</section><section id="sec-inflacao-inflação-e-retorno-real" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="sec-inflacao-inflação-e-retorno-real">
-<a href="#sec-inflacao" class="quarto-xref"><span>Section 1.5</span></a> Inflação e retorno real</h3>
-<div id="exr-sec-inflacao-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1.17</strong></span> A <a href="https://www.tesourodireto.com.br/lumis/portal/file/fileDownload.jsp?fileId=8A94D4988608850F018660E32BE60FE9">NTN-B Principal</a> (ou Tesouro IPCA<sup>+</sup>) é um título pós-fixado negociado pelo Tesouro brasileiro que não possui pagamentos de cupom. Esse título oferece ao investidor retornos retornos dados pela variação realizada do IPCA, mais uma porção prefixada, que é determinada no momento da compra do título pela “taxa contratada” (sempre expressa em termos anuais, com 252 dias úteis). Você está considerando investir em títulos desse tipo.</p>
-<p>O valor de face das NTN-Bs é corrigido periodicamente pela variação do IPCA, e por isso costuma ser chamado “Valor Nominal Atualizado” (VNA). Checando a página da <a href="https://www.anbima.com.br/pt_br/informar/valor-nominal-atualizado.htm">ANBIMA</a>, você observa que atualmente o VNA das NTN-B é R$4118.321914.</p>
+</section>
+<section id="sec-inflacao-inflação-e-retorno-real" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="sec-inflacao-inflação-e-retorno-real"><a href="#sec-inflacao" class="quarto-xref"><span>Section 2.5</span></a> Inflação e retorno real</h3>
+<div id="exr-inflacao-1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2.15</strong></span> Seu salário é <span class="math inline">\(Y=\$800\)</span> ao mês e você gasta essa renda exclusivamente em latas de refrigerantes, que custam atualmente <span class="math inline">\(P_0=\$5\)</span>. Passado um mês, o seu salário ainda é o mesmo, mas o preço do refrigerante aumentou para <span class="math inline">\(P_1=\$5.5\)</span>.</p>
+<ol type="a">
+<li>Qual é a taxa de inflação mensal realizada das latas de refrigerantes?</li>
+<li>Qual foi sua “perda de poder de compra” no período? Ou seja, quantos refrigerantes (em termos percentuais) a menos você pôde comprar devido o aumento no preço?</li>
+<li>Considere que a inflação do refrigerante se manterá constante mês a mês. Quantos meses passarão até seu poder de compra ser reduzido pela metade?</li>
+</ol>
+</div>
+<div id="exr-sec-inflacao-2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2.16</strong></span> A <a href="https://www.tesourodireto.com.br/lumis/portal/file/fileDownload.jsp?fileId=8A94D4988608850F018660E32BE60FE9">NTN-B Principal</a> (ou Tesouro IPCA<sup>+</sup>) é um título pós-fixado negociado pelo Tesouro brasileiro que não possui pagamentos de cupom. Esse título oferece ao investidor retornos retornos dados pela variação realizada do IPCA, mais uma porção prefixada, que é determinada no momento da compra do título pela “taxa contratada” (sempre expressa em termos anuais, com 252 dias úteis). Você está considerando investir em títulos desse tipo.</p>
+<p>O valor de face das NTN-Bs é corrigido periodicamente pela variação do IPCA, e por isso costuma ser chamado “Valor Nominal Atualizado” (VNA). Checando a página da <a href="https://www.anbima.com.br/pt_br/informar/valor-nominal-atualizado.htm">ANBIMA</a>, você observa que atualmente o VNA das NTN-B é R$5170.587593.</p>
 <p>Hoje você pagaria por uma unidade do título:</p>
 <p><span class="math display">\[
 \begin{align}
@@ -1633,47 +1774,46 @@ FC_0 + \frac{FC_1}{1+r^*} + \frac{FC_2}{(1+r^*)^2} + \cdots + \frac{FC_T}{(1+r^*
   \text{Cotação}\% = 100 \times \left(\frac{1}{1 + \text{taxa contratada}(t)}\right)^{\frac{\text{dut}}{252}}.
 \end{align}
 \]</span></p>
-<p>Considere que a taxa contratada (na porção préfixada da remuneração) oferecida hoje é de 10.82% ao ano. Faltam exatamente 275 dias úteis até o vencimento do título, em 15/08/2026.</p>
+<p>Considere que a taxa contratada (na porção préfixada da remuneração) oferecida hoje é de 10.61% ao ano. Faltam exatamente 290 dias úteis até o vencimento do título, em 15/08/2026.</p>
 <ol type="a">
-<li>Você adquiriu uma unidade de NTN-B Principal, com vencimento em 15/08/2026. Qual preço unitário que você pagou no título hoje? <abbr title="R$3681.5428011">[R]</abbr>
-</li>
-<li>Qual a cotação do título? <abbr title="89.3942455%">[R]</abbr>
-</li>
+<li>Você adquiriu uma unidade de NTN-B Principal, com vencimento em 15/08/2026. Qual preço unitário que você pagou no título hoje? <abbr title="R$4604.0665347">[R]</abbr></li>
+<li>Qual a cotação do título? <abbr title="89.0433911%">[R]</abbr></li>
 </ol>
-<p>Passados 114 dias úteis da compra do título, o VNA agora é R$4287.9057814, e a cotação atual é 92.2152283%.</p>
+<p>Passados 105 dias úteis da compra do título, o VNA agora é R$5325.0477902, e a cotação atual é 91.2628239%.</p>
 <ol start="3" type="a">
-<li>Qual foi a taxa de inflação anual (base 252) média acumulada no período? <abbr title="9.33%">[R]</abbr>
-</li>
-<li>Qual é a taxa contratada implícita nesse título hoje (lembre-se que a taxa é expressa na frequência anual, com ano base de 252 dias úteis)? <abbr title="13.525%">[R]</abbr>
-</li>
-<li>Qual seria o preço de venda da NTN-B Principal com vencimento em 15/08/2026 no mercado secundário hoje, depois de passados os 114 dias úteis? <abbr title="R$3954.1021078">[R]</abbr>
-</li>
-<li>Imagine que você vendeu antecipadamente sua unidade da NTN-B Principal no mercado secundário pelo preço unitário calculado anteriormente. Qual foi seu retorno real médio realizado calculado em termos anuais? <abbr title="7.1092097%">[R]</abbr>
-</li>
+<li>Qual foi a taxa de inflação anual (base 252) média acumulada no período? <abbr title="7.32%">[R]</abbr></li>
+<li>Qual é a taxa contratada implícita nesse título hoje (lembre-se que a taxa é expressa na frequência anual, com ano base de 252 dias úteis)? <abbr title="13.2625%">[R]</abbr></li>
+<li>Qual seria o preço de venda da NTN-B Principal com vencimento em 15/08/2026 no mercado secundário hoje, depois de passados os 105 dias úteis? <abbr title="R$4859.7889857">[R]</abbr></li>
+<li>Imagine que você vendeu antecipadamente sua unidade da NTN-B Principal no mercado secundário pelo preço unitário calculado anteriormente. Qual foi seu retorno real médio realizado calculado em termos anuais? <abbr title="6.0867896%">[R]</abbr></li>
 </ol>
 </div>
-</section><section id="sec-sequenciasfluxosdecaixa-sequências-de-fluxos-de-caixa" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="sec-sequenciasfluxosdecaixa-sequências-de-fluxos-de-caixa">
-<a href="#sec-sequenciasfluxosdecaixa" class="quarto-xref"><span>Section 1.6</span></a> Sequências de fluxos de caixa</h3>
-</section><section id="sec-vpl-valor-presente-líquido-vpl" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="sec-vpl-valor-presente-líquido-vpl">
-<a href="#sec-vpl" class="quarto-xref"><span>Section 1.7</span></a> Valor presente líquido (VPL)</h3>
+</section>
+<section id="sec-sequenciasfluxosdecaixa-sequências-de-fluxos-de-caixa" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="sec-sequenciasfluxosdecaixa-sequências-de-fluxos-de-caixa"><a href="#sec-sequenciasfluxosdecaixa" class="quarto-xref"><span>Section 2.6</span></a> Sequências de fluxos de caixa</h3>
+</section>
+<section id="sec-vpl-valor-presente-líquido-vpl" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="sec-vpl-valor-presente-líquido-vpl"><a href="#sec-vpl" class="quarto-xref"><span>Section 2.7</span></a> Valor presente líquido (VPL)</h3>
 <div id="exr-sec-vpl-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1.18</strong></span> A tabela abaixo descreve os fluxos de caixa previstos para diferentes projetos de investimento. O custo de capital relevante é <span class="math inline">\(r=7.5\%\)</span> ao ano.</p>
+<p><span class="theorem-title"><strong>Exercise 2.17</strong></span> A tabela abaixo descreve os fluxos de caixa previstos para diferentes projetos de investimento. O custo de capital relevante é <span class="math inline">\(r=7.5\%\)</span> ao ano.</p>
 <ol type="a">
 <li>Calcule o valor presente líquido (VPL) de cada um dos projetos de investimento. Determine quais são economicamente viáveis.</li>
 <li>Se você tivesse que escolher apenas um dos projetos para executar, qual seria?</li>
 </ol>
 </div>
-</section><section id="sec-tir-taxa-interna-de-retorno-tir" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="sec-tir-taxa-interna-de-retorno-tir">
-<a href="#sec-tir" class="quarto-xref"><span>Section 1.8</span></a> Taxa interna de retorno (TIR)</h3>
+</section>
+<section id="sec-tir-taxa-interna-de-retorno-tir" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="sec-tir-taxa-interna-de-retorno-tir"><a href="#sec-tir" class="quarto-xref"><span>Section 2.8</span></a> Taxa interna de retorno (TIR)</h3>
 <div id="exr-sec-tir-1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1.19</strong></span> As NTN-F (Notas do Tesouro Nacional série F) são títulos com rentabilidade prefixada emitidos pelo Tesouro brasileiro que pagam juros semestrais. O valor de face das NTN-Fs é R$1.000,00, e a taxa de cupom é 10% ao ano.</p>
+<p><span class="theorem-title"><strong>Exercise 2.18</strong></span> As NTN-F (Notas do Tesouro Nacional série F) são títulos com rentabilidade prefixada emitidos pelo Tesouro brasileiro que pagam juros semestrais. O valor de face das NTN-Fs é R$1.000,00, e a taxa de cupom é 10% ao ano.</p>
 <p>Os cupons são pagos dia primeiro de janeiro (01/01) e primeiro de julho (01/07) de cada ano até o vencimento. O valor do cupom semestral é calculado pela convenção composta; isso quer dizer que a cada semestre, <span class="math inline">\(((1+10\%)^{1/2}-1)=4{,}881\%\)</span> do valor de face são pagos ao detentor do título.</p>
 <p>O imposto de renda sobre rendimentos auferidos de títulos do Tesouro (e a maioria dos ativos de renda fixa brasileiros) incide sobre pagamentos de cupom e ganhos de capital brutos no momento do vencimento ou venda antecipada do título. A alíquota decresce conforme passa o tempo desde a aquisição do título.</p>
 <table class="caption-top table">
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th>Dias corridos</th>
 <th>Alíquota IR(%)</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td>Até 180</td>
@@ -1702,11 +1842,13 @@ FC_0 + \frac{FC_1}{1+r^*} + \frac{FC_2}{(1+r^*)^2} + \cdots + \frac{FC_T}{(1+r^*
 <col style="width: 40%">
 <col style="width: 22%">
 </colgroup>
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th style="text-align: center;">Dias Úteis até o Pagamento</th>
 <th style="text-align: center;">Valor Bruto do Pagamento (R$)</th>
 <th style="text-align: center;">Alíquota IR (%)</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: center;">125</td>
@@ -1754,24 +1896,36 @@ FC_0 + \frac{FC_1}{1+r^*} + \frac{FC_2}{(1+r^*)^2} + \cdots + \frac{FC_T}{(1+r^*
 <li>Qual é a rentabilidade anual desse título líquida de impostos?</li>
 </ol>
 </div>
-</section></section><section id="sec-aplicacoes02" class="level2" data-number="1.10"><h2 data-number="1.10" class="anchored" data-anchor-id="sec-aplicacoes02">
-<span class="header-section-number">1.10</span> Aplicações e extensões</h2>
-<section id="amortização-de-financiamentos-tabela-sac" class="level3" data-number="1.10.1"><h3 data-number="1.10.1" class="anchored" data-anchor-id="amortização-de-financiamentos-tabela-sac">
-<span class="header-section-number">1.10.1</span> Amortização de financiamentos: tabela SAC</h3>
-</section><section id="amortização-de-financiamentos-tabela-price" class="level3" data-number="1.10.2"><h3 data-number="1.10.2" class="anchored" data-anchor-id="amortização-de-financiamentos-tabela-price">
-<span class="header-section-number">1.10.2</span> Amortização de financiamentos: tabela Price</h3>
-</section><section id="juros-contínuos" class="level3" data-number="1.10.3"><h3 data-number="1.10.3" class="anchored" data-anchor-id="juros-contínuos">
-<span class="header-section-number">1.10.3</span> Juros contínuos</h3>
-</section><section id="desconto-bancário" class="level3" data-number="1.10.4"><h3 data-number="1.10.4" class="anchored" data-anchor-id="desconto-bancário">
-<span class="header-section-number">1.10.4</span> Desconto bancário</h3>
+</section>
+</section>
+<section id="sec-aplicacoes02" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="sec-aplicacoes02"><span class="header-section-number">2.10</span> Aplicações e extensões</h2>
+<section id="amortização-de-financiamentos-tabela-sac" class="level3" data-number="2.10.1">
+<h3 data-number="2.10.1" class="anchored" data-anchor-id="amortização-de-financiamentos-tabela-sac"><span class="header-section-number">2.10.1</span> Amortização de financiamentos: tabela SAC</h3>
+</section>
+<section id="amortização-de-financiamentos-tabela-price" class="level3" data-number="2.10.2">
+<h3 data-number="2.10.2" class="anchored" data-anchor-id="amortização-de-financiamentos-tabela-price"><span class="header-section-number">2.10.2</span> Amortização de financiamentos: tabela Price</h3>
+</section>
+<section id="juros-contínuos" class="level3" data-number="2.10.3">
+<h3 data-number="2.10.3" class="anchored" data-anchor-id="juros-contínuos"><span class="header-section-number">2.10.3</span> Juros contínuos</h3>
+</section>
+<section id="desconto-bancário" class="level3" data-number="2.10.4">
+<h3 data-number="2.10.4" class="anchored" data-anchor-id="desconto-bancário"><span class="header-section-number">2.10.4</span> Desconto bancário</h3>
 
 
-</section></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><hr>
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
 <ol>
 <li id="fn1"><p>Cupons são pagamentos periódicos feitos pelo emissor ao detentor do título antes da data final de vencimento.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Sistema Nacional de Índices de Preços ao Consumidor<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>A taxa de cupom das NTN-F é <span class="math inline">\(10\%\)</span> ao ano. No caso brasileiro calculamos a taxa de cupom semestral de forma composta, <span class="math inline">\(c=(1+10\%)^{1/2}-1=4.881\%\)</span> ao semestre. Então a cada semestre o detento do título recebe <span class="math inline">\(cFV=4.881\%\times R\$1000=R\$48.81\)</span>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -2019,7 +2173,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="Welcomm">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcomm</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./03_MercadosFinanceiros.html" class="pagination-link" aria-label="Mercados Financeiros">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mercados Financeiros</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
+
 
 
 

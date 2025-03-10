@@ -1,4 +1,4 @@
-# Matemática Financeira {#sec-02}
+# Matemática Financeira {#cap-02}
 
 O que chamamos de matemática financeira é um conjunto de ferramentas que nos permitem comparar quantidades monetárias que existem em diferentes instantes de tempo.
 
@@ -64,17 +64,19 @@ VF &= VP + J \left(\frac{VP}{VP}\right) \\
 &= VP + \left(\frac{J}{VP}\right)\cdot VP \\
 &= VP + rVP \\
 VF &= VP(1+r)
-\end{align*}$$
+\end{align*}$${#eq-juros}
 
 ::: {.callout-note title="Taxa de juros, taxa de retorno, e taxa de desconto"}
 
+Nesta apresentação eu uso os termos "taxa de juros", "taxa de retorno", e "taxa de desconto", de forma intercambiável. Todos esses conceitos se referem ao $r$ em [@eq-juros], mas são ligeiramente distintos. 
+
 Juros são o pagamento que o tomador faz ao credor pelo direito de usufruir do principal por um período de tempo pre-éstabelecido em um empréstimo. 
 
-Só faz sentido falar em taxa de juros no contexto de um contrato de dívida. Chamamos de ativos de renda fixa, contratos nos quais o emissor, em troca de uma quantia acordada, se compromete a 
+Não faz sentido falar de taxa de "juros" quando não há um compromisso explicito de transferência de recursos entre duas partes. 
 
-A matemática financeira é aplicável em situações ma
+Por exemplo, quando você investe em um negócio próprio e tem lucro   
 
-
+Quando falamos em taxa de "desconto" 
 
 :::
 
@@ -155,28 +157,30 @@ axis(2, at=c(-PV,FV), labels=TRUE)
 
 ## Desconto e capitalização em múltiplos períodos {#sec-regimescapitalizacao}
 
-Nossos exemplos até agora trataram de situações nas quais a operação acontece em dois períodos. 
-
-
+Nossos exemplos até agora trataram de situações nas quais a operação acontece em dois períodos. Em $t=0$ pagamos uma quantia $S_0$ e em $t=1$ recebemos outra quantia $S_1$ (ou vice e versa). A taxa de juros é determinada pela diferença entre esses valores, seguindo a [@eq-eqvp]. A *frequência de incidência* da taxa de juros é definida pelo passo temporal entre $t=0$ e $t=1$.  
 
 ### Regime composto
 
-
-::: {#exm-regime-composto-1}
 Imagine que você tomou emprestado $\$1000$, pelo período de $2$ anos, e que a taxa de juros é $10\%$ ao ano. Quanto você deve devolver para o credor ao final dos $2$ anos?
-:::
-
 
 O principal é $\$1000$ e a taxa de juros é $10\%$ ao ano, mas o montante deve ser quitado em dois anos.
+
 Uma forma natural de lidar com essa situação é desmembrar a operação toda em dois empréstimos de $1$ ano, e aplicar a equação @eq-eqvp duas vezes.
+
 Chame de $S_t$ o saldo devedor no período $t$. Então $S_0=\$1000$ é o princial original e a taxa de juros é $r=10\%$ ao ano. 
 
-$$\begin{align*} &S_1 = S_0(1+r),  &1100=1000(1+0.1).  \end{align*}$$
+$$\begin{align*} S_1 &= S_0(1+r),\\  
+  S_1&=\$1000(1+0.1)=\$1100.  
+\end{align*}$$
 
-Tomamos $S_0=\$1000$ no ano $t=0$, pagando uma taxa de $r=10\%$ ao ano, tal que nosso saldo devedor ao final do ano é $S_1=\$1100$. No início do ano $t=1$ o empréstimo é renovado, mas o "novo principal" inclui os juros devidos pelo período anterior.
+Tomamos $S_0=\$1000$ em $t=0$, pagando uma taxa de $r=10\%$ ao ano, tal que nosso saldo devedor ao final do ano é $S_1=\$1100$. No início do ano $t=1$ o empréstimo é renovado, mas o "novo principal" inclui os juros devidos pelo período anterior.
 
-$$\begin{align*} S_2&=S_1(1+r)=S_0(1+r)(1+r)=S_0(1+r)^2,\\
-1210&=1100(1+0.1)=1000(1+0.1)^2. \end{align*}$$
+$$\begin{align*} 
+  S_2&=S_1(1+r)=S_0(1+r)(1+r)\\
+  S_2&=S_0(1+r)^2,\\
+  S_2&=\$1100(1+0.1)=\$1000(1+0.1)^2,\\
+  S_2&=\$1210.
+\end{align*}$$
 
 A figura abaixo descreve a evolução de um saldo devedor originalmente $S_0=\$100$ sendo capitalizado a uma taxa de juros de $10\%$ ao período sob o regime composto.
 
@@ -275,15 +279,8 @@ $$\begin{align}
 \end{align}$${#eq-eqvp-taxasvariaveis}
 :::
 
-::: {.callout-warning appearance="minimal"}
-::: {#exr-taxasvariaveis-1}
- a.
- a.
- a.
- a.
- a.
- a.
-:::
+::: {.callout-warning title="Exercícios de fixação" collapse=true}
+
 :::
 
 ### Regime simples
@@ -301,6 +298,8 @@ $$\begin{align}
   S_0 = \frac{S_t}{1+rt}.
 \end{align}$$
 :::
+
+A menos que explicitamente mencionado, consideraremos todas as operações de desconto e capitalização no regime composto.
 
 ## Transformação de frequência e taxas equivalentes {#sec-transformacaotaxas}
 
@@ -404,11 +403,65 @@ $$\begin{align}
 \end{align}$$
 :::
 
-::: {.callout-warning appearance="minimal"}
+::: {.callout-warning title="Exercícios de fixação" collapse=true}
 
 :::
 
-### Taxa de juros média {.unnumbered}
+### Taxas médias 
+
+A tabela abaixo descreve as taxas de juro realizadas de um certo ativo financeiro em quatro anos.
+
+| t 	| r     	|
+|---	|-------	|
+| 1 	| 10.0% 	|
+| 2 	|  8.0% 	|
+| 3 	|  7.5% 	|
+| 4 	| 13.0% 	|
+
+Qual é a taxa de juros média nesses quatro anos?
+
+Uma solução aparente seria calcular a média aritmética das taxas de juro 
+
+$$\begin{align}
+\frac{10\%+8\%+7.5\%+13\%}{4}=9.625\%
+\end{align}$$
+
+Repare que
+$$\begin{align}
+10\%+8\%+7.5\%+13\% = 4\cdot9.625\% = 38.5\%
+\end{align}$$
+
+Então a média aritmética de um conjunto de dados com $n$ elementos é o único número que, repetido $n$ vezes, nos leva ao mesmo valor que obteríamos somando todos os elementos desse conjunto.
+
+Se eu investi $\$100$ em $t=0$ nesse ativo financeiro, o valor do meu capital em $t=4$ é
+$$\begin{align}
+\$100(1+10\%)(1+8\%)(1+7.5\%)(1+13\%)=\$138.5.
+\end{align}$$
+
+Quando dizemos taxa de juros *média* aqui, nos referimos à única taxa de juros constante, que quando aplicada quatro vezes sobre $\$100$ nos levaria ao mesmo valor futuro $\$138.5$.
+
+Se tentarmos aplicar a média das taxas, $9.6\%$, quatro vezes, obtemos
+$$\begin{align}
+\$100(1+9.6\%)^4=\$144.42,
+\end{align}$$
+que é diferente do valor futuro $\$138.5$, obtido ao compor as taxas individuais.
+
+O que queremos é
+$$\begin{align}
+\$100(1+\tilde r)^4&=\$100(1+10\%)(1+8\%)(1+7.5\%)(1+13\%),\\
+(1+\tilde r)^4 &= 1.385, \\
+1+\tilde r &= (1.385)^{1/4}, \\
+\tilde r &= (1.385)^{1/4}-1 = 8.483%.
+\end{align}$$
+
+O que efetivamente fizemos foi calcular a taxa de juros total acumulada nos quatro anos, depois anualizamos tal taxa.
+
+::: {.callout-note title="Taxa média de juros"}
+Seja $r_1, r_2, \dots, r_n$ uma sequência de taxas de juro com $n$ elementos. A taxa média $\tilde r$ é a única taxa constante, que composta $n$ vezes, leva ao mesmo valor futuro que seria obtido componto $r_1, r_2, \dots, r_n$.
+$$\begin{align}
+  \tilde r = \left[\prod_{t=1}^n(1+r_t)\right]^{1/n}-1
+\end{align}$$
+:::
 
 ## Inflação e retorno real {#sec-inflacao}
 
@@ -416,7 +469,7 @@ O *preço* de um bem (ou serviço) é a quantidade de dinheiro (do bem numerári
 
 A *inflação* é a mudança (percentual) dos preços de um certo bem, em um dado intervalo de tempo. 
 
-Por exemplo, se um pacote de café custava $P_0=\$8$ há um ano, e hoje custa $P_1=\$11$, então a (taxa de) inflação $\pi$ do café, entre um ano atrás e hoje, foi de
+Por exemplo, se um pacote de café no Supermercado Azul custava $P_0=\$8$ há um ano, e hoje custa $P_1=\$11$, então a (taxa de) inflação $\pi$ do café, entre um ano atrás e hoje, foi de
 
 $$\begin{align} 
   \pi &= \frac{P_1-P_0}{P_0},\\
@@ -498,7 +551,7 @@ $$\begin{align}
   1+\mu = \frac{1+r}{1+\pi}.
 \end{align}$$
 :::
-É importante lembrar que ambas a taxa de retorno nominal $r$ e inflação $\pi$ tenham a mesma frequência de incidência (mensal, anual, etc.).
+É importante ressaltar que ambas a taxa de retorno nominal $r$ e inflação $\pi$ precisam estar expressas na mesma frequência de incidência (mensal, anual, etc.).
 
 #### Retorno real *ex-post* e *ex-ante* {.unnumbered}
 
@@ -663,15 +716,6 @@ Repare que se tivessemos descontado a inflação média do retorno anual médio,
 
 ::: {.callout-warning title="Exercícios" collapse="true"}
 
-::: {#exr-inflacao-1}
-
-   Seu salário é $Y=\$800$ ao mês e você gasta essa renda exclusivamente em latas de refrigerantes, que custam atualmente $P_0=\$5$. Passado um mês, o seu salário ainda é o mesmo, mas o preço do refrigerante aumentou para $P_1=\$5.5$. 
-   
-   a. Qual é a taxa de inflação mensal realizada das latas de refrigerantes?
-   b. Qual foi sua "perda de poder de compra" no período? Ou seja, quantos refrigerantes (em termos percentuais) a menos você pôde comprar devido o aumento no preço? 
-   c. Considere que a inflação do refrigerante se manterá constante mês a mês. Quantos meses passarão até seu poder de compra ser reduzido pela metade?
-   
-:::
 
 
 
@@ -1012,6 +1056,7 @@ A frequência de incidência da TIR calculada é igual ao passo temporal na sequ
 
 Chamamos essa taxa de *yield to maturity* porque é o retorno médio obtido pelo detentor do título, que leva esse título até o vencimento (não vende antecipadamente no mercado secundário). 
 
+O Tesouro disponibiliza uma [calculadora](https://www.tesourodireto.com.br/titulos/calculadora.htm) que facilita esses cálculos. No dia a dia temos que lidar com detalhes de dias úteis no caledário civil e incidência de impostos sobre recebimentos de cupons e valor de face.
 :::
 :::
 
@@ -1034,32 +1079,40 @@ A TIR é a solução para a seguinte equação polinomial:
 
 $$\begin{align*}
 FC_0 + \frac{FC_1}{1+r^*} + \frac{FC_2}{(1+r^*)^2} + \cdots + \frac{FC_T}{(1+r^*)^n} = 0. 
-\end{align*}$$
+\end{align*}$${#eq-tir}
 
 Uma equação polinomial de grau $n$ tem sempre $n$ raízes. Em geral essas raízes podem ser números complexos e não precisam se repetir. 
 
-As duas condições abaixo garantem que existe apenas uma solução real $r^*$ (vão existir raízes complexas, que vamos ignorar), e que essa soluçaõ real é positiva.
+As duas condições abaixo garantem que existe apenas uma solução real $r^*$ (vão existir raízes complexas, que vamos ignorar), e que essa solução real é positiva.
 
-1. Existe apenas uma mudança no sinal dos fluxos de caixa.
+  1. Existe apenas uma mudança no sinal dos fluxos de caixa.
+  
 Essa condição garante que existe apenas uma solução real. Na grande maioria das nossas aplicações essa mudança ocorre do primeiro para o segundo fluxo de caixa. Isto é, $FC_0<0$ e $FC_t>0$, $t=1,\dots,n$; ou $FC_0>0$ e $FC_t<0$, $t=1,\dots,n$.
 
-2. Assumindo que a mundança de sinal acontece entre $t=0$ e $t=1$, o valor bruto (não descontado) dos fluxos de caixa acumulados entre $t=1$ e $t=n$ são maiores do que $FC_0$, em módulo. Ou seja,
-$$|FC_0|<\left|\sum^n_{t=1}FC_t\right|.$$
+  2. Assumindo que a mundança de sinal acontece entre $t=0$ e $t=1$, o valor bruto (não descontado) dos fluxos de caixa acumulados entre $t=1$ e $t=n$ são maiores do que $FC_0$, em módulo. Ou seja,
+  
+  $$|FC_0|<\left|\sum^n_{t=1}FC_t\right|.$$
+  
 Essa condição vai garantir que a TIR é uma taxa positiva. Perceba que se $FC_0 + \sum^n_{t=1}FC_t = 0$, então $r^*=0$.
 
 Essas condições são corolários de um resultado mais geral conhecido como [Regra dos sinais de Descartes](https://en.wikipedia.org/wiki/Descartes%27_rule_of_signs).
 :::
 
-::: {.callout-tip title="@exm-tir-3 Cálculo da TIR no ***R***" appearance="minimal" collapse="true"}
+::: {.callout-tip title="@exm-tir-3 Cálculo da TIR no usando a linguagem ***R***" appearance="minimal" collapse="true"}
 ::: {#exm-tir-3}
 
+Para calcular a TIR nós precisamos resolver a equação [@eq-tir] numericamente. Vamos usar a 
+
 ```{r}
-SFC_1 = c(100, 10, 10, 20, 30, -45)
-polyroot(SFC_1)
+SFC = c(100, 10, 10, 20, 30, -45) # <1>
+polyroot(SFC)
 tir = function(SFC){
   
 }
 ```
+
+1. Construímos um vetor cujas entradas são os
+(...)
 :::
 :::
 
@@ -1179,7 +1232,18 @@ Um saldo de $S_0=\$1000$ capitalizado pelo regime simples a uma taxa de $r^s=1\%
 
 ### @sec-inflacao Inflação e retorno real {.unnumbered}
 
-::: {#exr-sec-inflacao-1}
+::: {#exr-inflacao-1}
+
+   Seu salário é $Y=\$800$ ao mês e você gasta essa renda exclusivamente em latas de refrigerantes, que custam atualmente $P_0=\$5$. Passado um mês, o seu salário ainda é o mesmo, mas o preço do refrigerante aumentou para $P_1=\$5.5$. 
+   
+   a. Qual é a taxa de inflação mensal realizada das latas de refrigerantes?
+   b. Qual foi sua "perda de poder de compra" no período? Ou seja, quantos refrigerantes (em termos percentuais) a menos você pôde comprar devido o aumento no preço? 
+   c. Considere que a inflação do refrigerante se manterá constante mês a mês. Quantos meses passarão até seu poder de compra ser reduzido pela metade?
+   
+:::
+
+
+::: {#exr-sec-inflacao-2}
 ```{r, echo=FALSE}
 rm(list=ls())
 VNA.0=runif(1,min = 2345, max=6543) |> round(digits=6) 

@@ -1,4 +1,5 @@
 ---
+title: "Welcomm"
 description-meta: |
   This book will teach you how to program in R, with hands-on examples. I 
   wrote it for non-programmers to provide a friendly introduction  to the R

@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Pedro Chaim">
-<meta name="dcterms.date" content="2024-12-31">
-<meta name="description" content="<p>This book will teach you how to program in R, with hands-on examples. I wrote it for non-programmers to provide a friendly introduction to the R language. You’ll learn how to load data, assemble and disassemble data objects, navigate R’s environment system, write your own functions, and use all of R’s programming tools. Throughout the book, you’ll use your newfound skills to solve practical data science problems.</p>">
 
-<title>Welcomm</title>
+<title>3&nbsp; Mercados Financeiros – Mercado de Capitais</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -33,7 +50,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./02_MatematicaFinanceira.html" rel="next">
+<link href="./02_MatematicaFinanceira.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -95,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcomm</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03_MercadosFinanceiros.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mercados Financeiros</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -109,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcomm</span></span></a>
   </div>
 </li>
@@ -117,6 +134,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="./02_MatematicaFinanceira.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Matemática Financeira</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_MercadosFinanceiros.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mercados Financeiros</span></span></a>
   </div>
 </li>
     </ul>
@@ -129,7 +152,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a></li>
+  <li><a href="#intermediação-financeira" id="toc-intermediação-financeira" class="nav-link active" data-scroll-target="#intermediação-financeira"><span class="header-section-number">3.1</span> Intermediação financeira</a></li>
+  <li><a href="#ativos-financeiros" id="toc-ativos-financeiros" class="nav-link" data-scroll-target="#ativos-financeiros"><span class="header-section-number">3.2</span> Ativos financeiros</a></li>
+  <li><a href="#ativos-de-renda-fixa" id="toc-ativos-de-renda-fixa" class="nav-link" data-scroll-target="#ativos-de-renda-fixa"><span class="header-section-number">3.3</span> Ativos de renda fixa</a>
+  <ul class="collapse">
+  <li><a href="#exemplos-de-ativos-de-renda-fixa" id="toc-exemplos-de-ativos-de-renda-fixa" class="nav-link" data-scroll-target="#exemplos-de-ativos-de-renda-fixa"><span class="header-section-number">3.3.1</span> Exemplos de ativos de renda fixa</a></li>
+  </ul></li>
+  <li><a href="#ativos-de-renda-variável" id="toc-ativos-de-renda-variável" class="nav-link" data-scroll-target="#ativos-de-renda-variável"><span class="header-section-number">3.4</span> Ativos de renda variável</a></li>
+  <li><a href="#derivativos" id="toc-derivativos" class="nav-link" data-scroll-target="#derivativos"><span class="header-section-number">3.5</span> Derivativos</a></li>
   </ul>
 </nav>
     </div>
@@ -138,26 +168,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Welcomm</h1>
+<h1 class="title"><span id="sec-03" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mercados Financeiros</span></span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Pedro Chaim </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">December 31, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -167,23 +185,54 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-
-<section id="welcome" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="welcome">Welcome</h2><p><img src="capa.png" title="Mercado de Capitais" class="quarto-cover-image img-fluid"></p>
-<p>This is the website for <strong>“Hands-On Programming with R”</strong>. This book will teach you how to program in R, with hands-on examples. I wrote it for non-programmers to provide a friendly introduction to the R language. You’ll learn how to load data, assemble and disassemble data objects, navigate R’s environment system, write your own functions, and use all of R’s programming tools. Throughout the book, you’ll use your newfound skills to solve practical data science problems.</p>
-<p>If you are already comfortable with R, and would like to focus instead how to analyze data using R’s Tidyverse packages, I recommend <a href="http://r4ds.had.co.nz/">R for Data Science</a>, a book that I co-authored with Hadley Wickham.</p>
-<div class="callout callout-style-simple callout-note">
-<div class="callout-body d-flex">
+<p>Sugestões de referências para estudo</p>
+<ul>
+<li><span class="citation" data-cites="mishkin2019economics">Mishkin (<a href="#ref-mishkin2019economics" role="doc-biblioref">2019</a>)</span>: capítulos 1, 2.</li>
+</ul>
+<section id="intermediação-financeira" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="intermediação-financeira"><span class="header-section-number">3.1</span> Intermediação financeira</h2>
+<p>Dadas as dificuldades em</p>
+</section>
+<section id="ativos-financeiros" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="ativos-financeiros"><span class="header-section-number">3.2</span> Ativos financeiros</h2>
+</section>
+<section id="ativos-de-renda-fixa" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="ativos-de-renda-fixa"><span class="header-section-number">3.3</span> Ativos de renda fixa</h2>
+<section id="exemplos-de-ativos-de-renda-fixa" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="exemplos-de-ativos-de-renda-fixa"><span class="header-section-number">3.3.1</span> Exemplos de ativos de renda fixa</h3>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Certificado de Depósito Bancário [(CDB)](https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2020/Lei/L13986.htm#art30)">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
-<p>aaa</p>
+<div class="callout-title-container flex-fill">
+Certificado de Depósito Bancário <a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2020/Lei/L13986.htm#art30">(CDB)</a>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>O Certificado de Depósito Bancário (CDB) é um dos instrumentos financeiros mais tradicionais do mercado brasileiro, e é uma das principais fontes de captação de recursos para as instituições financeiras. É uma obrigação de pagamento futuro de um capital aplicado a prazo fixo em uma instituição financeira. As características de remuneração e liquidez dos CDBs são determinadas no momento da contratação, e podem variar dependendo do acordo entre a instituição emitente e o contratante.</p>
 </div>
 </div>
 </div>
+<p>Depósito Interfinanceiro <a href="https://www.b3.com.br/pt_br/produtos-e-servicos/registro/renda-fixa-e-valores-mobiliarios/deposito-interfinanceiro.htm">(DI)</a></p>
+<p>Negociado exclusivamente entre instituições financeiras, o Depósito Interfinanceiro (DI) é um título privado de Renda Fixa que auxilia no fechamento de caixa dos bancos, como instrumento de captação de recursos ou de aplicação de recursos excedentes. O Depósito Interfinanceiro não pode ser vendido a outros investidores e não há incidência de impostos sobre a rentabilidade.Os títulos têm elevada liquidez e embutem um baixíssimo risco, normalmente associado à solidez dos bancos que participam do mercado.</p>
+<p>As negociações entre os bancos geram a Taxa DI, referência para a maior parte dos títulos de renda fixa ofertados ao investidor. É hoje o principal benchmark do mercado. A Taxa DI é obtida ao se calcular a média ponderada das taxas das transações prefixadas, extragrupo e com prazo de um dia efetuadas na B3 entre instituições financeiras. Como a taxa para o prazo de um dia é muito pequena, convencionou-se divulgá-la de forma anualizada. Essas transações são fechadas por meio eletrônico e registradas na B3. Na prática, a Taxa DI costuma seguir a Taxa Selic, ficando ligeriamente abaixo.</p>
+</section>
+</section>
+<section id="ativos-de-renda-variável" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="ativos-de-renda-variável"><span class="header-section-number">3.4</span> Ativos de renda variável</h2>
+</section>
+<section id="derivativos" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="derivativos"><span class="header-section-number">3.5</span> Derivativos</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-mishkin2019economics" class="csl-entry" role="listitem">
+Mishkin, Frederic S. 2019. <em>The Economics of Money, Banking, and Financial Markets</em>. 12th ed. Pearson.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -437,11 +486,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./02_MatematicaFinanceira.html" class="pagination-link" aria-label="Matemática Financeira">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Matemática Financeira</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./02_MatematicaFinanceira.html" class="pagination-link" aria-label="Matemática Financeira">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Matemática Financeira</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

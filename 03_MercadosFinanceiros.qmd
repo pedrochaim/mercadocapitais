@@ -1,0 +1,29 @@
+# Mercados Financeiros {#sec-03}
+
+Sugestões de referências para estudo
+
+* @mishkin2019economics: capítulos 1, 2. 
+
+## Intermediação financeira
+
+Dadas as dificuldades em 
+
+## Ativos financeiros
+
+## Ativos de renda fixa
+
+### Exemplos de ativos de renda fixa
+
+::: {.callout-note title="Certificado de Depósito Bancário [(CDB)](https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2020/Lei/L13986.htm#art30)" collapse=true}
+O Certificado de Depósito Bancário (CDB) é um dos instrumentos financeiros mais tradicionais do mercado brasileiro, e é uma das principais fontes de captação de recursos para as instituições financeiras. É uma obrigação de pagamento futuro de um capital aplicado a prazo fixo em uma instituição financeira. As características de remuneração e liquidez dos CDBs são determinadas no momento da contratação, e podem variar dependendo do acordo entre a instituição emitente e o contratante.
+:::
+
+::: {.callout-note title="Depósito Interfinanceiro [(DI)](https://www.b3.com.br/pt_br/produtos-e-servicos/registro/renda-fixa-e-valores-mobiliarios/deposito-interfinanceiro.htm)" collapse=true}
+Negociado exclusivamente entre instituições financeiras, o Depósito Interfinanceiro (DI) é um título privado de Renda Fixa que auxilia no fechamento de caixa dos bancos, como instrumento de captação de recursos ou de aplicação de recursos excedentes. O Depósito Interfinanceiro não pode ser vendido a outros investidores e não há incidência de impostos sobre a rentabilidade.Os títulos têm elevada liquidez e embutem um baixíssimo risco, normalmente associado à solidez dos bancos que participam do mercado.
+
+As negociações entre os bancos geram a Taxa DI, referência para a maior parte dos títulos de renda fixa ofertados ao investidor. É hoje o principal benchmark do mercado. A Taxa DI é obtida ao se calcular a média ponderada das taxas das transações prefixadas, extragrupo e com prazo de um dia efetuadas na B3 entre instituições financeiras. Como a taxa para o prazo de um dia é muito pequena, convencionou-se divulgá-la de forma anualizada. Essas transações são fechadas por meio eletrônico e registradas na B3. Na prática, a Taxa DI costuma seguir a Taxa Selic, ficando ligeriamente abaixo.  
+:::
+
+## Ativos de renda variável
+
+## Derivativos 
