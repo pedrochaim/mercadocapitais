@@ -74,7 +74,7 @@ Juros são o pagamento que o tomador faz ao credor pelo direito de usufruir do p
 
 Em casos nos quais o ativo é uma cota de propriedade em uma empresa, como por exemplo no caso de ações de empresas de capital aberto, não existe um compromisso explícito de remuneração do capital empenhado. Como o detentor é parte dono da empresa, a remuneração do capital depende do resultado operacional dos investimentos e das estratégias de crescimento da empresa. Dizemos que são ativos de renda variável. Nesse caso não faz sentido falar em taxa de juros (ninguém te deve dinheiro), então falamos em taxa de retorno, que é um conceito mais genérico.
 
-Quando falamos em taxa de "desconto" estamos aludindo ao custo de oportunidade de realizar certo investimento. É relacionado ao retorno que obteríamos com o melhor projeto de investimento alternativo (com mesmo perfil de risco).
+Quando falamos em taxa de desconto estamos aludindo ao custo de oportunidade de realizar certo investimento. É relacionado ao retorno que obteríamos com o melhor projeto de investimento alternativo (com mesmo perfil de risco).
 
 :::
 
