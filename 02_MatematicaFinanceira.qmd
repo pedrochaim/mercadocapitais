@@ -94,7 +94,7 @@ A *capitalização* é o deslocamento temporal de uma quantidade presente a uma 
 Retornando ao nosso primeiro exemplo: se tomarmos um empréstimo de $\$2500$, com duração de um ano (um período) e taxa de juros de $40\%$ ao ano, qual deve ser o montante devolvido ao final do ano? 
 
 $$\begin{align*}
-  FV &= PV(1+r), \\
+  VF &= VP(1+r), \\
   \$3500 &= \$2500(1+40\%).
 \end{align*}$$
 
@@ -448,7 +448,7 @@ $$\begin{align}
 \$100(1+\tilde r)^4&=\$100(1+10\%)(1+8\%)(1+7.5\%)(1+13\%),\\
 (1+\tilde r)^4 &= 1.385, \\
 1+\tilde r &= (1.385)^{1/4}, \\
-\tilde r &= (1.385)^{1/4}-1 = 8.483%.
+\tilde r &= (1.385)^{1/4}-1 = 8.483\%.
 \end{align}$$
 
 O que efetivamente fizemos foi calcular a taxa de juros total acumulada nos quatro anos, depois anualizamos tal taxa.
@@ -456,7 +456,7 @@ O que efetivamente fizemos foi calcular a taxa de juros total acumulada nos quat
 ::: {.callout-note title="Taxa média de juros"}
 Seja $r_1, r_2, \dots, r_n$ uma sequência de taxas de juro com $n$ elementos. A taxa média $\tilde r$ é a única taxa constante, que composta $n$ vezes, leva ao mesmo valor futuro que seria obtido componto $r_1, r_2, \dots, r_n$.
 $$\begin{align}
-  \tilde r = \left[\prod_{t=1}^n(1+r_t)\right]^{1/n}-1
+  \tilde r = \left[\prod_{t=1}^n(1+r_t)\right]^{1/n}-1.
 \end{align}$$
 :::
 
@@ -501,8 +501,8 @@ Repare que nessa situação o agricultor conseguiria comprar $10\%$ mais semente
 
   c. Agora suponha que passados os $12$ meses, o preço das sementes tenha aumentado de $\$15/\text{kg}$ para $\$16/\text{kg}$. Qual é a taxa de inflação anual das sementes?
   $$\begin{align}
-    \pi &= \frac{P_1-P_0}{P_0},
-    &= \frac{\$16/\text{kg}-\$15/\text{kg}}{\$16/\text{kg}}, \\
+    \pi &= \frac{P_1-P_0}{P_0},\\
+    &= \frac{\$16/\text{kg}-\$15/\text{kg}}{\$16/\text{kg}},\\
     &= 6.66\% \text{ ao ano}.
   \end{align}$$
   
@@ -511,7 +511,7 @@ Repare que nessa situação o agricultor conseguiria comprar $10\%$ mais semente
 Agora $P_1=\$16/\text{kg}$, e $W_1=W_0(1+r)$. Então
 $$\begin{align*}
   K_1&= \frac{W_1}{P_1}=\frac{W_0(1+r)}{P_1},\\
-  &=\frac{\$1,500(1+10\%)}{\$16/\text{kg}},\\
+  &=\frac{\$1500(1+10\%)}{\$16/\text{kg}},\\
   &=\frac{\$1650}{\$16/\text{kg}} = 103.125\text{kg}.
 \end{align*}$$
 
@@ -529,7 +529,8 @@ Ao investir o dinheiro o agricultor pode comprar $1.03125$ vezes a quantidade or
 
 Agora veja o cálculo que fizemos para obter o retorno real.
 $$\begin{align}
-  1 + \mu &= \frac{K_1}{K_0} = \frac{W_1/P_1}{W_0/P_0}=\frac{W_0(1+r)/P_1}{W_0/P_0},\\
+  1 + \mu &= \frac{K_1}{K_0} = \frac{W_1/P_1}{W_0/P_0},\\
+  &=\frac{W_0(1+r)/P_1}{W_0/P_0},\\
   &=(1+r)\frac{P_0}{P_1},
 \end{align}$$
 como $P_1/P_0=1+\pi$, temos 
@@ -546,13 +547,21 @@ Então verificamos que (um mais) a taxa real $\mu$ é (um mais) a taxa nominal $
 Se $r$ é o retorno nominal (em termos de unidades monetárias) de uma aplicação financeira, e $\pi$ é a taxa de inflação dos bens relevantes no período, então a taxa de retorno real (em termos de bens) $\mu$ da aplicação financeira é dada por
 $$\begin{align}
   1+\mu = \frac{1+r}{1+\pi}.
-\end{align}$$
+\end{align}$${#eq-retreal}
 :::
 É importante ressaltar que ambas a taxa de retorno nominal $r$ e inflação $\pi$ precisam estar expressas na mesma frequência de incidência (mensal, anual, etc.).
 
 #### Retorno real *ex-post* e *ex-ante* {.unnumbered}
 
-No @exm-inflacao-1 nós calculamos o retorno da aplicação financeira em termos da quantidade de sementes,  
+No @exm-inflacao-1 nós calculamos o retorno da aplicação financeira em termos da quantidade de sementes, mas isso só foi possível depois de passado o tempo e observarmos as mudanças nos preços relevantes. 
+
+A [@eq-retreal] é uma tautologia contábil que define a taxa real realizada $\mu$. Na realidade a decisão do agricultor entre investir no ativo financeiro ou estocar as sementes depende do palpite dele sobre o preço das sementes ao final do ano. 
+
+O que importa para a formação das decisões de investimento dos agentes não é o retorno real *ex-post*, calculado depois do ocorrido, mas a expectativa do retorno real *ex-ante*:
+
+$$\begin{align*}
+  1 + E_t[\mu_{t+1}] = \frac{1+r}{1+E_t[\pi_{t+1}]}.
+\end{align*}$${#eq-retreal-exante}
 
 ### Índices de preço 
 
@@ -606,13 +615,28 @@ knitr::kable(df)
 
 O índice é construído como uma média ponderada do preço dos bens individuais: 
 $$\begin{align}
-  I = 0.3 A + 0.2 F + 0.1 L + 0.25 C + 0.15 G.
+  I = `r Pesos[1]` A + `r Pesos[2]` F + `r Pesos[3]` L + `r Pesos[4]` C + `r Pesos[5]` G.
 \end{align}$$
 No primeiro mês, o valor do índice é:
 $$\begin{align}
   I_1 &= 0.3\cdot \$`r Arroz[1]` + 0.2 \cdot \$`r Feijao[1]` + 0.1 \cdot \$`r Leite[1]` + 0.25  \cdot \$`r Carne[1]` + 0.15  \cdot \$`r Gas[1]`,\\
-  &= \$12.9640.
+  &= \$`r Indice[1]`.
 \end{align}$$
+
+Nos meses subsequentes, temos $I_2 = \$`r Indice[2]`$, e $I_3 = \$`r Indice[3]`$.
+
+Os valores $I_t$ não são preços de um bem específico, e em muitas situações estamos mais interessados na variação percentual do que no valor absoluto em si.
+$$\begin{align}
+  I^*_t = \frac{I_t}{I_1}\cdot100
+\end{align}$$
+
+```{r, echo=FALSE}
+df2 = data.frame(1:length(Arroz), Indice, IndiceP)
+colnames(df2)=c("Mês", "Índice (\\$)", "Índice Padronizado")
+knitr::kable(df2)
+```
+
+
 :::
 :::
 
@@ -1086,7 +1110,7 @@ As duas condições abaixo garantem que existe apenas uma solução real $r^*$ (
   
 Essa condição garante que existe apenas uma solução real. Na grande maioria das nossas aplicações essa mudança ocorre do primeiro para o segundo fluxo de caixa. Isto é, $FC_0<0$ e $FC_t>0$, $t=1,\dots,n$; ou $FC_0>0$ e $FC_t<0$, $t=1,\dots,n$.
 
-  2. Assumindo que a mundança de sinal acontece entre $t=0$ e $t=1$, o valor bruto (não descontado) dos fluxos de caixa acumulados entre $t=1$ e $t=n$ são maiores do que $FC_0$, em módulo. Ou seja,
+  2. Assumindo que a mundança de sinal acontece entre $t=0$ e $t=1$, precisamos que o valor bruto (não descontado) dos fluxos de caixa acumulados entre $t=1$ e $t=n$ sejam do que $FC_0$, em módulo. Ou seja,
   
   $$|FC_0|<\left|\sum^n_{t=1}FC_t\right|.$$
   
@@ -1173,7 +1197,7 @@ Um mesmo saldo inicial de $S_0=\$1000$ é capitalizado ambos pelo regime compost
 Para responder às perguntas abaixo, considere as convenções
 
   * 30 dias em 1 mês (dias corridos),
-  * 365 dias em 1 ano (dias corridos),
+  * 360 dias em 1 ano (dias corridos),
   * 52 semanas em 1 ano,
   * 252 dias úteis em 1 ano (taxa *over*),
   * 22 dias úteis em 1 mês (taxa *over*).

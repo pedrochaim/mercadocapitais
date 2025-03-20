@@ -341,7 +341,7 @@ S_1 &amp;= S_0(1+r).\end{align}  \tag{2.2}\]</span></span></p>
 <p>A <em>capitalização</em> é o deslocamento temporal de uma quantidade presente a uma quantidade futura.</p>
 <p>Retornando ao nosso primeiro exemplo: se tomarmos um empréstimo de <span class="math inline">\(\$2500\)</span>, com duração de um ano (um período) e taxa de juros de <span class="math inline">\(40\%\)</span> ao ano, qual deve ser o montante devolvido ao final do ano?</p>
 <p><span class="math display">\[\begin{align*}
-  FV &amp;= PV(1+r), \\
+  VF &amp;= VP(1+r), \\
   \$3500 &amp;= \$2500(1+40\%).
 \end{align*}\]</span></p>
 <p>Estamos no ponto de vista do futuro, do período no qual o empréstimo deve ser quitado. Nesse sentido, a taxa de <span class="math inline">\(r=40\%\)</span> incide capitalizando, deslocando temporalmente para frente, o valor presente de <span class="math inline">\(VP=\$2500\)</span> para obtermos o valor futuro <span class="math inline">\(VF=\$2500(1+40\%)=\$3500\)</span>.</p>
@@ -713,7 +713,7 @@ Exercícios de fixação
 \$100(1+\tilde r)^4&amp;=\$100(1+10\%)(1+8\%)(1+7.5\%)(1+13\%),\\
 (1+\tilde r)^4 &amp;= 1.385, \\
 1+\tilde r &amp;= (1.385)^{1/4}, \\
-\tilde r &amp;= (1.385)^{1/4}-1 = 8.483%.
+\tilde r &amp;= (1.385)^{1/4}-1 = 8.483\%.
 \end{align}\]</span></p>
 <p>O que efetivamente fizemos foi calcular a taxa de juros total acumulada nos quatro anos, depois anualizamos tal taxa.</p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Taxa média de juros">
@@ -727,7 +727,7 @@ Taxa média de juros
 </div>
 <div class="callout-body-container callout-body">
 <p>Seja <span class="math inline">\(r_1, r_2, \dots, r_n\)</span> uma sequência de taxas de juro com <span class="math inline">\(n\)</span> elementos. A taxa média <span class="math inline">\(\tilde r\)</span> é a única taxa constante, que composta <span class="math inline">\(n\)</span> vezes, leva ao mesmo valor futuro que seria obtido componto <span class="math inline">\(r_1, r_2, \dots, r_n\)</span>. <span class="math display">\[\begin{align}
-  \tilde r = \left[\prod_{t=1}^n(1+r_t)\right]^{1/n}-1
+  \tilde r = \left[\prod_{t=1}^n(1+r_t)\right]^{1/n}-1.
 \end{align}\]</span></p>
 </div>
 </div>
@@ -774,15 +774,15 @@ Taxa média de juros
 <p>Repare que nessa situação o agricultor conseguiria comprar <span class="math inline">\(10\%\)</span> mais sementes. É a mesma rentabilidade da aplicação financeira.</p>
 <ol start="3" type="a">
 <li><p>Agora suponha que passados os <span class="math inline">\(12\)</span> meses, o preço das sementes tenha aumentado de <span class="math inline">\(\$15/\text{kg}\)</span> para <span class="math inline">\(\$16/\text{kg}\)</span>. Qual é a taxa de inflação anual das sementes? <span class="math display">\[\begin{align}
-    \pi &amp;= \frac{P_1-P_0}{P_0},
-    &amp;= \frac{\$16/\text{kg}-\$15/\text{kg}}{\$16/\text{kg}}, \\
+    \pi &amp;= \frac{P_1-P_0}{P_0},\\
+    &amp;= \frac{\$16/\text{kg}-\$15/\text{kg}}{\$16/\text{kg}},\\
     &amp;= 6.66\% \text{ ao ano}.
   \end{align}\]</span></p></li>
 <li><p>Se o agricultor manteve o capital na aplicação financeira que rende <span class="math inline">\(10\%\)</span> ao ano, quantos kgs de sementes conseguiria comprar após o aumento no preço?</p></li>
 </ol>
 <p>Agora <span class="math inline">\(P_1=\$16/\text{kg}\)</span>, e <span class="math inline">\(W_1=W_0(1+r)\)</span>. Então <span class="math display">\[\begin{align*}
   K_1&amp;= \frac{W_1}{P_1}=\frac{W_0(1+r)}{P_1},\\
-  &amp;=\frac{\$1,500(1+10\%)}{\$16/\text{kg}},\\
+  &amp;=\frac{\$1500(1+10\%)}{\$16/\text{kg}},\\
   &amp;=\frac{\$1650}{\$16/\text{kg}} = 103.125\text{kg}.
 \end{align*}\]</span></p>
 <ol start="5" type="a">
@@ -796,7 +796,8 @@ Taxa média de juros
 \end{align}\]</span></p>
 <p>Ao investir o dinheiro o agricultor pode comprar <span class="math inline">\(1.03125\)</span> vezes a quantidade original de sementes. Então a taxa de retorno em termos de fertilizante é <span class="math inline">\(3.125\%\)</span>. Essa é a taxa <em>real</em> de retorno da operação, já que se refere à rentabilidade em termos de um bem ou serviço, não em termos de unidades monetárias.</p>
 <p>Agora veja o cálculo que fizemos para obter o retorno real. <span class="math display">\[\begin{align}
-  1 + \mu &amp;= \frac{K_1}{K_0} = \frac{W_1/P_1}{W_0/P_0}=\frac{W_0(1+r)/P_1}{W_0/P_0},\\
+  1 + \mu &amp;= \frac{K_1}{K_0} = \frac{W_1/P_1}{W_0/P_0},\\
+  &amp;=\frac{W_0(1+r)/P_1}{W_0/P_0},\\
   &amp;=(1+r)\frac{P_0}{P_1},
 \end{align}\]</span> como <span class="math inline">\(P_1/P_0=1+\pi\)</span>, temos <span class="math display">\[\begin{align}
   1+\mu = \frac{1+r}{1+\pi}.
@@ -816,15 +817,20 @@ Retorno real <em>ex-post</em>
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Se <span class="math inline">\(r\)</span> é o retorno nominal (em termos de unidades monetárias) de uma aplicação financeira, e <span class="math inline">\(\pi\)</span> é a taxa de inflação dos bens relevantes no período, então a taxa de retorno real (em termos de bens) <span class="math inline">\(\mu\)</span> da aplicação financeira é dada por <span class="math display">\[\begin{align}
+<p>Se <span class="math inline">\(r\)</span> é o retorno nominal (em termos de unidades monetárias) de uma aplicação financeira, e <span class="math inline">\(\pi\)</span> é a taxa de inflação dos bens relevantes no período, então a taxa de retorno real (em termos de bens) <span class="math inline">\(\mu\)</span> da aplicação financeira é dada por <span id="eq-retreal"><span class="math display">\[\begin{align}
   1+\mu = \frac{1+r}{1+\pi}.
-\end{align}\]</span></p>
+\end{align} \tag{2.7}\]</span></span></p>
 </div>
 </div>
 <p>É importante ressaltar que ambas a taxa de retorno nominal <span class="math inline">\(r\)</span> e inflação <span class="math inline">\(\pi\)</span> precisam estar expressas na mesma frequência de incidência (mensal, anual, etc.).</p>
 <section id="retorno-real-ex-post-e-ex-ante" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="retorno-real-ex-post-e-ex-ante">Retorno real <em>ex-post</em> e <em>ex-ante</em></h4>
-<p>No <a href="#exm-inflacao-1" class="quarto-xref">Example&nbsp;<span>2.4</span></a> nós calculamos o retorno da aplicação financeira em termos da quantidade de sementes,</p>
+<p>No <a href="#exm-inflacao-1" class="quarto-xref">Example&nbsp;<span>2.4</span></a> nós calculamos o retorno da aplicação financeira em termos da quantidade de sementes, mas isso só foi possível depois de passado o tempo e observarmos as mudanças nos preços relevantes.</p>
+<p>A <a href="#eq-retreal" class="quarto-xref">Equation&nbsp;<span>2.7</span></a> é uma tautologia contábil que define a taxa real realizada <span class="math inline">\(\mu\)</span>. Na realidade a decisão do agricultor entre investir no ativo financeiro ou estocar as sementes depende do palpite dele sobre o preço das sementes ao final do ano.</p>
+<p>O que importa para a formação das decisões de investimento dos agentes não é o retorno real <em>ex-post</em>, calculado depois do ocorrido, mas a expectativa do retorno real <em>ex-ante</em>:</p>
+<p><span id="eq-retreal-exante"><span class="math display">\[\begin{align*}
+  1 + E_t[\mu_{t+1}] = \frac{1+r}{1+E_t[\pi_{t+1}]}.
+\end{align*} \tag{2.8}\]</span></span></p>
 </section>
 <section id="índices-de-preço" class="level3" data-number="2.5.1">
 <h3 data-number="2.5.1" class="anchored" data-anchor-id="índices-de-preço"><span class="header-section-number">2.5.1</span> Índices de preço</h3>
@@ -877,43 +883,43 @@ Retorno real <em>ex-post</em>
 </tr>
 <tr class="even">
 <td style="text-align: right;">2</td>
-<td style="text-align: right;">7.26</td>
-<td style="text-align: right;">9.78</td>
-<td style="text-align: right;">7.60</td>
-<td style="text-align: right;">16.04</td>
-<td style="text-align: right;">33.63</td>
+<td style="text-align: right;">7.68</td>
+<td style="text-align: right;">9.87</td>
+<td style="text-align: right;">7.20</td>
+<td style="text-align: right;">17.98</td>
+<td style="text-align: right;">31.56</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">3</td>
-<td style="text-align: right;">7.99</td>
-<td style="text-align: right;">10.90</td>
-<td style="text-align: right;">7.32</td>
-<td style="text-align: right;">20.78</td>
-<td style="text-align: right;">39.29</td>
+<td style="text-align: right;">8.42</td>
+<td style="text-align: right;">9.89</td>
+<td style="text-align: right;">7.84</td>
+<td style="text-align: right;">20.82</td>
+<td style="text-align: right;">36.99</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">4</td>
-<td style="text-align: right;">7.55</td>
-<td style="text-align: right;">12.00</td>
-<td style="text-align: right;">8.01</td>
-<td style="text-align: right;">24.33</td>
-<td style="text-align: right;">40.24</td>
+<td style="text-align: right;">8.77</td>
+<td style="text-align: right;">10.47</td>
+<td style="text-align: right;">8.81</td>
+<td style="text-align: right;">22.01</td>
+<td style="text-align: right;">36.25</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right;">5</td>
-<td style="text-align: right;">7.47</td>
-<td style="text-align: right;">12.14</td>
-<td style="text-align: right;">9.10</td>
-<td style="text-align: right;">25.59</td>
-<td style="text-align: right;">49.09</td>
+<td style="text-align: right;">8.73</td>
+<td style="text-align: right;">11.59</td>
+<td style="text-align: right;">10.02</td>
+<td style="text-align: right;">22.18</td>
+<td style="text-align: right;">37.96</td>
 </tr>
 <tr class="even">
 <td style="text-align: right;">6</td>
-<td style="text-align: right;">8.18</td>
-<td style="text-align: right;">13.55</td>
-<td style="text-align: right;">9.06</td>
-<td style="text-align: right;">31.54</td>
-<td style="text-align: right;">57.67</td>
+<td style="text-align: right;">9.86</td>
+<td style="text-align: right;">12.89</td>
+<td style="text-align: right;">9.97</td>
+<td style="text-align: right;">21.88</td>
+<td style="text-align: right;">46.69</td>
 </tr>
 </tbody>
 </table>
@@ -932,8 +938,57 @@ Retorno real <em>ex-post</em>
   I = 0.3 A + 0.2 F + 0.1 L + 0.25 C + 0.15 G.
 \end{align}\]</span> No primeiro mês, o valor do índice é: <span class="math display">\[\begin{align}
   I_1 &amp;= 0.3\cdot \$6.65 + 0.2 \cdot \$8.94 + 0.1 \cdot \$7.05 + 0.25  \cdot \$15.7 + 0.15  \cdot \$30.34,\\
-  &amp;= \$12.9640.
+  &amp;= \$12.964.
 \end{align}\]</span></p>
+<p>Nos meses subsequentes, temos <span class="math inline">\(I_2 = \$14.227\)</span>, e <span class="math inline">\(I_3 = \$16.0415\)</span>.</p>
+<p>Os valores <span class="math inline">\(I_t\)</span> não são preços de um bem específico, e em muitas situações estamos mais interessados na variação percentual do que no valor absoluto em si. <span class="math display">\[\begin{align}
+  I^*_t = \frac{I_t}{I_1}\cdot100
+\end{align}\]</span></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Mês</th>
+<th style="text-align: right;">Índice ($)</th>
+<th style="text-align: right;">Índice Padronizado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">12.9640</td>
+<td style="text-align: right;">100.0000</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">14.2270</td>
+<td style="text-align: right;">109.7424</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">16.0415</td>
+<td style="text-align: right;">123.7388</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">16.5460</td>
+<td style="text-align: right;">127.6304</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">17.1780</td>
+<td style="text-align: right;">132.5054</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">19.0065</td>
+<td style="text-align: right;">146.6098</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -953,7 +1008,7 @@ IPCA: Índice de Preços ao Consumidor Amplo
 <p>O Índice de Preços ao Consumidor Amplo, <a href="https://www.ibge.gov.br/estatisticas/economicas/precos-e-custos/9256-indice-nacional-de-precos-ao-consumidor-amplo.html">IPCA</a>, é uma média ponderada de preços calculada pelo IBGE desde dezembro de 1979, que tem por objetivo medir a inflação de um conjunto de produtos e serviços comercializados no varejo, referentes ao consumo pessoal das famílias. O IPCA é o principal índice de preços do Brasil, sendo utilizado com indexador em diversos contratos, e, em especial, tomado como a medida oficial de inflação para efeitos de política monetária.</p>
 <p>Atualmente, a população-objetivo do IPCA abrange as famílias com rendimentos de 1 a 40 salários mínimos, qualquer que seja a fonte, residentes nas áreas urbanas das regiões de abrangência do SNIPC<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, as quais são: regiões metropolitanas de Belém, Fortaleza, Recife, Salvador, Belo Horizonte, Vitória, Rio de Janeiro, São Paulo, Curitiba, Porto Alegre, além do Distrito Federal e dos municípios de Goiânia, Campo Grande, Rio Branco, São Luís e Aracaju.</p>
 <p>Esse índice de preços tem como unidade de coleta estabelecimentos comerciais e de prestação de serviços, concessionária de serviços públicos e intenet e sua coleta estende-se, em geral, do dia 01 a 30 do mês de referência.</p>
-<p>Os gastos mensais das famílias são divididos em grandes grupos, que se dividem em categorias cada vez mais granulares. A tabela abaixo descreve os pesos relativos de cada grupo em janeiro 2025.</p>
+<p>Os gastos mensais das famílias são divididos em grandes grupos, que se dividem em categorias cada vez mais granulares. A tabela abaixo descreve os pesos relativos de cada grupo em fevereiro 2025.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -966,47 +1021,47 @@ IPCA: Índice de Preços ao Consumidor Amplo
 <tr class="odd">
 <td>1</td>
 <td>Alimentação e bebidas</td>
-<td>21.6924%</td>
+<td>21.8672%</td>
 </tr>
 <tr class="even">
 <td>2</td>
 <td>Habitação</td>
-<td>15.0661%</td>
+<td>14.58%</td>
 </tr>
 <tr class="odd">
 <td>3</td>
 <td>Artigos de residência</td>
-<td>3.6626%</td>
+<td>3.6538%</td>
 </tr>
 <tr class="even">
 <td>4</td>
 <td>Vestuário</td>
-<td>4.6724%</td>
+<td>4.6586%</td>
 </tr>
 <tr class="odd">
 <td>5</td>
 <td>Transportes</td>
-<td>20.6258%</td>
+<td>20.862%</td>
 </tr>
 <tr class="even">
 <td>6</td>
 <td>Saúde e cuidados pessoais</td>
-<td>13.4564%</td>
+<td>13.5283%</td>
 </tr>
 <tr class="odd">
 <td>7</td>
 <td>Despesas pessoais</td>
-<td>10.1671%</td>
+<td>10.2028%</td>
 </tr>
 <tr class="even">
 <td>8</td>
 <td>Educação</td>
-<td>5.9449%</td>
+<td>5.9504%</td>
 </tr>
 <tr class="odd">
 <td>9</td>
 <td>Comunicação</td>
-<td>4.7124%</td>
+<td>4.6969%</td>
 </tr>
 </tbody>
 </table>
@@ -1301,11 +1356,11 @@ S_n &amp;=  a_0\left(\frac{1-q^n}{1-q}\right).\end{align*} \]</span> Essa é a f
 <p><span id="eq-sfc-vp-1"><span class="math display">\[\begin{align}
 VP(SFC,r) &amp;= FC_0 + \frac{1}{1+r}\left[\frac{1-\left(\frac{1}{1+r}\right)^T}{1-\left(\frac{1}{1+r}\right)}\right],\\
 &amp;= FC_0 + FC\left(\frac{1-(1+r)^{-T}}{r}\right).
-\end{align} \tag{2.7}\]</span></span></p>
-<p>A expressão entre parênteses na <a href="#eq-sfc-vp-1" class="quarto-xref">Equation&nbsp;<span>2.7</span></a> às vezes é chamada de fator de valor presente, <span class="math inline">\(FVP\)</span>, porque é o fator pelo qual que multiplicamos o pagamento homogêneo <span class="math inline">\(FC\)</span> para obter o valor presente da sua soma.</p>
+\end{align} \tag{2.9}\]</span></span></p>
+<p>A expressão entre parênteses na <a href="#eq-sfc-vp-1" class="quarto-xref">Equation&nbsp;<span>2.9</span></a> às vezes é chamada de fator de valor presente, <span class="math inline">\(FVP\)</span>, porque é o fator pelo qual que multiplicamos o pagamento homogêneo <span class="math inline">\(FC\)</span> para obter o valor presente da sua soma.</p>
 <p><span id="eq-sfc-vp-2"><span class="math display">\[\begin{align*}
   FVP(r,T)=\left(\frac{1-(1+r)^{-T}}{r}\right).
-\end{align*} \tag{2.8}\]</span></span></p>
+\end{align*} \tag{2.10}\]</span></span></p>
 </section>
 <section id="valor-presente-da-perpetuidade" class="level4" data-number="2.6.1.2">
 <h4 data-number="2.6.1.2" class="anchored" data-anchor-id="valor-presente-da-perpetuidade"><span class="header-section-number">2.6.1.2</span> Valor presente da perpetuidade</h4>
@@ -1550,7 +1605,7 @@ Unicidade da taxa interna de retorno
 <p>A TIR é a solução para a seguinte equação polinomial:</p>
 <p><span id="eq-tir"><span class="math display">\[\begin{align*}
 FC_0 + \frac{FC_1}{1+r^*} + \frac{FC_2}{(1+r^*)^2} + \cdots + \frac{FC_T}{(1+r^*)^n} = 0.
-\end{align*} \tag{2.9}\]</span></span></p>
+\end{align*} \tag{2.11}\]</span></span></p>
 <p>Uma equação polinomial de grau <span class="math inline">\(n\)</span> tem sempre <span class="math inline">\(n\)</span> raízes. Em geral essas raízes podem ser números complexos e não precisam se repetir.</p>
 <p>As duas condições abaixo garantem que existe apenas uma solução real <span class="math inline">\(r^*\)</span> (vão existir raízes complexas, que vamos ignorar), e que essa solução real é positiva.</p>
 <ol type="1">
@@ -1558,7 +1613,7 @@ FC_0 + \frac{FC_1}{1+r^*} + \frac{FC_2}{(1+r^*)^2} + \cdots + \frac{FC_T}{(1+r^*
 </ol>
 <p>Essa condição garante que existe apenas uma solução real. Na grande maioria das nossas aplicações essa mudança ocorre do primeiro para o segundo fluxo de caixa. Isto é, <span class="math inline">\(FC_0&lt;0\)</span> e <span class="math inline">\(FC_t&gt;0\)</span>, <span class="math inline">\(t=1,\dots,n\)</span>; ou <span class="math inline">\(FC_0&gt;0\)</span> e <span class="math inline">\(FC_t&lt;0\)</span>, <span class="math inline">\(t=1,\dots,n\)</span>.</p>
 <ol start="2" type="1">
-<li>Assumindo que a mundança de sinal acontece entre <span class="math inline">\(t=0\)</span> e <span class="math inline">\(t=1\)</span>, o valor bruto (não descontado) dos fluxos de caixa acumulados entre <span class="math inline">\(t=1\)</span> e <span class="math inline">\(t=n\)</span> são maiores do que <span class="math inline">\(FC_0\)</span>, em módulo. Ou seja,</li>
+<li>Assumindo que a mundança de sinal acontece entre <span class="math inline">\(t=0\)</span> e <span class="math inline">\(t=1\)</span>, precisamos que o valor bruto (não descontado) dos fluxos de caixa acumulados entre <span class="math inline">\(t=1\)</span> e <span class="math inline">\(t=n\)</span> sejam do que <span class="math inline">\(FC_0\)</span>, em módulo. Ou seja,</li>
 </ol>
 <p><span class="math display">\[|FC_0|&lt;\left|\sum^n_{t=1}FC_t\right|.\]</span></p>
 <p>Essa condição vai garantir que a TIR é uma taxa positiva. Perceba que se <span class="math inline">\(FC_0 + \sum^n_{t=1}FC_t = 0\)</span>, então <span class="math inline">\(r^*=0\)</span>.</p>
@@ -1578,7 +1633,7 @@ FC_0 + \frac{FC_1}{1+r^*} + \frac{FC_2}{(1+r^*)^2} + \cdots + \frac{FC_T}{(1+r^*
 <div id="callout-28" class="callout-28-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="exm-tir-3" class="theorem example">
-<p><span class="theorem-title"><strong>Example 2.14</strong></span> Para calcular a TIR nós precisamos resolver a equação <a href="#eq-tir" class="quarto-xref">Equation&nbsp;<span>2.9</span></a> numericamente. Vamos usar a</p>
+<p><span class="theorem-title"><strong>Example 2.14</strong></span> Para calcular a TIR nós precisamos resolver a equação <a href="#eq-tir" class="quarto-xref">Equation&nbsp;<span>2.11</span></a> numericamente. Vamos usar a</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="annotated-cell-4"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-4-1" class="code-annotation-target"><a href="#annotated-cell-4-1" aria-hidden="true" tabindex="-1"></a>SFC <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="sc">-</span><span class="dv">45</span>)</span>
 <span id="annotated-cell-4-2"><a href="#annotated-cell-4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">polyroot</span>(SFC)</span>
@@ -1680,61 +1735,61 @@ FC_0 + \frac{FC_1}{1+r^*} + \frac{FC_2}{(1+r^*)^2} + \cdots + \frac{FC_T}{(1+r^*
 <tbody>
 <tr class="odd">
 <td>1</td>
-<td>-1.243%</td>
+<td>1.2938%</td>
 </tr>
 <tr class="even">
 <td>2</td>
-<td>1.6345%</td>
+<td>2.0022%</td>
 </tr>
 <tr class="odd">
 <td>3</td>
-<td>-0.124%</td>
+<td>1.3763%</td>
 </tr>
 <tr class="even">
 <td>4</td>
-<td>1.2237%</td>
+<td>-0.7009%</td>
 </tr>
 <tr class="odd">
 <td>5</td>
-<td>1.8542%</td>
+<td>1.0328%</td>
 </tr>
 <tr class="even">
 <td>6</td>
-<td>1.8319%</td>
+<td>1.7705%</td>
 </tr>
 <tr class="odd">
 <td>7</td>
-<td>0.3924%</td>
+<td>0.987%</td>
 </tr>
 <tr class="even">
 <td>8</td>
-<td>1.4695%</td>
+<td>-1.2238%</td>
 </tr>
 <tr class="odd">
 <td>9</td>
-<td>1.0529%</td>
+<td>1.4854%</td>
 </tr>
 <tr class="even">
 <td>10</td>
-<td>-0.111%</td>
+<td>-0.611%</td>
 </tr>
 <tr class="odd">
 <td>11</td>
-<td>-0.3103%</td>
+<td>2.21%</td>
 </tr>
 <tr class="even">
 <td>12</td>
-<td>2.4694%</td>
+<td>2.2985%</td>
 </tr>
 </tbody>
 </table>
 <p>Responda ao que se pede.</p>
 <ol type="a">
-<li>Qual o retorno anual acumulado? <abbr title="10.55%">[R]</abbr></li>
-<li>Qual o retorno médio mensal? <abbr title="0.84%">[R]</abbr></li>
-<li>Qual o retorno médio do primeiro semestre? <abbr title="5.25%">[R]</abbr></li>
-<li>Qual o retorno médio do segundo semestre? <abbr title="5.04%">[R]</abbr></li>
-<li>Qual o retorno médio semestral? <abbr title="5.14%">[R]</abbr></li>
+<li>Qual o retorno anual acumulado? <abbr title="12.51%">[R]</abbr></li>
+<li>Qual o retorno médio mensal? <abbr title="0.99%">[R]</abbr></li>
+<li>Qual o retorno médio do primeiro semestre? <abbr title="6.94%">[R]</abbr></li>
+<li>Qual o retorno médio do segundo semestre? <abbr title="5.2%">[R]</abbr></li>
+<li>Qual o retorno médio semestral? <abbr title="6.07%">[R]</abbr></li>
 </ol>
 </div>
 <div id="exr-sec-transformacaotaxas-3" class="theorem exercise">
@@ -1753,7 +1808,7 @@ FC_0 + \frac{FC_1}{1+r^*} + \frac{FC_2}{(1+r^*)^2} + \cdots + \frac{FC_T}{(1+r^*
 </div>
 <div id="exr-sec-inflacao-2" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 2.16</strong></span> A <a href="https://www.tesourodireto.com.br/lumis/portal/file/fileDownload.jsp?fileId=8A94D4988608850F018660E32BE60FE9">NTN-B Principal</a> (ou Tesouro IPCA<sup>+</sup>) é um título pós-fixado negociado pelo Tesouro brasileiro que não possui pagamentos de cupom. Esse título oferece ao investidor retornos retornos dados pela variação realizada do IPCA, mais uma porção prefixada, que é determinada no momento da compra do título pela “taxa contratada” (sempre expressa em termos anuais, com 252 dias úteis). Você está considerando investir em títulos desse tipo.</p>
-<p>O valor de face das NTN-Bs é corrigido periodicamente pela variação do IPCA, e por isso costuma ser chamado “Valor Nominal Atualizado” (VNA). Checando a página da <a href="https://www.anbima.com.br/pt_br/informar/valor-nominal-atualizado.htm">ANBIMA</a>, você observa que atualmente o VNA das NTN-B é R$3025.740053.</p>
+<p>O valor de face das NTN-Bs é corrigido periodicamente pela variação do IPCA, e por isso costuma ser chamado “Valor Nominal Atualizado” (VNA). Checando a página da <a href="https://www.anbima.com.br/pt_br/informar/valor-nominal-atualizado.htm">ANBIMA</a>, você observa que atualmente o VNA das NTN-B é R$5529.575489.</p>
 <p>Hoje você pagaria por uma unidade do título:</p>
 <p><span class="math display">\[
 \begin{align}
@@ -1766,17 +1821,17 @@ FC_0 + \frac{FC_1}{1+r^*} + \frac{FC_2}{(1+r^*)^2} + \cdots + \frac{FC_T}{(1+r^*
   \text{Cotação}\% = 100 \times \left(\frac{1}{1 + \text{taxa contratada}(t)}\right)^{\frac{\text{dut}}{252}}.
 \end{align}
 \]</span></p>
-<p>Considere que a taxa contratada (na porção préfixada da remuneração) oferecida hoje é de 12.61% ao ano. Faltam exatamente 719 dias úteis até o vencimento do título, em 15/08/2026.</p>
+<p>Considere que a taxa contratada (na porção préfixada da remuneração) oferecida hoje é de 10.58% ao ano. Faltam exatamente 431 dias úteis até o vencimento do título, em 15/08/2026.</p>
 <ol type="a">
-<li>Você adquiriu uma unidade de NTN-B Principal, com vencimento em 15/08/2026. Qual preço unitário que você pagou no título hoje? <abbr title="R$2156.1230688">[R]</abbr></li>
-<li>Qual a cotação do título? <abbr title="71.2593624%">[R]</abbr></li>
+<li>Você adquiriu uma unidade de NTN-B Principal, com vencimento em 15/08/2026. Qual preço unitário que você pagou no título hoje? <abbr title="R$4655.76407">[R]</abbr></li>
+<li>Qual a cotação do título? <abbr title="84.1974954%">[R]</abbr></li>
 </ol>
-<p>Passados 130 dias úteis da compra do título, o VNA agora é R$3139.5514411, e a cotação atual é 71.0268661%.</p>
+<p>Passados 112 dias úteis da compra do título, o VNA agora é R$5748.5175336, e a cotação atual é 85.4507465%.</p>
 <ol start="3" type="a">
-<li>Qual foi a taxa de inflação anual (base 252) média acumulada no período? <abbr title="7.42%">[R]</abbr></li>
-<li>Qual é a taxa contratada implícita nesse título hoje (lembre-se que a taxa é expressa na frequência anual, com ano base de 252 dias úteis)? <abbr title="15.7625%">[R]</abbr></li>
-<li>Qual seria o preço de venda da NTN-B Principal com vencimento em 15/08/2026 no mercado secundário hoje, depois de passados os 130 dias úteis? <abbr title="R$2229.9249988">[R]</abbr></li>
-<li>Imagine que você vendeu antecipadamente sua unidade da NTN-B Principal no mercado secundário pelo preço unitário calculado anteriormente. Qual foi seu retorno real médio realizado calculado em termos anuais? <abbr title="-0.631489%">[R]</abbr></li>
+<li>Qual foi a taxa de inflação anual (base 252) média acumulada no período? <abbr title="9.13%">[R]</abbr></li>
+<li>Qual é a taxa contratada implícita nesse título hoje (lembre-se que a taxa é expressa na frequência anual, com ano base de 252 dias úteis)? <abbr title="13.225%">[R]</abbr></li>
+<li>Qual seria o preço de venda da NTN-B Principal com vencimento em 15/08/2026 no mercado secundário hoje, depois de passados os 112 dias úteis? <abbr title="R$4912.1511426">[R]</abbr></li>
+<li>Imagine que você vendeu antecipadamente sua unidade da NTN-B Principal no mercado secundário pelo preço unitário calculado anteriormente. Qual foi seu retorno real médio realizado calculado em termos anuais? <abbr title="3.3802427%">[R]</abbr></li>
 </ol>
 </div>
 </section>
