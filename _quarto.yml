@@ -7,12 +7,14 @@ book:
   author: "Pedro Chaim"
   date: "2025"
   cover-image: images/capa.png
-  page-navigation: true
+  page-navigation: false
   navbar: 
     collapse: true
   chapters:
     - index.qmd
     - 02_MatematicaFinanceira.qmd
+  sidebar: 
+    style: floating
 
 callout-appearance: minimal
 

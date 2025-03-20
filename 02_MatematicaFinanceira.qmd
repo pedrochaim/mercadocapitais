@@ -1,3 +1,10 @@
+---
+navbar: false
+page-navigation: false
+toc: true
+toc-expand: false
+---
+
 # Matemática Financeira {#cap-02}
 
 O que chamamos de matemática financeira é um conjunto de ferramentas que nos permitem comparar quantidades monetárias que existem em diferentes instantes de tempo.
@@ -894,6 +901,17 @@ $$\begin{align*}
   FVP(r,T)=\left(\frac{1-(1+r)^{-T}}{r}\right).
 \end{align*}$${#eq-sfc-vp-2}
 
+::: {.callout-tip title='@exm-seq-fcs-4: Tabela *price* de amortização de empréstimos' collapse='true'}
+::: {#exm-seq-fcs-4}
+
+Suponha que você tomou emprestado $\$25000$ pelo período de dez anos, a uma taxa de juros de $8\%$ ao ano. O empréstimo será quitado em dez parcelas iguais, de modo que ao pagamento da décima parcela, seu saldo devedor é zero.
+
+  a. Qual o valor da parcela? 
+  a. Quanto de cada parcela se refere a amortização do saldo devedor e quanto de cada parcela se refere ao pagamento de juros?
+
+:::
+:::
+
 #### Valor presente da perpetuidade
 
 Podemos calcular o valor presente de uma sequência de fluxos de caixa homogêneos sem data para acabar. 
@@ -915,26 +933,6 @@ Uma aplicação bastante relevante para
 
 ::: {.callout-warning appearance="minimal"}
 
-::: {#exr-sfc-1}
-
-:::
-
-::: {#exr-sfc-2}
-
-:::
-
-::: {#exr-sfc-3}
-
-:::
-
-::: {#exr-sfc-4}
-
-:::
-
-::: {#exr-sfc-5}
-
-:::
-
 :::
 
 
@@ -948,7 +946,7 @@ Em um mundo sem incertezas, um *projeto de investimento* é completamente descri
 $$ SFC = \{FC_0, FC_1, \dots, FC_T\},$$
 
 * e uma sequência de taxas de juros que descontam/capitalizam esses fluxos de caixa a cada período
-$$ r = \{r_0, r_1, \dots, r_T\}.$$
+$$ r = \{r_1, \dots, r_T\}.$$
 elas representam o *custo do capital* empenhado no projeto.
 
 ::: {.callout-note title="Custo de capital"}
@@ -976,9 +974,8 @@ Podemos tomar dinheiro emprestado ao custo de $12\%$ ao período.
 
 A justificativa por trás da resposta é que em $t=0$ tomamos dois empréstimos com horizontes diferentes.
 
-* No primeiro empréstimo tomamos $\frac{\$500}{1+12\%}=\$446.43$ por $1$ período. Em $t=1$ devolveremos $\$446.43(1+12\%)=\$500$ aos nossos credores. O saldo devedor é exatamente coberto pelo pagamento que receberemos. 
-* No segundo, tomamos $\frac{\$1000}{(1+12\%)^2}=\$797.19$ por $2$ períodos. Em $t=2$ o pagamento de $\$1000$ é exatamente o necessário para quitar esse saldo devedor.
-
+  * No primeiro empréstimo tomamos $\frac{\$500}{1+12\%}=\$446.43$ por $1$ período. Em $t=1$ devolveremos $\$446.43(1+12\%)=\$500$ aos nossos credores. O saldo devedor é exatamente coberto pelo pagamento que receberemos. 
+  * No segundo, tomamos $\frac{\$1000}{(1+12\%)^2}=\$797.19$ por $2$ períodos. Em $t=2$ o pagamento de $\$1000$ é exatamente o necessário para quitar esse saldo devedor.
 
 Perceba que se tomarmos $\$1243.62$ emprestados da forma descrita acima em $t=0$, e usarmos os pagamentos do contrato de dívida para quitar nossas dívidas, estamos exatamente como se não tivessemos feito tal operação. 
 
@@ -986,9 +983,6 @@ Então se pudermos comprar o contrato por $\$1043.62$, podemos tomar os $\$1243.
 
 :::
 :::
-
-
-
 
 ::: {.callout-note title="Critério do valor presente líquido"}
 
@@ -1095,7 +1089,16 @@ O Tesouro disponibiliza uma [calculadora](https://www.tesourodireto.com.br/titul
 
 A TIR é uma medida bastante atraente porque apenas usando as informações dos fluxos de caixa, obtemos uma medida do quão rentável é um projeto de investimento particular. Comparando com o VPL, a TIR não requer uma taxa de desconto préviamente especificada para ser calculada.
 
-::: {.callout-note title="Unicidade da taxa interna de retorno"}
+Infelizmente, a TIR só é bem definida (e portanto tem as interpretações que discutimos) se o fluxo de caixa em questão for "convencional". Uma sequência de fluxos de caixa é dita convencional se houver apenas uma mudança no sinal dos fluxos de caixa.
+
+::: {.callout-tip title="@exm-tir-4 TIR de um fluxo de caixa não convencional" appearance="minimal" collapse="true"}
+::: {#exm-tir-4}
+
+:::
+:::
+
+
+::: {.callout-note title="Unicidade da taxa interna de retorno" collapse=true}
 A TIR é a solução para a seguinte equação polinomial:
 
 $$\begin{align*}
@@ -1121,19 +1124,71 @@ Essas condições são corolários de um resultado mais geral conhecido como [Re
 
 ::: {.callout-tip title="@exm-tir-3 Cálculo da TIR no usando a linguagem ***R***" appearance="minimal" collapse="true"}
 ::: {#exm-tir-3}
+```{r, echo=FALSE}
+rm(list=ls())
+```
 
-Para calcular a TIR nós precisamos resolver a equação [@eq-tir] numericamente. Vamos usar a 
+Tome a sequência de fluxos de caixa descrita na tabela abaixo.
+
+| $t$ 	| $FC_t$ (\\$) 	|
+|-----	|--------------	|
+|   0 	|         -100 	|
+|   1 	|           10 	|
+|   2 	|           10 	|
+|   3 	|           20 	|
+|   4 	|           30 	|
+|   5 	|           45 	|
+
+Para calcular a TIR nós precisamos resolver a equação [@eq-tir] numericamente. Vamos usar a função `polyroot()`, que obtém as raízes reais e complexas de uma equação polinomial.
 
 ```{r}
-SFC = c(100, 10, 10, 20, 30, -45) # <1>
-polyroot(SFC)
-tir = function(SFC){
-  
+SFC = c(-100, 10, 10, 20, 30, 45) # <1>
+```
+
+1. Construímos um vetor cujas entradas são os fluxos de caixa (os coeficientes da equação polinomial), em ordem crescente de tempo.
+
+```{r}
+raizes = polyroot(SFC) # <2>
+raizes
+```
+
+2. A função `polyroot()` retorna um vetor com as todas as raízes, reaiz e complexas, do polinômio.
+
+```{r}
+idx = abs(Im(raizes))<10^(-6) # <3>
+raiz_real = Re(raizes[idx]) # <4>
+raiz_real
+```
+
+3. Para nós só é relevante a raíz real. Então identificamos a entrada do vetor `raizes` cuja parte imaginária (usando a função `Im()`) é, em termos absolutos, muito pequena.
+
+4. Usando a função `Re()`, ficamos apenas com a parte real do número, e transformamos o tipo da variável.
+
+Lembre que a relação da TIR com a raíz do polinômio é tal que
+
+$$ x = \frac{1}{1+r^*}, \qquad r^* = \frac{1}{x}-1. $$
+```{r}
+r_tir = 1/raiz_real-1 # <5>
+r_tir
+```
+
+5. Então transformamos a raíz para obter a TIR.
+
+Podemos criar uma função que repete os passos anteriores.
+
+```{r}
+calcula_tir = function(SFC){
+  raizes = polyroot(SFC)
+  idx = abs(Im(raizes))<10e-6
+  if (sum(idx)!=1){
+    return("Fluxo de caixa não convencional, múltiplas TIR.")
+    }
+  raiz_real = Re(raizes[idx])
+  r_tir = 1/raiz_real-1
+  return(r_tir)
 }
 ```
 
-1. Construímos um vetor cujas entradas são os
-(...)
 :::
 :::
 
@@ -1184,7 +1239,7 @@ Você acabou de empenhar seu capital inicial de $S_0=\$5000$ em um investimento 
 :::
 
 ::: {#exr-sec-regimescapitalizacao-5}
-Um mesmo saldo inicial de $S_0=\$1000$ é capitalizado ambos pelo regime composto e simples, com a mesma taxa de juros de $10\%$ ao ano. Quantos períodos são necessários para que o valor desse saldo capitalizado pelo regime composto exceda duas vezes o valor capitalizado pelo regime simples? 
+Um mesmo saldo inicial de $S_0=\$1000$ é capitalizado ambos pelo regime composto e simples, com a mesma taxa de juros de $10\%$ ao ano. Quantos períodos são necessários para que o valor desse saldo capitalizado pelo regime composto exceda duas vezes o valor capitalizado pelo regime simples? (Dica: resolva numericamente simulando valores.)
 :::
 
 ::: {#exr-sec-regimescapitalizacao-6}
